@@ -9,11 +9,11 @@ Localfarm menggunakan framework CI4 dengan Bootstrap.
 
 ## ANGGOTA
 
-Alan RM
-Fachry AA
-Faisal P
-Haidar AF
-Ikhwan TS
-Karina AN
-Nur Fazriati
-Wulan AP
++ Alan RM
++ Fachry AA
++ Faisal P
++ Haidar AF
++ Ikhwan TS
++ Karina AN
++ Nur Fazriati
++ Wulan AP
