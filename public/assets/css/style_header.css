@@ -1,0 +1,39 @@
+.bg-green{
+    background-color: green;
+}
+
+.custom-toggler.navbar-toggler {
+    border-color: rgb(255, 255, 255);
+  }
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    img{
+      width: 100%;
+      margin-right: auto;
+    }
+    }
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+      img{
+        width: 35%;
+        margin-left: 3rem;
+      }
+    }
+
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+      img{
+        width: 20%;
+        margin-left: 4rem;
+      }
+    }
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+
+    }
