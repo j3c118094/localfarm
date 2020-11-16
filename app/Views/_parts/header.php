@@ -11,6 +11,7 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style_header.css">
+    <link rel="stylesheet" href="assets/css/style_beranda.css">
 
     <title>Localfarm</title>
   </head>
