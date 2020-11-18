@@ -23,19 +23,56 @@ body, html {
     letter-spacing: 0.1rem;
   }
 
+.img-shadow{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.rounded-border{
+  border-radius: 15px;
+}
+
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
         .hero-image {
             height: 30%;
         }
         h1{
             font-size: 3vw;
         }
+        .tentang-img{
+          width: 75%;
+        }
+        .btn-hidden{
+          display: none;
+        }
+
     }
 
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
         h1{
             font-size: 3.6vw;
         }
+        .btn-hidden-2{
+          display: none;
+        }
     }
+
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+        .tentang-img{
+          width: 75%;
+        }
+        .btn-hidden-2{
+          display: none;
+        }
+}
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+        .btn-hidden-2{
+          display: none;
+        }
+}

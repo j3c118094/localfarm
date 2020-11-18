@@ -11,7 +11,7 @@
   }
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-    img{
+    .nav-img{
       width: 100%;
       margin-right: auto;
     }
@@ -19,7 +19,7 @@
 
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-      img{
+      .nav-img{
         width: 35%;
         margin-left: 3rem;
       }
@@ -27,7 +27,7 @@
 
 /* Desktops and laptops ----------- */
 @media only screen  and (min-width : 1224px) {
-      img{
+        .nav-img{
         width: 20%;
         margin-left: 4rem;
       }
