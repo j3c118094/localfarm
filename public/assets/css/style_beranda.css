@@ -28,7 +28,20 @@ body, html {
 }
 
 .rounded-border{
-  border-radius: 15px;
+  border-radius: 1rem;
+}
+
+.mh-80{
+  max-width: 80%;
+}
+
+.min-w-100{
+  min-width: 100%;
+}
+
+.top-border-rounded{
+ border-top-left-radius: 1rem;
+ border-top-right-radius: 1rem;
 }
 
 /* Smartphones (portrait and landscape) ----------- */
