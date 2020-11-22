@@ -56,30 +56,12 @@
 <!-- Artikel Terbaru -->
 <section class="mt-5 px-0 container-fluid ">
     <h2 class="container px-sm-3 font-weight-bold font-8">Artikel Terbaru</h2>
-    <div class="position-relative">
-        <div class="position-relative">
-            <img class=" img-fluid mh-img-50" src="assets/images/img_rotikopi.jpg" alt="">
-            <div class="container px-sm-3">
-                <div class="position-absolute text-block-transparant">
-                    <h4 class="text-white font-weight-bold">Manfaat Ubi</h4>
-                    <!-- Kutipan artikel manfaat ubi -->
-                    <p class="text-white text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,
-                        officia officiis animi perspiciatis accusantium nemo accusamus quo fugit!
-                        Quia amet molestiae eius, quae recusandae optio placeat. Perspiciatis,
-                        dicta. Voluptates, omnis.
-                    </p>
-                    <a href="#" class="text-blue-sea font-weight-bold">Selengkapnya
-                        <hr class="biru ml-0 mt-0">
-                    </a>
-                </div>
-            </div>
-        </div>
         <div class="position-relative">
             <img class="img-fluid mh-img-50" src="assets/images/img_rotikopi.jpg" alt="">
             <div class="container px-sm-3">
-                <div class="position-absolute text-block-transparant">
+                <div class="position-absolute text-block-transparant index-1">
                     <h4 class="text-white font-weight-bold">Manfaat Ubi</h4>
-                    <!-- Kutipan artikel manfaat ubi -->
+                    <!-- Kutipan artikel terbaru -->
                     <p class="text-white text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,
                         officia officiis animi perspiciatis accusantium nemo accusamus quo fugit!
                         Quia amet molestiae eius, quae recusandae optio placeat. Perspiciatis,
@@ -91,12 +73,29 @@
                 </div>
             </div>
         </div>
-        <div class="">
-            <img class=" img-fluid mh-img-50" src="assets/images/img_rotikopi.jpg" alt="">
+        <div class="position-relative">
+            <img class="img-fluid mh-img-50" src="assets/images/img_jagungbakar.jpg" alt="">
+            <div class="container px-sm-3">
+                <div class="position-absolute text-block-transparant-right index-1">
+                    <h4 class="text-white font-weight-bold">Manfaat Ubi</h4>
+                    <!-- Kutipan artikel terbaru -->
+                    <p class="text-white text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,
+                        officia officiis animi perspiciatis accusantium nemo accusamus quo fugit!
+                        Quia amet molestiae eius, quae recusandae optio placeat. Perspiciatis,
+                        dicta. Voluptates, omnis.
+                    </p>
+                    <a href="#" class="text-blue-sea font-weight-bold">Selengkapnya
+                        <hr class="biru ml-0 mt-0">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="position-relative">
+            <img class="img-fluid mh-img-50" src="assets/images/img_sembako.jpg" alt="">
             <div class="container px-sm-3">
                 <div class="position-absolute text-block-transparant">
                     <h4 class="text-white font-weight-bold">Manfaat Ubi</h4>
-                    <!-- Kutipan artikel manfaat ubi -->
+                    <!-- Kutipan artikel terbaru -->
                     <p class="text-white text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,
                         officia officiis animi perspiciatis accusantium nemo accusamus quo fugit!
                         Quia amet molestiae eius, quae recusandae optio placeat. Perspiciatis,
@@ -108,11 +107,16 @@
                 </div>
             </div>
         </div>
+    <div class="container px-sm-3 mt-6">
+        <button class="btn btn-dark mb-3">
+                    Lihat Semua
+                    <i class='fas fa-chevron-right'></i>
+        </button>  
     </div>
 </section>
 
 <!-- Resep Terpopuler -->
-<section class="mt-5 container-fluid bg-secondary ">
+<section class="mt-2 container-fluid bg-secondary">
     <div class="pt-4 pb-5 container">
         <h2 class="text-center pt-1 pb-3 font-weight-bold text-white font-8" style="letter-spacing:0.2rem;">Resep Terpopuler</h2>
         <div class="row">

@@ -72,6 +72,15 @@ body, html {
   padding:20px 23px 10px
 }
 
+.text-block-transparant-right {
+  bottom: -3rem;
+  right: 4rem;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(16, 136, 0, 0.5); /* Black background with 0.5 opacity */
+  width: 40%;
+  padding:20px 23px 10px
+}
+
 hr.biru{
   border: 1px solid #49F4FF;
   width: 13%;
@@ -82,8 +91,16 @@ hr.biru{
   color:  #49F4FF;
 }
 
-.mt-20{
-  margin-top: 20vh;
+.mt-6{
+  margin-top: 4rem;
+}
+
+.index-1{
+  z-index: +1;
+}
+
+.r-100{
+  right: 100%;
 }
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
@@ -135,9 +152,6 @@ hr.biru{
         }
         .btn-hidden-2{
           display: none;
-        }
-        .position-text{
-
         }
 }
 
