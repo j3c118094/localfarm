@@ -9,7 +9,7 @@
 <section class="mt-5 px-sm-3 container">
     <div class="row">
         <div class="col-sm">
-            <h2 class="font-weight-bold">Tentang Kami</h2>
+            <h2 class="font-weight-bold font-8">Tentang Kami</h2>
             <!-- kutipan kalimat tentang kami -->
             <p class="pt-2 text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia fuga animi ad,
                 quisquam corrupti repellat sunt vero libero? Ullam aliquam eum sequi labore eaque
@@ -38,7 +38,7 @@
         </div>
         <div class="col-sm">
             <div class="px-sm-4 pt-3">
-                <h2 class="font-weight-bold text-white">Tujuan</h2>
+                <h2 class="font-weight-bold text-white font-8">Tujuan</h2>
                 <!-- kutipan kalimat Tujuan -->
                 <p class="pt-2 text-justify text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia fuga animi ad,
                     quisquam corrupti repellat sunt vero libero? Ullam aliquam eum sequi labore eaque
@@ -53,14 +53,72 @@
     </div>
 </section>
 
+<!-- Artikel Terbaru -->
+<section class="mt-5 px-0 container-fluid ">
+    <h2 class="container px-sm-3 font-weight-bold font-8">Artikel Terbaru</h2>
+    <div class="position-relative">
+        <div class="position-relative">
+            <img class=" img-fluid mh-img-50" src="assets/images/img_rotikopi.jpg" alt="">
+            <div class="container px-sm-3">
+                <div class="position-absolute text-block-transparant">
+                    <h4 class="text-white font-weight-bold">Manfaat Ubi</h4>
+                    <!-- Kutipan artikel manfaat ubi -->
+                    <p class="text-white text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,
+                        officia officiis animi perspiciatis accusantium nemo accusamus quo fugit!
+                        Quia amet molestiae eius, quae recusandae optio placeat. Perspiciatis,
+                        dicta. Voluptates, omnis.
+                    </p>
+                    <a href="#" class="text-blue-sea font-weight-bold">Selengkapnya
+                        <hr class="biru ml-0 mt-0">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="position-relative">
+            <img class="img-fluid mh-img-50" src="assets/images/img_rotikopi.jpg" alt="">
+            <div class="container px-sm-3">
+                <div class="position-absolute text-block-transparant">
+                    <h4 class="text-white font-weight-bold">Manfaat Ubi</h4>
+                    <!-- Kutipan artikel manfaat ubi -->
+                    <p class="text-white text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,
+                        officia officiis animi perspiciatis accusantium nemo accusamus quo fugit!
+                        Quia amet molestiae eius, quae recusandae optio placeat. Perspiciatis,
+                        dicta. Voluptates, omnis.
+                    </p>
+                    <a href="#" class="text-blue-sea font-weight-bold">Selengkapnya
+                        <hr class="biru ml-0 mt-0">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <img class=" img-fluid mh-img-50" src="assets/images/img_rotikopi.jpg" alt="">
+            <div class="container px-sm-3">
+                <div class="position-absolute text-block-transparant">
+                    <h4 class="text-white font-weight-bold">Manfaat Ubi</h4>
+                    <!-- Kutipan artikel manfaat ubi -->
+                    <p class="text-white text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,
+                        officia officiis animi perspiciatis accusantium nemo accusamus quo fugit!
+                        Quia amet molestiae eius, quae recusandae optio placeat. Perspiciatis,
+                        dicta. Voluptates, omnis.
+                    </p>
+                    <a href="#" class="text-blue-sea font-weight-bold">Selengkapnya
+                        <hr class="biru ml-0 mt-0">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Resep Terpopuler -->
-<section class="mt-5 container-fluid bg-secondary">
-    <h2 class="pt-3 font-weight-bold text-white">Resep Terpopuler</h2>
-    <div class="py-4 container">
+<section class="mt-5 container-fluid bg-secondary ">
+    <div class="pt-4 pb-5 container">
+        <h2 class="text-center pt-1 pb-3 font-weight-bold text-white font-8" style="letter-spacing:0.2rem;">Resep Terpopuler</h2>
         <div class="row">
             <!-- Gambar resep dan judul resep -->
-            <div class="col-sm">
-                <div class="card rounded-border" style="width: 15rem; height:19rem">
+            <div class="col-sm m-col-b">
+                <div class="mx-auto card rounded-border size-card">
                     <img class="card-img-top top-border-rounded" src="assets/images/img_roti.jpg" alt="Card image cap">
                     <div class="card-body">
                         <p class="card-text text-secondary">Penulis Resep</p>
@@ -68,8 +126,8 @@
                     </div>
                 </div>
             </div>
-            <div class="col-sm text-center">
-                <div class="card rounded-border" style="width: 15rem; height:19rem">
+            <div class="col-sm m-col-b">
+                <div class="mx-auto card rounded-border size-card">
                     <img class="card-img-top top-border-rounded" src="assets/images/img_roti.jpg" alt="Card image cap">
                     <div class="card-body">
                         <p class="card-text text-secondary">Penulis Resep</p>
@@ -78,7 +136,7 @@
                 </div>
             </div>
             <div class="col-sm">
-                <div class="card rounded-border" style="width: 15rem; height:19rem">
+                <div class="mx-auto card rounded-border size-card" >
                     <img class="card-img-top top-border-rounded" src="assets/images/img_roti.jpg" alt="Card image cap">
                     <div class="card-body">
                         <p class="card-text text-secondary">Penulis Resep</p>

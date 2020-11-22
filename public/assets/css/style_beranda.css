@@ -44,6 +44,47 @@ body, html {
  border-top-right-radius: 1rem;
 }
 
+.size-card{
+  width: 15rem;
+  height: 19rem;
+}
+
+.px-15{
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.sans-serif {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.mh-img-50{
+  height: 45vh;
+  object-fit: cover;
+  width: 100%;
+}
+
+.text-block-transparant {
+  bottom: -3rem;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  width: 40%;
+  padding:20px 23px 10px
+}
+
+hr.biru{
+  border: 1px solid #49F4FF;
+  width: 13%;
+
+}
+
+.text-blue-sea{
+  color:  #49F4FF;
+}
+
+.mt-20{
+  margin-top: 20vh;
+}
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 
@@ -59,6 +100,16 @@ body, html {
         .btn-hidden{
           display: none;
         }
+        .m-col-b{
+          margin-bottom: 1rem;
+        }
+        .size-card{
+          width: 12rem;
+          height: 16rem;
+        }
+        .font-8{
+          font-size: 8vw;
+        }
 
     }
 
@@ -71,6 +122,10 @@ body, html {
         .btn-hidden-2{
           display: none;
         }
+        .size-card{
+          width: 12rem;
+          height: 16rem;
+        }
     }
 
 /* Desktops and laptops ----------- */
@@ -80,6 +135,9 @@ body, html {
         }
         .btn-hidden-2{
           display: none;
+        }
+        .position-text{
+
         }
 }
 
