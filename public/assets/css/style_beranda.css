@@ -58,6 +58,10 @@ body, html {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.object-cover{
+  object-fit: cover;
+}
+
 .mh-img-50{
   height: 45vh;
   object-fit: cover;
@@ -102,6 +106,10 @@ hr.biru{
 .r-100{
   right: 100%;
 }
+
+.mt-5-custom{
+  margin-top: 3rem;
+}
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 
@@ -110,6 +118,9 @@ hr.biru{
         }
         h1{
             font-size: 3vw;
+        }
+        p{
+          font-size: 12px;
         }
         .tentang-img{
           width: 75%;
@@ -127,6 +138,16 @@ hr.biru{
         .font-8{
           font-size: 8vw;
         }
+        .text-block-transparant-right {
+          right: 1rem;
+          width: 80%;
+        }
+        .text-block-transparant {
+          width: 80%;
+        }
+        .mt-5-custom{
+          margin-top: 2rem;
+        }
 
     }
 
@@ -136,12 +157,22 @@ hr.biru{
         h1{
             font-size: 3.6vw;
         }
+        p{
+          font-size: 18px;
+        }
         .btn-hidden-2{
           display: none;
         }
         .size-card{
           width: 12rem;
           height: 16rem;
+        }
+        .text-block-transparant-right {
+          right: 2.5rem;
+          width: 60%;
+        }
+        .text-block-transparant {
+          width: 60%;
         }
     }
 

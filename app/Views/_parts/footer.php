@@ -1,4 +1,4 @@
-    <div class="mt-5 container-fluid w-100 py-4 bg-green">
+    <div class="container-fluid w-100 py-4 bg-green">
         <div class="text-center sticky-bottom text-white">Copyright &copy; Localfarm 2020. All Rights Reserved</dic>
     </div>    
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

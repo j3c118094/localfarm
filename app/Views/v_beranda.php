@@ -6,7 +6,7 @@
 </div>
 
 <!-- Tentang Kami -->
-<section class="mt-5 px-sm-3 container">
+<section class="mt-5-custom px-sm-3 container">
     <div class="row">
         <div class="col-sm">
             <h2 class="font-weight-bold font-8">Tentang Kami</h2>
@@ -31,10 +31,10 @@
 </section>
 
 <!-- Tujuan -->
-<section class="mt-5 container-fluid bg-green">
+<section class="mt-5-custom container-fluid bg-green">
     <div class="row">
         <div class="px-0 col-sm">
-                <img class=" img-fluid w-100 " src="assets/images/img_beras2.jpg" alt="">
+                <img class="object-cover img-fluid w-100 h-100" src="assets/images/img_beras2.jpg" alt="">
         </div>
         <div class="col-sm">
             <div class="px-sm-4 pt-3">
@@ -54,7 +54,7 @@
 </section>
 
 <!-- Artikel Terbaru -->
-<section class="mt-5 px-0 container-fluid ">
+<section class="mt-5-custom px-0 container-fluid ">
     <h2 class="container px-sm-3 font-weight-bold font-8">Artikel Terbaru</h2>
         <div class="position-relative">
             <img class="img-fluid mh-img-50" src="assets/images/img_rotikopi.jpg" alt="">
