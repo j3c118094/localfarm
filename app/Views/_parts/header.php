@@ -15,6 +15,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style_header.css">
     <link rel="stylesheet" href="assets/css/style_beranda.css">
+    <link rel="stylesheet" href="assets/css/style_daftar_artikel.css">
 
     <title>Localfarm</title>
   </head>
