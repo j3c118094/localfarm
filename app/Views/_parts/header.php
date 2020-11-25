@@ -23,7 +23,7 @@
     <nav class="navbar p-0 navbar-expand-sm navbar-light bg-green">
       <div class="container">
         <a class="" href="#">
-          <img class="img-fluid nav-img" src="assets/images/logo localfarm v3.png" alt="">
+          <img class="img-fluid nav-img" src="assets/images/logo localfarm v4.png" alt="">
         </a>
         <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
