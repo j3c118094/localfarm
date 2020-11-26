@@ -22,17 +22,18 @@
   <body>
 
     <nav class="navbar p-0 navbar-expand-sm navbar-light bg-green">
-      <div class="container">
+      <div class="container position-relative mx-header">
         <a class="" href="#">
-          <img class="img-fluid nav-img" src="assets/images/logo localfarm v4.png" alt="">
+          <img class="img-fluid nav-img" id="logo" src="assets/images/logo localfarm v4.png" alt="">
         </a>
+        
         <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ml-auto ">
-            <li class="nav-item ">
+          <ul class="navbar-nav">
+            <li class="nav-item">
               <a class="nav-link text-white" href="#">Beranda <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
@@ -51,3 +52,34 @@
         </div>
       </div>
     </nav>
+
+    <!-- <nav class="navbar py-0 navbar-expand-sm bg-green fixed-top main-menu">
+      <div class="container">
+        <a href="#" class="order-md-first order-0">
+            <img class="img-fluid nav-img" src="assets/images/logo localfarm v4.png" alt="">
+        </a>
+        <button class="navbar-toggler custom-toggler mx-header" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="mainNav">
+          <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Beranda <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Artikel</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Resep</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Tentang</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Kontak</a>
+              </li>
+          </ul>
+        </div>
+      </div>
+    </nav> -->

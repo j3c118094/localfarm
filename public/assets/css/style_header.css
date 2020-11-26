@@ -14,8 +14,23 @@
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     .nav-img{
-      width: 100%;
-      
+      width: 25%;  
+    }
+    .navbar-toggler {
+      right: 0;
+      position: absolute;
+    }
+    .mx-header{
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+    .navbar-toggler {
+      padding: 0.25rem 0.75rem;
+      font-size: 0.8rem;
+      line-height: 1;
+      background-color: transparent;
+      border: 1px solid transparent;
+      border-radius: 0.25rem;
     }
     }
 

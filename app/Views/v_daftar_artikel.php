@@ -1,6 +1,6 @@
 <!-- Judul dan Pencarian -->
 <section class="mt-5-custom container">
-    <h1 class="text-secondary font-weight-bold">Daftar Artikel</h1>
+    <h1 class="text-secondary font-weight-bold artikel-txt">Daftar Artikel</h1>
     <div class="row">
         <div class="col-sm">
             <h4 class="text-secondary">Semoga Bermanfaat</h4>
@@ -23,8 +23,8 @@
 <!-- Daftar Artikel -->
 <section class="container mb-5">
     <div class="row">
-        <div class="col-sm">
-            <div class="mx-auto card" style="width: 18rem;">
+        <div class="col-sm m-col-b m-col-t">
+            <div class="mx-auto card size-card-artikel">
                 <img class="card-img-top" src="assets/images/img_rotikopi.jpg" alt="Card image cap">
                 <div class="card-body-custom">
                     <div class="bg-secondary p-card">
@@ -36,14 +36,14 @@
                             10/11/2020
                         </span>
                         <hr class="white ml-0 mt-0">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="card-text text-justify">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <a href="#" class="text-dark font-weight-bold">Selengkapnya</a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-sm">
-            <div class="mx-auto card" style="width: 18rem;">
+        <div class="col-sm m-col-b">
+            <div class="mx-auto card size-card-artikel">
                 <img class="card-img-top" src="assets/images/img_rotikopi.jpg" alt="Card image cap">
                 <div class="card-body-custom">
                     <div class="bg-secondary p-card">
@@ -55,14 +55,14 @@
                             10/11/2020
                         </span>
                         <hr class="white ml-0 mt-0">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="card-text text-justify">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <a href="#" class="text-dark font-weight-bold">Selengkapnya</a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="col-sm">
-            <div class="mx-auto card" style="width: 18rem;">
+            <div class="mx-auto card size-card-artikel">
                 <img class="card-img-top" src="assets/images/img_rotikopi.jpg" alt="Card image cap">
                 <div class="card-body-custom">
                     <div class="bg-secondary p-card">
@@ -74,7 +74,7 @@
                             10/11/2020
                         </span>
                         <hr class="white ml-0 mt-0">
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <p class="card-text text-justify">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                         <a href="#" class="text-dark font-weight-bold">Selengkapnya</a>
                     </div>
                 </div>

@@ -71,17 +71,37 @@ hr.white{
 }
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-
+      .size-card-artikel{
+        width: 15.5rem;
+      }
+      .m-col-t{
+        margin-top: 2rem;
+      }
+      .wrap{
+        width: 90%;
+        left: 50%;
+        margin-top: 1vh;
+      }
+      hr.green{
+        width: 40%;
+      }
+      h1.artikel-txt{
+        font-size: 1.8em;
+      }
     }
 
 /* iPads (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-
+      .size-card-artikel{
+        width: 13rem;
+      }
     }
 
 /* Desktops and laptops ----------- */
 @media only screen  and (min-width : 1224px) {
-
+      .size-card-artikel{
+        width: 18rem;
+      }
     }
 
 /* Large screens ----------- */
