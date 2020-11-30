@@ -11,11 +11,14 @@
 
     <!-- Font Awesome -->
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style_header.css">
     <link rel="stylesheet" href="assets/css/style_beranda.css">
     <link rel="stylesheet" href="assets/css/style_daftar_artikel.css">
+    <link rel="stylesheet" href="assets/css/style_artikel.css">
+    <link rel="stylesheet" href="assets/css/style_kuesioner.css">
 
     <title>Localfarm</title>
   </head>
