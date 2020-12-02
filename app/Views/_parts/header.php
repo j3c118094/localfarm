@@ -39,8 +39,14 @@
             <li class="nav-item">
               <a class="nav-link text-white" href="#">Beranda <span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="#">Artikel</a>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Artikel
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Daftar Artikel</a>
+                <a class="dropdown-item" href="#">Kuesioner</a>
+              </div>
             </li>
             <li class="nav-item">
               <a class="nav-link text-white" href="#">Resep</a>

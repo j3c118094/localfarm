@@ -52,13 +52,13 @@
             <label for="Tidak Membantu">Tidak Membantu</label><br>
         </div>
         <!-- NO 5 -->
-        <div class="mb-3">
+        <div class="mb-2">
             <h4 for="" class="font-weight-bold text-justify font-kuis">
                 5. Kritik dan saran mengenai diversifikasi pangan?
             </h4>
             <textarea name="no_2" class="text-input-area" placeholder="Tuliskan kritik dan saran Anda disini..."></textarea>
         </div>
 
-        <button class="btn btn-info">Kirim</button>
+        <button class="btn btn-info px-4">Kirim</button>
     </form>
 </section>
