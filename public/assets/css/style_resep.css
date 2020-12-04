@@ -1,0 +1,67 @@
+
+.card{
+    margin-top: 50px;
+    border: none;
+}
+
+
+hr.green{
+    border: 1px solid green;
+    width: 13%;
+}
+
+hr.white{
+    border: 1px solid white;
+    width: 13%;
+}
+
+
+
+
+.card-body-custom {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+  }
+
+.p-card{
+    padding: 0.5rem 1rem 0.05rem;
+}
+.p-card a{
+    float: right;
+}
+
+.bg-green-light{
+    background-color: #40CE68;
+}
+.bg-brown-light{
+    background-color: #CBCE40;
+}
+.bg-blue-light{
+    background-color: #40CE93;
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+    }
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+    }
+
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+
+    }
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+
+    }
+
+@media (min-width: 992px){
+    .daftar-resep img{
+        width: 313px;
+    }
+}

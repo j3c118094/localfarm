@@ -1,0 +1,56 @@
+.rounded-border-full{
+    border-radius: 9999px;
+  }
+
+.text-green{
+    color:green;
+}
+
+.text-input-area{
+    width: 70%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+}
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .font-kuis{
+        font-size: 18px;
+    }
+    .text-input-area{
+        width: 100%;
+        height: 140px;
+        font-size: 14px;
+    }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .font-kuis{
+        font-size: 20px;
+    }
+    .text-input-area{
+        width: 100%;
+        height: 145px;
+        font-size: 15px;
+    }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+    label{
+        font-size: large;
+    }
+}
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+
+}

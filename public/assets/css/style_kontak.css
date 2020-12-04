@@ -1,0 +1,109 @@
+
+/* judul */
+.info-panel{
+    text-align: center;
+}
+.info-panel h1{
+    margin-top: 100px;
+    font-weight: bold;
+}
+
+/* kontak */
+.kontak{
+    margin-top: 100px;
+}
+.kontak h4{
+    color: black;
+    font-weight: bold;
+}
+.kontak figure img{
+    width: 80px;
+}
+.kontak figure svg{
+    position: absolute;
+    z-index: -1;
+}
+.kontak figure figcaption img{
+    width: 20px;
+}
+
+/* pesan */
+.pesan{
+    align-content: center;
+}
+.pesan .btn-kirim{
+    margin-top: 30px;
+    background-color: #009277;
+    color: white;
+    width: 50%;
+}
+.form-control, .custom-select {
+    border: none;
+    font-size: 16px;
+    height: 45px;
+    padding-left: 0;
+    padding-right: 0;
+    background: transparent;
+    border-bottom: 1px solid #43434d;
+    border-radius: 0; 
+    margin-top: 50px;
+}
+.form-control:active, .form-control:focus, .custom-select:active, .custom-select:focus {
+    border-color: #ff2e63;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: transparent; 
+}
+    
+
+/* lokasi */
+.lokasi{
+    margin-top: 50px;
+}
+/* sosial media */
+.sosial-media{
+    margin-top: 50px;
+}
+.sosial-media img{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.instagram img{
+    width: 90px;;
+}
+.facebook img{
+    margin-top: 10px;
+    width: 70px;
+}
+.twitter img{
+    margin-top: 30px;
+    width: 70px;
+}
+.linkedin img{
+    margin-top: 30px;
+    width: 70px;
+}
+
+@media (min-width: 992px) { 
+    .input-field{
+        width: 500px;
+    }
+
+    .kontak figure img{
+        width: 100px;
+    }
+
+    .formkontak img{
+        width:100%;
+    }
+    .twitter img{
+        margin-top: 10px;
+        width: 70px;
+    }
+    .linkedin img{
+        margin-top: 10px;
+        width: 70px;
+    }
+    
+
+ }

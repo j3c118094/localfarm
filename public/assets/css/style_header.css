@@ -1,0 +1,57 @@
+.bg-green{
+    background-color: green;
+}
+
+.custom-toggler.navbar-toggler {
+    border-color: rgb(255, 255, 255);
+  }
+
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .nav-img{
+      width: 90px;  
+    }
+    .navbar-toggler {
+      right: 0;
+      position: absolute;
+    }
+    .mx-header{
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+    .navbar-toggler {
+      padding: 0.25rem 0.75rem;
+      font-size: 0.8rem;
+      line-height: 1;
+      background-color: transparent;
+      border: 1px solid transparent;
+      border-radius: 0.25rem;
+    }
+    }
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+      .nav-img{
+        width: 140px;
+        margin-left: 3rem;
+
+      }
+    }
+
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+        .nav-img{
+        width: 160px;
+        margin-left: 4rem;
+      }
+    }
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+
+    }

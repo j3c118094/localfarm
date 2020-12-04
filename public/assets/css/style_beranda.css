@@ -1,0 +1,194 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/bg_header.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+
+.hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    letter-spacing: 0.1rem;
+  }
+
+.img-shadow{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.rounded-border{
+  border-radius: 1rem;
+}
+
+.mh-80{
+  max-width: 80%;
+}
+
+.min-w-100{
+  min-width: 100%;
+}
+
+.top-border-rounded{
+ border-top-left-radius: 1rem;
+ border-top-right-radius: 1rem;
+}
+
+.size-card{
+  width: 15rem;
+  height: 19rem;
+}
+
+.px-15{
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.sans-serif {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.object-cover{
+  object-fit: cover;
+}
+
+.mh-img-50{
+  height: 45vh;
+  object-fit: cover;
+  width: 100%;
+}
+
+.text-block-transparant {
+  bottom: -3rem;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  width: 40%;
+  padding:20px 23px 10px
+}
+
+.text-block-transparant-right {
+  bottom: -3rem;
+  right: 4rem;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(16, 136, 0, 0.5); /* Black background with 0.5 opacity */
+  width: 40%;
+  padding:20px 23px 10px
+}
+
+hr.biru{
+  border: 1px solid #49F4FF;
+  width: 13%;
+
+}
+
+.text-blue-sea{
+  color:  #49F4FF;
+}
+
+.mt-6{
+  margin-top: 4rem;
+}
+
+.index-1{
+  z-index: +1;
+}
+
+.r-100{
+  right: 100%;
+}
+
+.mt-5-custom{
+  margin-top: 3rem;
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+        .hero-image {
+            height: 30%;
+        }
+        h1.header-text{
+            font-size: 3vw;
+        }
+        p{
+          font-size: 12px;
+        }
+        .tentang-img{
+          width: 75%;
+        }
+        .btn-hidden{
+          display: none;
+        }
+        .m-col-b{
+          margin-bottom: 1rem;
+        }
+        .size-card{
+          width: 12rem;
+          height: 16rem;
+        }
+        .font-8{
+          font-size: 8vw;
+        }
+        .text-block-transparant-right {
+          right: 1rem;
+          width: 80%;
+        }
+        .text-block-transparant {
+          width: 80%;
+        }
+        .mt-5-custom{
+          margin-top: 2rem;
+        }
+
+    }
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+        h1{
+            font-size: 3.6vw;
+        }
+        p{
+          font-size: 18px;
+        }
+        .btn-hidden-2{
+          display: none;
+        }
+        .size-card{
+          width: 12rem;
+          height: 16rem;
+        }
+        .text-block-transparant-right {
+          right: 2.5rem;
+          width: 60%;
+        }
+        .text-block-transparant {
+          width: 60%;
+        }
+    }
+
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+        .tentang-img{
+          width: 75%;
+        }
+        .btn-hidden-2{
+          display: none;
+        }
+}
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+        .btn-hidden-2{
+          display: none;
+        }
+}
