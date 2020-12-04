@@ -19,7 +19,9 @@
     <link rel="stylesheet" href="assets/css/style_daftar_artikel.css">
     <link rel="stylesheet" href="assets/css/style_artikel.css">
     <link rel="stylesheet" href="assets/css/style_kuesioner.css">
-
+    <link rel="stylesheet" href="assets/css/style_kontak.css">
+    <link rel="stylesheet" href="assets/css/style_resep.css">
+    <link rel="stylesheet" href="assets/css/style_tentang.css">
     <title>Localfarm</title>
   </head>
   <body>
@@ -37,25 +39,25 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link text-white" href="#">Beranda <span class="sr-only">(current)</span></a>
+              <a class="nav-link text-white" href="<?php echo site_url('Beranda') ?>">Beranda <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Artikel
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="#">Daftar Artikel</a>
-                <a class="dropdown-item" href="#">Kuesioner</a>
+                <a class="dropdown-item" href="<?php echo site_url('Artikel') ?>">Daftar Artikel</a>
+                <a class="dropdown-item" href="<?php echo site_url('Kuesioner') ?>">Kuesioner</a>
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="#">Resep</a>
+              <a class="nav-link text-white" href="<?php echo site_url('Resep') ?>">Resep</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="#">Tentang</a>
+              <a class="nav-link text-white" href="<?php echo site_url('Tentang') ?>">Tentang</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="#">Kontak</a>
+              <a class="nav-link text-white" href="<?php echo site_url('Kontak') ?>">Kontak</a>
             </li>
           </ul>
         </div>
