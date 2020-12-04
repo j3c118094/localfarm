@@ -1,0 +1,71 @@
+
+/* judul */
+.info-panel{
+    text-align: center;
+}
+.info-panel h1{
+    margin-top: 100px;
+    font-weight: bold;
+}
+
+/* perusahanan */
+.tentang1{
+    margin-top: 100px;
+}
+.perusahaan img{
+    width: 70%;
+    float: left;
+    box-shadow: 10px 15px rgba(155, 160, 160, 0.6);
+}
+.perusahaan .bordergambar{
+    border-radius: 25px;
+}
+/* foto */
+.foto img{
+    width: 70%;
+    border-radius: 25px;
+}
+.foto .bordergambar{
+    border-radius: 25px;
+}
+.foto .baris1{
+    margin-top: 70px;
+}
+.foto .baris2{
+    margin-top: 50px;
+}
+.foto .baris3{
+    margin-top: 50px;
+}
+.foto .card{
+    text-align: center;
+    align-items: center;
+    border: none;
+}
+
+/* tujuan */
+.tujuan{
+    margin-bottom: 50px;
+}
+.tujuan img{
+    width: 70%;
+    box-shadow: 10px 15px rgba(155, 160, 160, 0.6);
+}
+.tujuan h1{
+    margin-top: 50px;
+}
+.tujuan-des{
+    float: right;
+}
+.tujuan .bordergambar{
+    border-radius: 25px;
+}
+
+@media (min-width: 992px) { 
+    .tujuan h1{
+        margin-top: 0px;
+    }
+    .perusahaan img{
+        float: right;
+    }
+}
