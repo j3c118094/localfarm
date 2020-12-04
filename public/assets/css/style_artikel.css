@@ -1,0 +1,53 @@
+
+.icon-arrow{
+    font-size: 48px;
+    left: 25px;
+    top: 0;
+}
+.white-color{
+    color: white;
+}
+
+a:hover{
+    color: green;
+}
+
+.min-5-mt{
+    margin-top: -15vh;
+}
+
+.card-shadow{
+    /* box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.4), 0 8px 22px 0 rgba(0, 0, 0, 0.24); */
+    box-shadow: 0px -10px 15px 0px rgba(0, 0, 0, 0.4), 0px -10px 15px 0px rgba(0, 0, 0, 0.24);
+  }
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    .min-5-mt{
+        margin-top: -4vh;
+    }
+    .icon-arrow{
+        font-size: 23px;
+    }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    .min-5-mt{
+        margin-top: -11vh;
+    }
+    .icon-arrow{
+        font-size: 35px;
+    }
+}
+
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+    .min-5-mt{
+        margin-top: -13vh;
+    }
+}
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+
+}

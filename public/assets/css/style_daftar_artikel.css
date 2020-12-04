@@ -1,0 +1,110 @@
+hr.green{
+    border: 1px solid green;
+    width: 13%;
+}
+
+hr.white{
+    border: 1px solid white;
+    width: 20%;
+}
+
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
+  }
+  
+  .searchTerm {
+    width: 100%;
+    border: 3px solid green;
+    border-right: none;
+    padding: 5px;
+    height: 100%;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+  }
+  
+  .searchTerm:focus{
+    color: #00B4CC;
+  }
+  
+  .searchButton {
+    width: 50px;
+    height: 100%;
+    border: 1px solid green;
+    background: green;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  /*Resize the wrap to see the search bar change!*/
+  .wrap{
+    width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+  }
+
+.card-body-custom {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+  }
+
+.p-card{
+    padding: 0.5rem 1rem 0.05rem;
+}
+
+.bg-green-light{
+    background-color: #40CE68;
+}
+.bg-brown-light{
+    background-color: #CBCE40;
+}
+.bg-blue-light{
+    background-color: #40CE93;
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+      .size-card-artikel{
+        width: 15.5rem;
+      }
+      .m-col-t{
+        margin-top: 2rem;
+      }
+      .wrap{
+        width: 90%;
+        left: 50%;
+        margin-top: 1vh;
+      }
+      hr.green{
+        width: 40%;
+      }
+      h1.artikel-txt{
+        font-size: 1.8em;
+      }
+    }
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+      .size-card-artikel{
+        width: 13rem;
+      }
+    }
+
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+      .size-card-artikel{
+        width: 18rem;
+      }
+    }
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+
+    }
