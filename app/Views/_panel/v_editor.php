@@ -47,13 +47,13 @@
                 <div class="col text-center mx-auto">
                     <div class="row h-100">
                         <div class="col card mx-1 my-3">
-                            <div class="my-auto" style="font-size: 40px;">
+                            <div class="my-auto">
                                 <div class="row">
                                     <div class="col">
-                                        420
-                                    </div>
-                                    <div class="col">
-                                        <a href="<?php echo site_url('Panel/editor') ?>" class="btn btn-green">Tambah resep baru!</a>
+                                        <div class="form-group text-left" style="font-size: 14px">
+                                            <label for="usr" >Judul</label>
+                                            <input type="text" class="form-control" style="font-size: 22px;" id="usr" required>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -67,42 +67,17 @@
         </section>
 
         <section style="height: auto;">
-            <div class="row " style="height: 20vh;" >
+            <div class="row " style="height: auto" >
                 <div class="col-3 d-none d-lg-block">
                     
                 </div>
                 <div class="col text-center mx-auto">
                     <div class="row h-100">
-                        <div class="col card mx-1 mb-3">
-                            <div class="my-auto" style="font-size: 40px;">
-                                <div class="row">
-                                    <div class="col">
-                                        420
-                                    </div>
-                                    <div class="col">
-                                        <a href="<?php echo site_url('Panel/editor') ?>" class="btn btn-green">Tambah Artikel Baru</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3 d-none d-lg-block">
-                    
-                </div>
-            </div>
-        </section>
-
-        <section style="height: auto;">
-            <div class="row " style="height: 100vh;" >
-                <div class="col-3 d-none d-lg-block">
-                    
-                </div>
-                <div class="col text-center mx-auto">
-                    <div class="row h-100">
-                        <div class="col card mx-1 mb-3">
-                            <div class="my-auto" style="font-size: 40px;">
-                                LIST POSTS
+                        <div class="col card mx-1 mb-3 px-0">
+                            <div class="" style="font-size: 40px;">
+                                <textarea name="content">
+                                        
+                                </textarea>
                             </div>
                         </div>
                     </div>
@@ -120,5 +95,11 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="/assets/ckeditor/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace('content', {
+            height: "63vh"
+        });
+    </script>
   </body>
 </html>

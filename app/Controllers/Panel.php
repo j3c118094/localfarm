@@ -42,6 +42,10 @@ class Panel extends BaseController
 	public function post(){
 		return view('_panel/v_post.php');
 	}
+
+	public function editor(){
+		return view('_panel/v_editor.php');
+	}
 	//--------------------------------------------------------------------
 
 }
