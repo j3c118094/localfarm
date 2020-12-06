@@ -27,9 +27,9 @@
                     <div class="btn btn-group p-0" style="border: thin solid white;">
                         <a class="btn panelbtnp " href="<?php echo site_url('Panel/dash') ?>" style="width: 45%;">DASH</a>
 
-                        <a class="btn panelbtna " href="<?php echo site_url('Panel/form') ?>" style="width: 45%;">FORMS</a>
+                        <a class="btn panelbtnp " href="<?php echo site_url('Panel/form') ?>" style="width: 45%;">FORMS</a>
 
-                        <a class="btn panelbtnp " href="<?php echo site_url('Panel/post') ?>" style="width: 45%;">POSTS</a>
+                        <a class="btn panelbtna " href="<?php echo site_url('Panel/post') ?>" style="width: 45%;">POSTS</a>
                     </div>
                 </div>
                 <div class="col">
@@ -40,7 +40,7 @@
 
 
         <section style="height: auto;">
-            <div class="row " style="height: 43vh;" >
+            <div class="row " style="height: 20vh;" >
                 <div class="col-3 d-none d-lg-block">
                     
                 </div>
@@ -48,7 +48,27 @@
                     <div class="row h-100">
                         <div class="col card mx-1 my-3">
                             <div class="my-auto" style="font-size: 40px;">
-                                CHART KUESIONER
+                                PANEL RESEP
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 d-none d-lg-block">
+                    
+                </div>
+            </div>
+        </section>
+
+        <section style="height: auto;">
+            <div class="row " style="height: 20vh;" >
+                <div class="col-3 d-none d-lg-block">
+                    
+                </div>
+                <div class="col text-center mx-auto">
+                    <div class="row h-100">
+                        <div class="col card mx-1 mb-3">
+                            <div class="my-auto" style="font-size: 40px;">
+                                PANEL ARTIKEL
                             </div>
                         </div>
                     </div>
@@ -68,7 +88,7 @@
                     <div class="row h-100">
                         <div class="col card mx-1 mb-3">
                             <div class="my-auto" style="font-size: 40px;">
-                                LIST RESPONSE KUESIONER
+                                LIST POSTS
                             </div>
                         </div>
                     </div>

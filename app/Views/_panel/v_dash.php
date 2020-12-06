@@ -16,14 +16,15 @@
     <title>Document</title>
 </head>
 <body class="bg-abu">
+
     <div class="container-fluid">
 
-        <section style="height: 7vh;">
+        <section class="sticky-top" style="height: 7vh;">
             <div class="row bg-green h-100">
-                <div class="col">
+                <div class="col d-none d-lg-block">
                     
                 </div>
-                <div class="col text-center">
+                <div class="col text-center ">
                     <div class="btn btn-group p-0" style="border: thin solid white;">
                         <a class="btn panelbtna " href="<?php echo site_url('Panel/dash') ?>" style="width: 45%;">DASH</a>
 
@@ -32,7 +33,7 @@
                         <a class="btn panelbtnp " href="<?php echo site_url('Panel/post') ?>" style="width: 45%;">POSTS</a>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col d-none d-lg-block">
                     
                 </div>
             </div>
@@ -41,10 +42,10 @@
 
         <section style="height: auto;">
             <div class="row " style="height: 43vh;" >
-                <div class="col">
+                <div class="col-3 d-none d-lg-block">
                     
                 </div>
-                <div class="col-6 text-center">
+                <div class="col text-center mx-auto ">
                     <div class="row h-100">
                         <div class="col-6 card mx-1 my-3">
                             <div class="my-auto" style="font-size: 40px;">
@@ -59,7 +60,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col-3 d-none d-lg-block">
                     
                 </div>
             </div>
@@ -67,19 +68,19 @@
 
         <section style="height: auto;">
             <div class="row " style="height: 100vh;" >
-                <div class="col">
+                <div class="col-3 d-none d-lg-block">
                     
                 </div>
-                <div class="col-6 text-center">
+                <div class="col text-center mx-auto">
                     <div class="row h-100">
-                        <div class="col card mx-1">
+                        <div class="col card mx-1 mb-3">
                             <div class="my-auto" style="font-size: 40px;">
                                 LIST
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col">
+                <div class="col-3 d-none d-lg-block">
                     
                 </div>
             </div>

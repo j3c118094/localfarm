@@ -34,6 +34,14 @@ class Panel extends BaseController
 	public function dash(){
 		return view('_panel/v_dash.php');
 	}
+
+	public function form(){
+		return view('_panel/v_form.php');
+	}
+
+	public function post(){
+		return view('_panel/v_post.php');
+	}
 	//--------------------------------------------------------------------
 
 }
