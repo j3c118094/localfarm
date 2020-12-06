@@ -30,7 +30,7 @@
                             <form class="text-left mb-4" action="" method="post">
                             <div class=" text-center">
                                 <img src="/assets/images/localfarm-logo.png" class="logo"></img>
-                                <div class="m-0 p-0 ">Administrator Registration</div>
+                                <div class="m-0 p-0 ">Administrator Panel Login</div>
                             </div>
                                 <!-- Material input -->
                                 <div class="form-group">
@@ -40,6 +40,9 @@
 
                                    <label for="usr">Password</label>
                                    <input type="text" class="form-control" id="usr" required>
+                                   <label for="usr">Konfirmasi Password</label>
+                                   <input type="text" class="form-control" id="usr" required>
+                                  
                                    
                                 </div>
                                 
@@ -48,7 +51,7 @@
                             </form>
 
                             <div class="text-center font-weight-light mb-2">
-                                Jika belum punya akun <a href="<?php echo site_url('Panel/signUp') ?>">daftar di sini</a>
+                                Jika belum punya akun <a href="<?php echo site_url('Panel/signIn') ?>">daftar di sini</a>
                             </div>
                         </div>
                     </div>

@@ -14,22 +14,26 @@ class Panel extends BaseController
 	public function index()
 	{
 		// DEBUG VARIABLE
-		$session = $this->checkSession(0);
+		$session = $this->checkSession(1);
 
 		if (!$session){
-			return view('_panel/v_signin');
+			return $this->signIn();
 		} else {
-			echo view('_panel/header.php');
-			echo view('_panel/v_dash.php');
-			echo view('_panel/footer.php');
-			return 0;
+			return $this->dash();
 		}
 	}
 
 	public function signUp(){
-
+		return view('_panel/v_signup.php');
 	}
 
+	public function signIn(){
+		return view('_panel/v_signin.php');
+	}
+
+	public function dash(){
+		return view('_panel/v_dash.php');
+	}
 	//--------------------------------------------------------------------
 
 }
