@@ -150,7 +150,11 @@
                                                     </form>
                                                         &nbsp;
                                                         &nbsp;
-                                                    <a href=""><?php echo $row->judul; ?></a></td>
+                                                    <form id="edit-<?php echo $row->id ?>" class="d-inline" action="<?php echo site_url('Panel/editor'); ?>" method="POST">
+                                                        <input type="hidden" id="id" name="id" value="<?php echo $row->id ?>">
+                                                        <input type="hidden" id="tipe" name="tipe" value="resep">
+                                                        <a href="#" onclick="document.getElementById('edit-<?php echo $row->id ?>').submit();"><?php echo $row->judul; ?></a>
+                                                    </form></td>
                                                 <td><?php echo $row->created_at; ?>  
 
                                                 </td>
@@ -190,7 +194,7 @@
 
                                             <tr>
                                                 <td>
-                                                <form class="d-inline" action="<?php echo site_url('Panel/delete'); ?>" method="POST">
+                                                    <form class="d-inline" action="<?php echo site_url('Panel/delete'); ?>" method="POST">
                                                         <input type="hidden" id="id" name="id" value="<?php echo $row->id ?>">
                                                         <input type="hidden" id="tipe" name="tipe" value="artikel">
                                                         <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah yakin data akan dihapus?');">
@@ -199,7 +203,13 @@
                                                     </form>
                                                         &nbsp;
                                                         &nbsp;
-                                                    <a href=""><?php echo $row->judul; ?></a></td>
+
+                                                    <form id="edit-<?php echo $row->id ?>" class="d-inline" action="<?php echo site_url('Panel/editor'); ?>" method="POST">
+                                                        <input type="hidden" id="id" name="id" value="<?php echo $row->id ?>">
+                                                        <input type="hidden" id="tipe" name="tipe" value="artikel">
+                                                        <a href="#" onclick="document.getElementById('edit-<?php echo $row->id ?>').submit();"><?php echo $row->judul; ?></a>
+                                                    </form>
+                                                </td>
                                                 <td><?php echo $row->created_at; ?></td>
                                             </tr>
 

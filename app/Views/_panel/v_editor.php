@@ -53,23 +53,24 @@
                                     <div class="col">
                                         <div class="form-group text-left" style="font-size: 14px">
                                             <label for="usr" >Judul</label>
-                                            <input id="judul" name="judul" type="text" class="form-control" style="font-size: 22px;" required>
+                                            <input id="judul" name="judul" type="text" class="form-control" style="font-size: 22px;" value="<?php if (!empty($id)) echo $data->judul; ?>" required>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row h-100">
                                     <div class="col">
                                         <div class="form-group text-left" style="font-size: 14px">
-                                            <label for="usr" >thumbnail</label>
-                                            <input id="thumb" name="thumb" type="file" class="form-control" required>
+                                            <label for="usr" >Thumbnail <?php if (!empty($id)) echo '<a href="'.site_url('/assets/images/').$data->thumbnail.'">sebelumnya</a>'; ?></label>
+                                            <input id="thumb" name="thumb" type="file" class="form-control" >
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div class="form-group text-center my-4" style="font-size: 14px">
                                             <div class="btn-group ">
                                                 <a href="<?php echo site_url('Panel/post') ?>" class="btn btn-warning">Batal</a>
+                                                <input type="hidden" id="id" name="id" value="<?php if (!empty($id)) echo $id; ?>">
                                                 <input type="hidden" id="tipe" name="tipe" value="<?php echo $tipe ?>">
-                                                <button type="submit" class="btn btn-green">Publish <?php echo ucwords($tipe) ?></button>
+                                                <button type="submit" class="btn btn-green">Save <?php echo ucwords($tipe) ?></button>
                                             </div>
                                         </div>
                                     </div>
@@ -94,7 +95,7 @@
                         <div class="col card mx-1 mb-3 px-0">
                             <div class="" style="font-size: 40px;">
                                 <textarea id="konten" name="konten" >
-                                        
+                                        <?php if (!empty($id)) echo $data->konten; ?>
                                 </textarea>
                             </div>
                         </div>

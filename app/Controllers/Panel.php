@@ -25,7 +25,7 @@ class Panel extends BaseController
 	public function index()
 	{
 		// DEBUG VARIABLE
-		$session = $this->checkSession(1);
+		$session = $this->checkSession(0);
 
 		if (!$session){
 			return $this->signIn();
@@ -63,14 +63,20 @@ class Panel extends BaseController
 		$type = $this->request->getPost('tipe');
 
 		if ($type == 'resep'){
-			$data['dataResep'] = $this->resepModel->find($id);
+			$data = [
+				'id' => $this->request->getPost('id'),
+				'tipe' => $this->request->getPost('tipe'),
+				'data' => $this->resepModel->find($id),
+			];
 		} else {
-			$data['dataArtikel'] = $this->artikelModel->find($id);
+			$data = [
+				'id' => $this->request->getPost('id'),
+				'tipe' => $this->request->getPost('tipe'),
+				'data' => $this->artikelModel->find($id),
+			];
 		}
-		$data = [
-            'id' => $this->request->getPost('id'),
-            'tipe' => $this->request->getPost('tipe'),
-    	];
+		
+
 		
 		return view('_panel/v_editor.php', $data);
 	}
@@ -80,7 +86,7 @@ class Panel extends BaseController
 
         $id = $this->request->getPost('id');
 		$type = $this->request->getPost('tipe');
-
+		$newName = "default.jpg";
 		if($imagefile = $this->request->getFiles())
 		{
 			if($img = $imagefile['thumb'])
@@ -95,7 +101,7 @@ class Panel extends BaseController
 
 					// You can continue here to write a code to save the name to database
 					// db_connect() or model format
-					echo $newName;
+			
 
 				}
 			}
