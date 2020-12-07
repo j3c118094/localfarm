@@ -69,15 +69,38 @@ class Panel extends BaseController
 	//--------------------------------------------------------------------
 
 	public function save() {
+
+        $id = $this->request->getPost('id');
+		$type = $this->request->getPost('tipe');
+
+		if($imagefile = $this->request->getFiles())
+		{
+			if($img = $imagefile['thumb'])
+			{
+				if ($img->isValid() && ! $img->hasMoved())
+				{
+					$filename= $_FILES["thumb"]["name"];
+					$ext = pathinfo($filename,PATHINFO_EXTENSION);
+					
+					$newName = $type."-".date('Y-m-d').".".$ext; //This is if you want to change the file name to encrypted name
+					$img->move(ROOTPATH.'public/assets/uploads/', $newName);
+
+					// You can continue here to write a code to save the name to database
+					// db_connect() or model format
+					echo $newName;
+
+				}
+			}
+		}
+
         $data = [
             'id' => $this->request->getPost('id'),
             'judul' => $this->request->getPost('judul'),
-            'thumb' => $this->request->getPost('thumb'),
-            'konten' => $this->request->getPost('konten')
+            'thumbnail' => $newName,
+			'konten' => $this->request->getPost('konten'),
+			'created_at' => date('Y-m-d'),
         ];
 
-        $id = $this->request->getPost('id');
-		$type = $this->request->getPost('type');
 		if (empty($id)) { //Insert
 			
 			if ($type == 'resep'){
@@ -85,12 +108,6 @@ class Panel extends BaseController
 			} else {
 				$response = $this->artikelModel->insert($data);
 			}
-
-            if ($response) {
-                $this->session->setFlashdata('response', ['status' => $response, 'message' => 'Data berhasil disimpan.']);
-            } else {
-                $this->session->setFlashdata('response', ['status' => $response, 'message' => 'Data gagal disimpan.']);
-            }
         } else { // Update
 			$where = ['id' => $id];
 			
@@ -108,7 +125,7 @@ class Panel extends BaseController
             }
         }
 
-        return redirect()->to(site_url('Panel/post'));
+        //return redirect()->to(site_url('Panel/post'));
     }
 
 }

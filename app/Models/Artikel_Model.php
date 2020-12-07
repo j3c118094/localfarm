@@ -3,7 +3,7 @@
 use CodeIgniter\Model;
 
 class Artikel_Model extends Model {
-    protected $table      = 'resep';
+    protected $table      = 'artikel';
     protected $primaryKey = 'id';
 
     protected $returnType     = 'object';
