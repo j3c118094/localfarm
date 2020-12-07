@@ -237,3 +237,36 @@ CRITICAL - 2020-12-07 03:33:52 --> Undefined variable: type
 #4 /var/www/html/localfarm-master/public/index.php(45): CodeIgniter\CodeIgniter->run()
 #5 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(34): require_once('/var/www/html/l...')
 #6 {main}
+CRITICAL - 2020-12-07 09:58:07 --> Unable to connect to the database.
+#0 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\Model.php(462): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Users\ASUS\Documents\GitHub\localfarm\app\Controllers\Panel.php(54): CodeIgniter\Model->findAll()
+#4 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Panel->post()
+#5 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel))
+#6 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\ASUS\Documents\GitHub\localfarm\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\ASUS\\D...')
+#9 {main}
+CRITICAL - 2020-12-07 09:59:56 --> Unable to connect to the database.
+#0 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\Model.php(462): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Users\ASUS\Documents\GitHub\localfarm\app\Controllers\Panel.php(54): CodeIgniter\Model->findAll()
+#4 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Panel->post()
+#5 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel))
+#6 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\ASUS\Documents\GitHub\localfarm\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\ASUS\\D...')
+#9 {main}
+CRITICAL - 2020-12-07 10:02:00 --> Unable to connect to the database.
+#0 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1860): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\Model.php(462): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\Users\ASUS\Documents\GitHub\localfarm\app\Controllers\Panel.php(54): CodeIgniter\Model->findAll()
+#4 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Panel->post()
+#5 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel))
+#6 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\Users\ASUS\Documents\GitHub\localfarm\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#8 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\ASUS\\D...')
+#9 {main}

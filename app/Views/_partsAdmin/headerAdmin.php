@@ -26,7 +26,7 @@
   </head>
   <body>
 
-    <nav class="navbar p-0 navbar-expand-sm navbar-light bg-green">
+    <nav class="navbar p-0 navbar-expand-sm navbar-light bg-green" style="height: 3rem;">
       <div class="container position-relative mx-header">
         
         <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,13 +36,13 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto mr-auto">
             <li class="nav-item">
-              <a class="nav-link text-white" href="<?php echo site_url('Dash') ?>"> DASH </a>
+              <a class="nav-link text-white" href="<?php echo site_url('Dash/index') ?>"> DASH </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="<?php echo site_url('Forms') ?>"> FORMS </a>
+              <a class="nav-link text-white" href="<?php echo site_url('Forms/index') ?>"> FORMS </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="<?php echo site_url('Post') ?>"> POSTS </a>
+              <a class="nav-link text-white" href="<?php echo site_url('Post/index') ?>"> POSTS </a>
             </li>
           </ul>
         </div>
