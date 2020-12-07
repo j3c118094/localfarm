@@ -9,11 +9,18 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="/assets/css/bootstrap.css">
     <link rel="stylesheet" href="/assets/css/panel.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.22/datatables.min.css"/>
+ 
+   
 
     <!-- Font Awesome -->
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Document</title>
+
+    <style>
+
+    </style>
 </head>
 <body class="bg-abu">
     <div class="container-fluid">
@@ -50,7 +57,10 @@
                             <div class="my-auto" style="font-size: 40px;">
                                 <div class="row">
                                     <div class="col">
-                                        420
+                                        <div class="text-center" style="font-size: 12px;">
+                                            JUMLAH POST RESEP
+                                        </div>
+                                        <?php echo count($dataResep) ?>
                                     </div>
                                     <div class="col">
                                         <form action="<?php echo site_url('Panel/editor'); ?>" method="post">
@@ -81,7 +91,10 @@
                             <div class="my-auto" style="font-size: 40px;">
                                 <div class="row">
                                     <div class="col">
-                                        420
+                                        <div class="text-center" style="font-size: 12px;">
+                                            JUMLAH POST ARTIKEL
+                                        </div>
+                                        <?php echo count($dataArtikel) ?>
                                     </div>
                                     <div class="col">
                                         <form action="<?php echo site_url('Panel/editor'); ?>" method="post">
@@ -102,15 +115,109 @@
         </section>
 
         <section style="height: auto;">
-            <div class="row " style="height: 100vh;" >
+            <div class="row " style="height: auto;" >
                 <div class="col-3 d-none d-lg-block">
                     
                 </div>
                 <div class="col text-center mx-auto">
                     <div class="row h-100">
                         <div class="col card mx-1 mb-3">
-                            <div class="my-auto" style="font-size: 40px;">
-                                LIST POSTS
+                            <div class="row py-3">
+                                <div class="col">
+                                    <div class="text-center">
+                                        LIST RESEP
+                                    </div>
+                                    <table id="resep" class="table table-striped table-bordered table-hover table.display">
+                                        <thead class="thead-light">
+                                            <tr>
+                                                <th>Judul</th>
+                                                <th>Tanggal</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="text-left">
+
+                                            <?php foreach ($dataResep as $row) : ?>
+
+                                            <tr>
+    
+                                                <td>
+                                                    <form class="d-inline" action="<?php echo site_url('Panel/delete'); ?>" method="POST">
+                                                        <input type="hidden" id="id" name="id" value="<?php echo $row->id ?>">
+                                                        <input type="hidden" id="tipe" name="tipe" value="resep">
+                                                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah yakin data akan dihapus?');">
+                                                            <i class="fa fa-trash"></i>
+                                                        </button>
+                                                    </form>
+                                                        &nbsp;
+                                                        &nbsp;
+                                                    <a href=""><?php echo $row->judul; ?></a></td>
+                                                <td><?php echo $row->created_at; ?>  
+
+                                                </td>
+                                            </tr>
+
+                                            <?php
+                                                endforeach;
+
+                                                if (empty($dataResep)) {
+                                            ?>
+
+                                            <tr>
+                                                <td colspan="3" class="text-center">Tidak ada data</td>
+                                            </tr>
+
+                                            <?php } ?>
+                                            
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="col">
+                                    <div class="text-center">
+                                        LIST ARTIKEL
+                                    </div>
+                                    <table id="artikel" class="table table-striped table-bordered table-hover table.display">
+                                        <thead class="thead-light">
+                                            <tr>
+                                                <!-- <th width="170">Aksi</th> -->
+                                                <th>Judul</th>
+                                                <th>Tanggal</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="text-left">
+
+                                            <?php foreach ($dataArtikel as $row) : ?>
+
+                                            <tr>
+                                                <td>
+                                                <form class="d-inline" action="<?php echo site_url('Panel/delete'); ?>" method="POST">
+                                                        <input type="hidden" id="id" name="id" value="<?php echo $row->id ?>">
+                                                        <input type="hidden" id="tipe" name="tipe" value="artikel">
+                                                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah yakin data akan dihapus?');">
+                                                            <i class="fa fa-trash"></i>
+                                                        </button>
+                                                    </form>
+                                                        &nbsp;
+                                                        &nbsp;
+                                                    <a href=""><?php echo $row->judul; ?></a></td>
+                                                <td><?php echo $row->created_at; ?></td>
+                                            </tr>
+
+                                            <?php
+                                                endforeach;
+
+                                                if (empty($dataArtikel)) {
+                                            ?>
+
+                                            <tr>
+                                                <td colspan="3" class="text-center">Tidak ada data</td>
+                                            </tr>
+
+                                            <?php } ?>
+                                            
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -124,9 +231,14 @@
 
 
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.22/datatables.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $('table.display').DataTable();
+        } );
+    </script>
   </body>
 </html>

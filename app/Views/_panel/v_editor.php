@@ -17,7 +17,6 @@
 </head>
 <body class="bg-abu">
     <div class="container-fluid">
-
     <form action="<?php echo site_url('Panel/save'); ?>" method="POST" enctype="multipart/form-data">
 
         <section class="sticky-top" style="height: 7vh;">
@@ -62,7 +61,7 @@
                                     <div class="col">
                                         <div class="form-group text-left" style="font-size: 14px">
                                             <label for="usr" >thumbnail</label>
-                                            <input id="thumb" name="thumb" type="file" class="form-control" >
+                                            <input id="thumb" name="thumb" type="file" class="form-control" required>
                                         </div>
                                     </div>
                                     <div class="col">

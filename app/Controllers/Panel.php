@@ -51,14 +51,22 @@ class Panel extends BaseController
 	}
 
 	public function post(){
-		return view('_panel/v_post.php');
+		$data['dataResep'] = $this->resepModel->findAll();
+		$data['dataArtikel'] = $this->artikelModel->findAll();
+
+		return view('_panel/v_post.php', $data);
 	}
 
 	public function editor(){
 
-        $id = $this->request->getPost('id');
-		$data['dataResep'] = $this->resepModel->find($id);
+		$id = $this->request->getPost('id');
+		$type = $this->request->getPost('tipe');
 
+		if ($type == 'resep'){
+			$data['dataResep'] = $this->resepModel->find($id);
+		} else {
+			$data['dataArtikel'] = $this->artikelModel->find($id);
+		}
 		$data = [
             'id' => $this->request->getPost('id'),
             'tipe' => $this->request->getPost('tipe'),
@@ -125,7 +133,26 @@ class Panel extends BaseController
             }
         }
 
-        //return redirect()->to(site_url('Panel/post'));
+        return redirect()->to(site_url('Panel/post'));
+	}
+	
+	public function delete() {
+		$id = $this->request->getPost('id');
+		$type = $this->request->getPost('tipe');
+
+		if ($type == 'resep'){
+			$response = $this->resepModel->delete($id);
+		} else {
+			$response = $this->artikelModel->delete($id);
+		}
+        
+        if ($response) {
+            $this->session->setFlashdata('response', ['status' => $response, 'message' => 'Data berhasil dihapus.']);
+        } else {
+            $this->session->setFlashdata('response', ['status' => $response, 'message' => 'Data gagal dihapus.']);
+        }
+
+        return redirect()->to(site_url('Panel/post'));
     }
 
 }
