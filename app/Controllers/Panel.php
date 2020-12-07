@@ -1,7 +1,18 @@
 <?php namespace App\Controllers;
 
+
+use App\Models\Resep_Model;
+use App\Models\Artikel_Model;
+
 class Panel extends BaseController
 {
+
+	public function __construct() {
+        $this->session = \Config\Services::session();
+
+		$this->resepModel = new Resep_Model();
+		$this->artikelModel = new Artikel_Model();
+    }
 
 	public function checkSession($status){
 		if ($status){
@@ -44,8 +55,60 @@ class Panel extends BaseController
 	}
 
 	public function editor(){
-		return view('_panel/v_editor.php');
+
+        $id = $this->request->getPost('id');
+		$data['dataResep'] = $this->resepModel->find($id);
+
+		$data = [
+            'id' => $this->request->getPost('id'),
+            'tipe' => $this->request->getPost('tipe'),
+    	];
+		
+		return view('_panel/v_editor.php', $data);
 	}
 	//--------------------------------------------------------------------
+
+	public function save() {
+        $data = [
+            'id' => $this->request->getPost('id'),
+            'judul' => $this->request->getPost('judul'),
+            'thumb' => $this->request->getPost('thumb'),
+            'konten' => $this->request->getPost('konten')
+        ];
+
+        $id = $this->request->getPost('id');
+		$type = $this->request->getPost('type');
+		if (empty($id)) { //Insert
+			
+			if ($type == 'resep'){
+				$response = $this->resepModel->insert($data);
+			} else {
+				$response = $this->artikelModel->insert($data);
+			}
+
+            if ($response) {
+                $this->session->setFlashdata('response', ['status' => $response, 'message' => 'Data berhasil disimpan.']);
+            } else {
+                $this->session->setFlashdata('response', ['status' => $response, 'message' => 'Data gagal disimpan.']);
+            }
+        } else { // Update
+			$where = ['id' => $id];
+			
+			if ($type == 'resep'){
+				$response = $this->resepModel->update($where, $data);
+			} else {
+				$response = $this->artikelModel->update($where, $data);
+			}
+			
+            
+            if ($response) {
+                $this->session->setFlashdata('response', ['status' => $response, 'message' => 'Data berhasil disimpan.']);
+            } else {
+                $this->session->setFlashdata('response', ['status' => $response, 'message' => 'Data gagal disimpan.']);
+            }
+        }
+
+        return redirect()->to(site_url('Panel/post'));
+    }
 
 }

@@ -18,6 +18,8 @@
 <body class="bg-abu">
     <div class="container-fluid">
 
+    <form action="<?php echo site_url('Panel/save'); ?>" method="POST" enctype="multipart/form-data">
+
         <section class="sticky-top" style="height: 7vh;">
             <div class="row bg-green h-100">
                 <div class="col">
@@ -40,7 +42,7 @@
 
 
         <section style="height: auto;">
-            <div class="row " style="height: 20vh;" >
+            <div class="row " style="height: 33vh;" >
                 <div class="col-3 d-none d-lg-block">
                     
                 </div>
@@ -52,7 +54,23 @@
                                     <div class="col">
                                         <div class="form-group text-left" style="font-size: 14px">
                                             <label for="usr" >Judul</label>
-                                            <input type="text" class="form-control" style="font-size: 22px;" id="usr" required>
+                                            <input type="text" class="form-control" style="font-size: 22px;" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row h-100">
+                                    <div class="col">
+                                        <div class="form-group text-left" style="font-size: 14px">
+                                            <label for="usr" >thumbnail</label>
+                                            <input type="file" class="form-control" id="usr" required>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-group text-center my-4" style="font-size: 14px">
+                                            <div class="btn-group ">
+                                                <a href="<?php echo site_url('Panel/post') ?>" class="btn btn-warning">Batal</a>
+                                                <button type="submit" class="btn btn-green">Publish <?php echo ucwords($tipe) ?></button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -89,7 +107,7 @@
         </section>
 
 
-
+    </form>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -98,7 +116,7 @@
     <script src="/assets/ckeditor/ckeditor.js"></script>
     <script>
         CKEDITOR.replace('content', {
-            height: "63vh"
+            height: "50vh"
         });
     </script>
   </body>

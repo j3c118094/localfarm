@@ -2,7 +2,7 @@
 
 use CodeIgniter\Database\Migration;
 
-class Resep extends Migration
+class artikel extends Migration
 {
 	public function up()
 	{
@@ -35,7 +35,7 @@ class Resep extends Migration
             ],
 		]);
 		$this->forge->addKey('id', TRUE);
-		$this->forge->createTable('resep');
+		$this->forge->createTable('artikel');
 	}
 
 	//--------------------------------------------------------------------

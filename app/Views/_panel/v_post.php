@@ -53,7 +53,11 @@
                                         420
                                     </div>
                                     <div class="col">
-                                        <a href="<?php echo site_url('Panel/editor') ?>" class="btn btn-green">Tambah resep baru!</a>
+                                        <form action="<?php echo site_url('Panel/editor'); ?>" method="post">
+                                            <input type="hidden" id="id" name="id" value="">
+                                            <input type="hidden" id="tipe" name="tipe" value="resep">
+                                            <button type="submit" class="btn btn-green">Tambah Resep baru!</button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -80,7 +84,11 @@
                                         420
                                     </div>
                                     <div class="col">
-                                        <a href="<?php echo site_url('Panel/editor') ?>" class="btn btn-green">Tambah Artikel Baru</a>
+                                        <form action="<?php echo site_url('Panel/editor'); ?>" method="post">
+                                            <input type="hidden" id="id" name="id" value="">
+                                            <input type="hidden" id="tipe" name="tipe" value="artikel">
+                                            <button type="submit" class="btn btn-green">Tambah Artikel baru!</button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
