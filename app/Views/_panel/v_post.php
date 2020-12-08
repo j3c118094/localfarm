@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="/assets/css/bootstrap.css">
     <link rel="stylesheet" href="/assets/css/panel.css">
+
+    <!-- -->
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.22/datatables.min.css"/>
  
-   
-
     <!-- Font Awesome -->
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -154,7 +154,8 @@
                                                         <input type="hidden" id="id" name="id" value="<?php echo $row->id ?>">
                                                         <input type="hidden" id="tipe" name="tipe" value="resep">
                                                         <a href="#" onclick="document.getElementById('edit-<?php echo $row->id ?>').submit();"><?php echo $row->judul; ?></a>
-                                                    </form></td>
+                                                    </form>
+                                                </td>
                                                 <td><?php echo $row->created_at; ?>  
 
                                                 </td>
@@ -174,13 +175,14 @@
                                             
                                         </tbody>
                                     </table>
+                                    
                                 </div>
 
                                 <div class="col">
                                     <div class="text-center">
                                         LIST ARTIKEL
                                     </div>
-                                    <table id="artikel" class="table table-striped table-bordered table-hover table.display">
+                                    <table id="artikel" class="table table-striped table-bordered table-hover">
                                         <thead class="thead-light">
                                             <tr>
                                                 <!-- <th width="170">Aksi</th> -->
@@ -237,20 +239,53 @@
                 </div>
             </div>
         </section>
-
-
-
+        <!-- tadi gw taro di sini -->
     </div>
-    <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.22/datatables.min.js"></script>
+
+        <!-- coba-coba tabel buat data tables 
+        <table class="table table-striped" id="table1">
+            <thead>
+                <tr>
+                    <th scope="col">nama barang</th>
+                    <th scope="col">kode</th>
+                    <th scope="col">jumlah</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td> Hello </td>
+                    <td> Hello </td>
+                    <td> Hello </td>
+                </tr>
+            </tbody>
+        </table>
+
+        -->
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="<?php echo base_url('assets/js/v_post.js') ?>"></script> 
+    
+    <!-- CDN Datadables -->
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.22/datatables.min.js"></script>
+    <!-- Kok bisa??  -->
+    <script src="<?php echo site_url('assets/js/v_post.js') ?>"></script> 
 
-    <script>
+<!--     <script>
         $(document).ready(function() {
-            $('table.display').DataTable();
+            $('table.display').DataTable({
+                paging: true,
+                scrollY: 400
+            });
         } );
-    </script>
+
+        $(document).ready(function() {
+            $('#table1').DataTable( {
+                paging: true,
+                scrollY: 400
+            });
+        } );
+
+    </script> -->
   </body>
 </html>

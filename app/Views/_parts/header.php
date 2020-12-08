@@ -46,7 +46,7 @@
                 Artikel
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="<?php echo site_url('Artikel') ?>">Daftar Artikel</a>
+                <a class="dropdown-item" href="<?php echo site_url('DaftarArtikel') ?>">Daftar Artikel</a>
                 <a class="dropdown-item" href="<?php echo site_url('Kuesioner') ?>">Kuesioner</a>
               </div>
             </li>

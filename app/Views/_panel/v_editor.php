@@ -94,9 +94,11 @@
                     <div class="row h-100">
                         <div class="col card mx-1 mb-3 px-0">
                             <div class="" style="font-size: 40px;">
+
                                 <textarea id="konten" name="konten" >
                                         <?php if (!empty($id)) echo $data->konten; ?>
                                 </textarea>
+                                
                             </div>
                         </div>
                     </div>
