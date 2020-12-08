@@ -37,7 +37,7 @@
                         </span>
                         <hr class="white ml-0 mt-0">
                         <p class="card-text text-justify">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="text-dark font-weight-bold">Selengkapnya</a>
+                        <a href="<?php echo site_url('Artikel') ?>" class="text-dark font-weight-bold">Selengkapnya</a>
                     </div>
                 </div>
             </div>
@@ -56,7 +56,7 @@
                         </span>
                         <hr class="white ml-0 mt-0">
                         <p class="card-text text-justify">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="text-dark font-weight-bold">Selengkapnya</a>
+                        <a href="<?php echo site_url('Artikel') ?>" class="text-dark font-weight-bold">Selengkapnya</a>
                     </div>
                 </div>
             </div>
@@ -75,7 +75,7 @@
                         </span>
                         <hr class="white ml-0 mt-0">
                         <p class="card-text text-justify">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="#" class="text-dark font-weight-bold">Selengkapnya</a>
+                        <a href="<?php echo site_url('Artikel') ?>" class="text-dark font-weight-bold">Selengkapnya</a>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,26 @@
     
+<!-- Judul dan Pencarian -->
+<section class="mt-5-custom container">
+    <h1 class="text-secondary font-weight-bold artikel-txt">Daftar Resep</h1>
+    <div class="row">
+        <div class="col-sm">
+            <h4 class="text-secondary">Semoga Bermanfaat</h4>
+            <hr class="green ml-0 mt-0">
+        </div>
+        <div class="col-sm ">
+            <!-- Pencarian -->
+            <form class="wrap">
+                <div class="search">
+                    <input type="text" class="searchTerm" placeholder="Pencarian...">
+                    <button type="submit" class="searchButton">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
     <!-- daftarresep -->
     <section class="daftar-resep">
       <div class="container">
@@ -7,7 +29,9 @@
             <div class="card mb-3" style="max-width: 900px;">
               <div class="row no-gutters">
                 <div class="col-md-4">
-                  <img src="assets/images/burger.png" class="card-img" alt="... ">
+                  <img src="assets/images/burger.png" class="card-img" alt="... " style="
+                  min-width: 313px
+                  max-width: 313px">
                 </div>
                 <div class="col-md-8">
                   <div class="card-body-custom">
@@ -21,7 +45,7 @@
                       </span>
                       <hr class="white ml-0 mt-1">
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="text-dark font-weight-bold">Selengkapnya</a>
+                      <a href="<?php echo site_url('DetailResep') ?>" class="text-dark font-weight-bold">Selengkapnya</a>
                   </div>
                   </div>
                 </div>
@@ -48,7 +72,7 @@
                       </span>
                       <hr class="white ml-0 mt-1">
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="text-dark font-weight-bold">Selengkapnya</a>
+                      <a href="<?php echo site_url('DetailResep') ?>" class="text-dark font-weight-bold">Selengkapnya</a>
                   </div>
                   </div>
                 </div>
@@ -75,7 +99,7 @@
                       </span>
                       <hr class="white ml-0 mt-1">
                       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="#" class="text-dark font-weight-bold">Selengkapnya</a>
+                      <a href="<?php echo site_url('DetailResep') ?>" class="text-dark font-weight-bold">Selengkapnya</a>
                   </div>
                   </div>
                 </div>
