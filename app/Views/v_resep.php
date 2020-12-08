@@ -53,7 +53,7 @@
                       <hr class="white ml-0 mt-1">
                       <p class="card-text"> <?php echo substr($row->konten,0,75)."..." ?></p>
                       <div class="text-right">
-                        <a href="<?php echo site_url('Artikel/read/'.$row->judul) ?>" class="text-dark font-weight-bold pr-2">Selengkapnya</a>
+                        <a href="<?php echo site_url('Resep/read/'.$row->judul) ?>" class="text-dark font-weight-bold pr-2">Selengkapnya</a>
                       </div>
                   </div>
                   </div>
