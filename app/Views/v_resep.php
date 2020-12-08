@@ -9,9 +9,9 @@
         </div>
         <div class="col-sm ">
             <!-- Pencarian -->
-            <form class="wrap">
+            <form class="wrap" method="GET" action="<?php echo site_url('DaftarResep/cari') ?>">
                 <div class="search">
-                    <input type="text" class="searchTerm" placeholder="Pencarian...">
+                    <input type="text" name="q" id="q" class="searchTerm" placeholder="Pencarian..." value="<?php if (!empty($cari)) echo $cari ?>" autocomplete="disabled">
                     <button type="submit" class="searchButton">
                         <i class="fa fa-search"></i>
                     </button>
@@ -70,7 +70,7 @@
     ?>
 
     <div class="col text-center my-5">
-        <h3>CODE 404 | Resep Kosong!</h3>
+        <h3>Resep <?php echo $cari ?> tidak ditemukan</h3>
     </div>
 
     <?php } ?>
