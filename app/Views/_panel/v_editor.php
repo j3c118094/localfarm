@@ -53,7 +53,7 @@
                                     <div class="col">
                                         <div class="form-group text-left" style="font-size: 14px">
                                             <label for="usr" >Judul</label>
-                                            <input id="judul" name="judul" type="text" class="form-control" style="font-size: 22px;" value="<?php if (!empty($id)) echo $data->judul; ?>" required>
+                                            <input id="judul" name="judul" type="text" class="form-control" style="font-size: 22px;" value="<?php if (!empty($id)) echo ucwords(str_replace("-", " ", $data->judul)); ?>" required>
                                         </div>
                                     </div>
                                 </div>
@@ -98,7 +98,7 @@
                                 <textarea id="konten" name="konten" >
                                         <?php if (!empty($id)) echo $data->konten; ?>
                                 </textarea>
-                                
+
                             </div>
                         </div>
                     </div>

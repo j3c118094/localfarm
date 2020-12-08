@@ -476,3 +476,17 @@ CRITICAL - 2020-12-07 20:33:54 --> Unable to connect to the database.
 #7 /var/www/html/localfarm-master/public/index.php(45): CodeIgniter\CodeIgniter->run()
 #8 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(34): require_once('/var/www/html/l...')
 #9 {main}
+CRITICAL - 2020-12-07 23:58:22 --> Class 'App\Controllers\Artikel_Model' not found
+#0 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(890): App\Controllers\DaftarArtikel->__construct()
+#1 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(399): CodeIgniter\CodeIgniter->createController()
+#2 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#3 /var/www/html/localfarm-master/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(34): require_once('/var/www/html/l...')
+#5 {main}
+CRITICAL - 2020-12-07 23:58:39 --> Class 'App\Controllers\Artikel_Model' not found
+#0 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(890): App\Controllers\DaftarArtikel->__construct()
+#1 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(399): CodeIgniter\CodeIgniter->createController()
+#2 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#3 /var/www/html/localfarm-master/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(34): require_once('/var/www/html/l...')
+#5 {main}

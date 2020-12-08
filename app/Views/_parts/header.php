@@ -7,21 +7,22 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="/assets/css/bootstrap.css">
 
     <!-- Font Awesome -->
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style_header.css">
-    <link rel="stylesheet" href="assets/css/style_beranda.css">
-    <link rel="stylesheet" href="assets/css/style_daftar_artikel.css">
-    <link rel="stylesheet" href="assets/css/style_artikel.css">
-    <link rel="stylesheet" href="assets/css/style_kuesioner.css">
-    <link rel="stylesheet" href="assets/css/style_kontak.css">
-    <link rel="stylesheet" href="assets/css/style_resep.css">
-    <link rel="stylesheet" href="assets/css/style_tentang.css">
+    <link rel="stylesheet" href="/assets/css/style_header.css">
+    <link rel="stylesheet" href="/assets/css/style_beranda.css">
+    <link rel="stylesheet" href="/assets/css/style_daftar_artikel.css">
+    <link rel="stylesheet" href="/assets/css/style_artikel.css">
+    <link rel="stylesheet" href="/assets/css/style_kuesioner.css">
+    <link rel="stylesheet" href="/assets/css/style_kontak.css">
+    <link rel="stylesheet" href="/assets/css/style_resep.css">
+    <link rel="stylesheet" href="/assets/css/style_tentang.css">
+    
     <title>Localfarm</title>
   </head>
   <body>
@@ -29,7 +30,7 @@
     <nav class="navbar p-0 navbar-expand-sm navbar-light bg-green">
       <div class="container position-relative mx-header">
         <a class="" href="#">
-          <img class="img-fluid nav-img" id="logo" src="assets/images/logo localfarm v4.png" alt="">
+          <img class="img-fluid nav-img" id="logo" src="/assets/images/logo localfarm v4.png" alt="">
         </a>
         
         <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -67,7 +68,7 @@
     <!-- <nav class="navbar py-0 navbar-expand-sm bg-green fixed-top main-menu">
       <div class="container">
         <a href="#" class="order-md-first order-0">
-            <img class="img-fluid nav-img" src="assets/images/logo localfarm v4.png" alt="">
+            <img class="img-fluid nav-img" src="/assets/images/logo localfarm v4.png" alt="">
         </a>
         <button class="navbar-toggler custom-toggler mx-header" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false"
           aria-label="Toggle navigation">

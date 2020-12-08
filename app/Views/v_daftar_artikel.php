@@ -22,63 +22,51 @@
 
 <!-- Daftar Artikel -->
 <section class="container mb-5">
+
+
+
     <div class="row">
+
+
+    <?php foreach ( array_reverse($dataArtikel) as $row) : ?>
         <div class="col-sm m-col-b m-col-t">
             <div class="mx-auto card size-card-artikel">
-                <img class="card-img-top" src="assets/images/img_rotikopi.jpg" alt="Card image cap">
+                <a href="<?php echo site_url('Artikel/read/'.$row->judul) ?>">
+                    <img class="card-img-top" src="assets/uploads/<?php echo $row->thumbnail ?>" alt="Card image cap">
+                </a>
                 <div class="card-body-custom">
                     <div class="bg-secondary p-card">
-                        <h5 class="card-title text-white">Manfaat Ubi</h5>
+                        <h5 class="card-title text-white"><?php echo substr(ucwords(str_replace("-", " ", $row->judul)),0,45)."..."; ?></h5>
                     </div>
-                    <div class="bg-green-light text-white p-card pb-3">
+                    <div class="bg-green-light text-white p-card" style="min-height: 25vh;">
                         <span>
                             <i class='far fa-calendar-alt mr-1'></i>
-                            10/11/2020
+                            <?php echo date("d/m/Y", strtotime($row->created_at)) ?>
                         </span>
                         <hr class="white ml-0 mt-0">
-                        <p class="card-text text-justify">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="<?php echo site_url('Artikel') ?>" class="text-dark font-weight-bold">Selengkapnya</a>
+                        <p class="card-text text-justify"> <?php echo substr($row->konten,0,50)."..." ?></p>
+                    </div>
+                    <div class="text-right">
+                        <a style="position: relative; top: -2rem;" href="<?php echo site_url('Artikel/read/'.$row->judul) ?>" class="text-dark font-weight-bold pr-2">Selengkapnya</a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-sm m-col-b">
-            <div class="mx-auto card size-card-artikel">
-                <img class="card-img-top" src="assets/images/img_rotikopi.jpg" alt="Card image cap">
-                <div class="card-body-custom">
-                    <div class="bg-secondary p-card">
-                        <h5 class="card-title text-white">Manfaat Ubi</h5>
-                    </div>
-                    <div class="bg-blue-light text-white p-card pb-3">
-                        <span>
-                            <i class='far fa-calendar-alt mr-1'></i>
-                            10/11/2020
-                        </span>
-                        <hr class="white ml-0 mt-0">
-                        <p class="card-text text-justify">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="<?php echo site_url('Artikel') ?>" class="text-dark font-weight-bold">Selengkapnya</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm">
-            <div class="mx-auto card size-card-artikel">
-                <img class="card-img-top" src="assets/images/img_rotikopi.jpg" alt="Card image cap">
-                <div class="card-body-custom">
-                    <div class="bg-secondary p-card">
-                        <h5 class="card-title text-white">Manfaat Ubi</h5>
-                    </div>
-                    <div class="bg-brown-light text-white p-card pb-3">
-                        <span>
-                            <i class='far fa-calendar-alt mr-1'></i>
-                            10/11/2020
-                        </span>
-                        <hr class="white ml-0 mt-0">
-                        <p class="card-text text-justify">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                        <a href="<?php echo site_url('Artikel') ?>" class="text-dark font-weight-bold">Selengkapnya</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+
+    <?php
+        endforeach;
+
+        if (empty($dataArtikel)) {
+    ?>
+
+    <div class="col text-center mt-5">
+        <h3>CODE 404 | Artikel Kosong!</h3>
     </div>
+
+    <?php } ?>
+
+        
+    </div>
+
+
 </section>

@@ -109,7 +109,7 @@ class Panel extends BaseController
 
         $data = [
             'id' => $this->request->getPost('id'),
-            'judul' => $this->request->getPost('judul'),
+            'judul' => str_replace(" ", "-", strtolower($this->request->getPost('judul'))),
             'thumbnail' => $newName,
 			'konten' => $this->request->getPost('konten'),
 			'created_at' => date('Y-m-d'),
