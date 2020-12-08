@@ -22,7 +22,7 @@ class DaftarResep extends BaseController
 		$q = $this->request->getGet('q');
 		$db = \Config\Database::connect();
 
-		$query = $db->query("SELECT * FROM resep WHERE konten LIKE '%".$q."%'");
+		$query = $db->query("SELECT * FROM resep WHERE konten LIKE '%".$q."%' OR judul LIKE '%".$q."%'");
 		$data['dataResep'] = $query->getResult();
 		$data['cari'] = $q;
 
