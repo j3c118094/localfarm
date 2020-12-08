@@ -20,32 +20,41 @@
         </div>
     </div>
 </section>
-
+ 
     <!-- daftarresep -->
-    <section class="daftar-resep">
+    <section class="daftar-resep" style="min-height: 55vh;">
       <div class="container">
+
+
+      <?php foreach ( array_reverse($dataResep) as $row) : ?>
         <div class="row justify-content-center">
           <div class="col justify-content-center d-flex">
-            <div class="card mb-3" style="max-width: 900px;">
+            <div class="card mb-3" style="width: 75%;">
               <div class="row no-gutters">
                 <div class="col-md-4">
-                  <img src="assets/images/burger.png" class="card-img" alt="... " style="
-                  min-width: 313px
-                  max-width: 313px">
+                  <a href="<?php echo site_url('Resep/read/'.$row->judul) ?>">
+                    <img src="/assets/uploads/<?php echo $row->thumbnail ?>" class="card-img" alt="... " style="
+                    height: 100%;
+                    object-fit: cover;
+                    min-width: 100%;
+                    max-width: 100%;">
+                  </a>
                 </div>
                 <div class="col-md-8">
                   <div class="card-body-custom">
                     <div class="bg-secondary p-card">
-                      <h5 class="card-title text-white">Manfaat Ubi</h5>
+                      <h5 class="card-title text-white"><?php echo substr(ucwords(str_replace("-", " ", $row->judul)),0,45)."..."; ?></h5>
                     </div>
                     <div class="bg-green-light text-white p-card pb-5">
                       <span>
                           <i class='far fa-calendar-alt mr-1'></i>
-                          10/11/2020
+                          <?php echo date("d/m/Y", strtotime($row->created_at)) ?>
                       </span>
                       <hr class="white ml-0 mt-1">
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="<?php echo site_url('DetailResep') ?>" class="text-dark font-weight-bold">Selengkapnya</a>
+                      <p class="card-text"> <?php echo substr($row->konten,0,75)."..." ?></p>
+                      <div class="text-right">
+                        <a href="<?php echo site_url('Artikel/read/'.$row->judul) ?>" class="text-dark font-weight-bold pr-2">Selengkapnya</a>
+                      </div>
                   </div>
                   </div>
                 </div>
@@ -53,60 +62,19 @@
             </div>
           </div>
         </div>
-        <div class="row justify-content-center">
-          <div class="col justify-content-center d-flex">
-            <div class="card mb-3" style="max-width: 900px;">
-              <div class="row no-gutters">
-                <div class="col-md-4">
-                  <img src="assets/images/burger.png" class="card-img" alt="... ">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body-custom">
-                    <div class="bg-secondary p-card">
-                      <h5 class="card-title text-white">Manfaat Ubi</h5>
-                    </div>
-                    <div class="bg-blue-light text-white p-card pb-5">
-                      <span>
-                          <i class='far fa-calendar-alt mr-1'></i>
-                          10/11/2020
-                      </span>
-                      <hr class="white ml-0 mt-1">
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="<?php echo site_url('DetailResep') ?>" class="text-dark font-weight-bold">Selengkapnya</a>
-                  </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col justify-content-center d-flex">
-            <div class="card mb-3" style="max-width: 900px;">
-              <div class="row no-gutters">
-                <div class="col-md-4">
-                  <img src="assets/images/burger.png" class="card-img" alt="... ">
-                </div>
-                <div class="col-md-8">
-                  <div class="card-body-custom">
-                    <div class="bg-secondary p-card">
-                      <h5 class="card-title text-white">Manfaat Ubi</h5>
-                    </div>
-                    <div class="bg-brown-light text-white p-card pb-5">
-                      <span>
-                          <i class='far fa-calendar-alt mr-1'></i>
-                          10/11/2020
-                      </span>
-                      <hr class="white ml-0 mt-1">
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                      <a href="<?php echo site_url('DetailResep') ?>" class="text-dark font-weight-bold">Selengkapnya</a>
-                  </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+
+    <?php
+        endforeach;
+
+        if (empty($dataResep)) {
+    ?>
+
+    <div class="col text-center my-5">
+        <h3>CODE 404 | Resep Kosong!</h3>
+    </div>
+
+    <?php } ?>
+
       </div>
     </section>
     <!-- akhirdaftarresep -->

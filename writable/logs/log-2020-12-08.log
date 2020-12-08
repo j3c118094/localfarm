@@ -992,3 +992,25 @@ CRITICAL - 2020-12-08 01:02:58 --> Undefined variable: obj_tanggal
 #7 /var/www/html/localfarm-master/public/index.php(45): CodeIgniter\CodeIgniter->run()
 #8 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(34): require_once('/var/www/html/l...')
 #9 {main}
+CRITICAL - 2020-12-08 01:14:48 --> Undefined variable: dataArtikel
+#0 /var/www/html/localfarm-master/app/Views/v_resep.php(29): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/View/View.php(246): include('/var/www/html/l...')
+#2 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/localfarm-master/app/Controllers/Resep.php(17): view()
+#4 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\Resep->index()
+#5 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#6 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#7 /var/www/html/localfarm-master/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(34): require_once('/var/www/html/l...')
+#9 {main}
+CRITICAL - 2020-12-08 01:14:48 --> Undefined variable: dataArtikel
+#0 /var/www/html/localfarm-master/app/Views/v_resep.php(29): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/View/View.php(246): include('/var/www/html/l...')
+#2 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/localfarm-master/app/Controllers/Resep.php(17): view()
+#4 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\Resep->index()
+#5 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#6 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#7 /var/www/html/localfarm-master/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(34): require_once('/var/www/html/l...')
+#9 {main}

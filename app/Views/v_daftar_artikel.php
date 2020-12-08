@@ -1,3 +1,5 @@
+
+
 <!-- Judul dan Pencarian -->
 <section class="mt-5-custom container">
     <h1 class="text-secondary font-weight-bold artikel-txt">Daftar Artikel</h1>
@@ -23,7 +25,7 @@
 <!-- Daftar Artikel -->
 <section class="container mb-5">
 
-
+ 
 
     <div class="row">
 
@@ -32,7 +34,7 @@
         <div class="col-sm m-col-b m-col-t">
             <div class="mx-auto card size-card-artikel">
                 <a href="<?php echo site_url('Artikel/read/'.$row->judul) ?>">
-                    <img class="card-img-top" src="assets/uploads/<?php echo $row->thumbnail ?>" alt="Card image cap">
+                    <img class="card-img-top" src="/assets/uploads/<?php echo $row->thumbnail ?>" alt="Card image cap">
                 </a>
                 <div class="card-body-custom">
                     <div class="bg-secondary p-card">

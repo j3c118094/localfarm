@@ -1,6 +1,6 @@
 <?php namespace App\Controllers;
 
-use App\Models\Artikel_Model;
+use App\Models\Artikel_Model; 
 
 class Artikel extends BaseController
 {

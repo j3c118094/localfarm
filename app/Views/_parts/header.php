@@ -52,7 +52,7 @@
               </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="<?php echo site_url('Resep') ?>">Resep</a>
+              <a class="nav-link text-white" href="<?php echo site_url('DaftarResep') ?>">Resep</a>
             </li>
             <li class="nav-item">
               <a class="nav-link text-white" href="<?php echo site_url('Tentang') ?>">Tentang</a>

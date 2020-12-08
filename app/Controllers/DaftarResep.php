@@ -1,22 +1,23 @@
 <?php namespace App\Controllers;
 
-use App\Models\Artikel_Model; 
+use App\Models\Resep_Model; 
 
-class DaftarArtikel extends BaseController
+class DaftarResep extends BaseController
 {
 
 	public function __construct() {
-		$this->artikelModel = new Artikel_Model();
+		$this->resepModel = new Resep_Model();
     }
 
 	public function index()
 	{
 
-		$data['dataArtikel'] = $this->artikelModel->findAll();
+		$data['dataResep'] = $this->resepModel->findAll();
         echo view('_parts/header.php');
-		echo view('v_daftar_artikel.php', $data);
+		echo view('v_resep.php', $data);
 	    echo view('_parts/footer.php');
 	}
+
 
 	//--------------------------------------------------------------------
 
