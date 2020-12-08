@@ -24,7 +24,7 @@ class DaftarArtikel extends BaseController
 		$q = $this->request->getGet('q');
 		$db = \Config\Database::connect();
 
-		$query = $db->query("SELECT * FROM artikel WHERE konten LIKE '%".$q."%'");
+		$query = $db->query("SELECT * FROM artikel WHERE konten LIKE '%".$q."%' OR judul LIKE '%".$q."%'");
 		$data['dataArtikel'] = $query->getResult();
 		$data['cari'] = $q;
 
