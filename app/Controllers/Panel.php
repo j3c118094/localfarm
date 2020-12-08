@@ -25,7 +25,7 @@ class Panel extends BaseController
 	public function index()
 	{
 		// DEBUG VARIABLE
-		$session = $this->checkSession(0);
+		$session = $this->checkSession(1);
 
 		if (!$session){
 			return $this->signIn();
