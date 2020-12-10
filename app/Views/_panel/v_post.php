@@ -64,8 +64,8 @@
                                     </div>
                                     <div class="col">
                                         <form action="<?php echo site_url('Panel/editor'); ?>" method="post">
-                                            <input type="hidden" id="id" name="id" value="">
-                                            <input type="hidden" id="tipe" name="tipe" value="resep">
+                                            <input type="hidden" id="id-resep-baru" name="id" value="">
+                                            <input type="hidden" id="tipe-resep-baru" name="tipe" value="resep">
                                             <button type="submit" class="btn btn-green">Tambah Resep baru!</button>
                                         </form>
                                     </div>
@@ -98,8 +98,8 @@
                                     </div>
                                     <div class="col">
                                         <form action="<?php echo site_url('Panel/editor'); ?>" method="post">
-                                            <input type="hidden" id="id" name="id" value="">
-                                            <input type="hidden" id="tipe" name="tipe" value="artikel">
+                                            <input type="hidden" id="id-artikel-baru" name="id" value="">
+                                            <input type="hidden" id="tipe-artikel-baru" name="tipe" value="artikel">
                                             <button type="submit" class="btn btn-green">Tambah Artikel baru!</button>
                                         </form>
                                     </div>
@@ -142,17 +142,17 @@
     
                                                 <td>
                                                     <form class="d-inline" action="<?php echo site_url('Panel/delete'); ?>" method="POST">
-                                                        <input type="hidden" id="id" name="id" value="<?php echo $row->id ?>">
-                                                        <input type="hidden" id="tipe" name="tipe" value="resep">
+                                                        <input type="hidden" id="id-del-resep-<?php echo $row->id ?>" name="id" value="<?php echo $row->id ?>">
+                                                        <input type="hidden" id="tipe-del-resep-<?php echo $row->id ?>" name="tipe" value="resep">
                                                         <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah yakin data akan dihapus?');">
                                                             <i class="fa fa-trash"></i>
                                                         </button>
                                                     </form>
                                                         &nbsp;
                                                         &nbsp;
-                                                    <form id="edit-<?php echo $row->id ?>" class="d-inline" action="<?php echo site_url('Panel/editor'); ?>" method="POST">
-                                                        <input type="hidden" id="id" name="id" value="<?php echo $row->id ?>">
-                                                        <input type="hidden" id="tipe" name="tipe" value="resep">
+                                                    <form id="edit-resep-<?php echo $row->id ?>" class="d-inline" action="<?php echo site_url('Panel/editor'); ?>" method="POST">
+                                                        <input type="hidden" id="id-edit-resep-<?php echo $row->id ?>" name="id" value="<?php echo $row->id ?>">
+                                                        <input type="hidden" id="tipe-edit-resep-<?php echo $row->id ?>" name="tipe" value="resep">
                                                         <a href="#" onclick="document.getElementById('edit-<?php echo $row->id ?>').submit();"><?php echo substr(ucwords(str_replace("-", " ", $row->judul)),0,15)."..."; ?></a>
                                                     </form>
                                                 </td>
@@ -197,8 +197,8 @@
                                             <tr>
                                                 <td>
                                                     <form class="d-inline" action="<?php echo site_url('Panel/delete'); ?>" method="POST">
-                                                        <input type="hidden" id="id" name="id" value="<?php echo $row->id ?>">
-                                                        <input type="hidden" id="tipe" name="tipe" value="artikel">
+                                                        <input type="hidden" id="id-del-artikel-<?php echo $row->id ?>" name="id" value="<?php echo $row->id ?>">
+                                                        <input type="hidden" id="tipe-del-artikel-<?php echo $row->id ?>" name="tipe" value="artikel">
                                                         <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah yakin data akan dihapus?');">
                                                             <i class="fa fa-trash"></i>
                                                         </button>
@@ -206,9 +206,9 @@
                                                         &nbsp;
                                                         &nbsp;
 
-                                                    <form id="edit-<?php echo $row->id ?>" class="d-inline" action="<?php echo site_url('Panel/editor'); ?>" method="POST">
-                                                        <input type="hidden" id="id" name="id" value="<?php echo $row->id ?>">
-                                                        <input type="hidden" id="tipe" name="tipe" value="artikel">
+                                                    <form id="edit-artikel-<?php echo $row->id ?>" class="d-inline" action="<?php echo site_url('Panel/editor'); ?>" method="POST">
+                                                        <input type="hidden" id="id-edit-artikel-<?php echo $row->id ?>" name="id" value="<?php echo $row->id ?>">
+                                                        <input type="hidden" id="tipe-edit-artikel-<?php echo $row->id ?>" name="tipe" value="artikel">
                                                         <a href="#" onclick="document.getElementById('edit-<?php echo $row->id ?>').submit();"><?php echo substr(ucwords(str_replace("-", " ", $row->judul)),0,15)."..."; ?></a>
                                                     </form>
                                                 </td>

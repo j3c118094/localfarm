@@ -53,7 +53,7 @@
                                     <div class="col">
                                         <div class="form-group text-left" style="font-size: 14px">
                                             <label for="usr" >Judul</label>
-                                            <input id="judul" name="judul" type="text" class="form-control" style="font-size: 22px;" value="<?php if (!empty($id)) echo ucwords(str_replace("-", " ", $data->judul)); ?>" required>
+                                            <input required id="judul" name="judul" type="text" class="form-control" style="font-size: 22px;" value="<?php if (!empty($id)) echo ucwords(str_replace("-", " ", $data->judul)); ?>" required>
                                         </div>
                                     </div>
                                 </div>
@@ -61,7 +61,7 @@
                                     <div class="col">
                                         <div class="form-group text-left" style="font-size: 14px">
                                             <label for="usr" >Thumbnail <?php if (!empty($id)) echo '<a href="'.site_url('/assets/images/').$data->thumbnail.'">sebelumnya</a>'; ?></label>
-                                            <input id="thumb" name="thumb" type="file" class="form-control" >
+                                            <input required id="thumb" name="thumb" type="file" accept="image/png, .jpeg, .jpg" class="form-control" >
                                         </div>
                                     </div>
                                     <div class="col">
@@ -95,9 +95,7 @@
                         <div class="col card mx-1 mb-3 px-0">
                             <div class="" style="font-size: 40px;">
 
-                                <textarea id="konten" name="konten" >
-                                        <?php if (!empty($id)) echo $data->konten; ?>
-                                </textarea>
+                                <textarea required id="konten" name="konten" ><?php if (!empty($id)) echo $data->konten; ?></textarea>
 
                             </div>
                         </div>
@@ -121,6 +119,17 @@
         CKEDITOR.replace('konten', {
             height: "50vh"
         });
+
+
+        $('#thumb').bind('change', function() {
+            var valid = ["png", "jpg", "jpeg"];
+            var ext = $("#thumb").val().split(".").pop().toLowerCase();
+            
+            if (!(valid.includes(ext))){
+                alert("Hanya menerima .png .jpg .jpeg");
+                $("#thumb").val("");
+            }
+        });
     </script>
-  </body>
+  </body>z
 </html>
