@@ -13,6 +13,7 @@ class DaftarArtikel extends BaseController
 	{
 
 		$data['dataArtikel'] = $this->artikelModel->findAll();
+		$data['cari'] = "";
         echo view('_parts/header.php');
 		echo view('v_daftar_artikel.php', $data);
 	    echo view('_parts/footer.php');

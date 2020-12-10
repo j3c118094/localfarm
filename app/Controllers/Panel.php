@@ -3,6 +3,8 @@
 
 use App\Models\Resep_Model;
 use App\Models\Artikel_Model;
+use App\Models\Response_Model;
+use App\Models\Visitor_Model;
 
 class Panel extends BaseController
 {
@@ -11,6 +13,8 @@ class Panel extends BaseController
         $this->session = \Config\Services::session();
 
 		$this->resepModel = new Resep_Model();
+		$this->responseModel = new Response_Model();
+		$this->visitorModel = new Visitor_Model();
 		$this->artikelModel = new Artikel_Model();
     }
 
@@ -45,14 +49,19 @@ class Panel extends BaseController
 	public function dash(){
 		return view('_panel/v_dash.php');
 	}
-
+ 
 	public function form(){
-		return view('_panel/v_form.php');
+		$data['dataResponse'] = $this->responseModel->findAll();
+		$ip = $data['dataResponse'][0]->visitor_ip;
+		$data['dataVisitor'] = $this->visitorModel->find($ip);
+		$data['kota'] = $data['dataVisitor']->kota;
+		return view('_panel/v_form.php', $data);
 	}
 
 	public function post(){
 		$data['dataResep'] = $this->resepModel->findAll();
 		$data['dataArtikel'] = $this->artikelModel->findAll();
+
 
 		return view('_panel/v_post.php', $data);
 	}

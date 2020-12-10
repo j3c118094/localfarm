@@ -19,12 +19,10 @@ class artikel extends Migration
 					'constraint'     => '100',
 			],
 			'thumbnail'   => [
-				'type'         	 	 => 'text',
-				'null'           	 => TRUE,
+				'type'         	 	 => 'TEXT',
 			],
 			'konten' 	  => [
 					'type'           => 'TEXT',
-					'null'           => TRUE,
 			],
 			'author'	  => [
 					'type'           => 'VARCHAR',
@@ -42,6 +40,6 @@ class artikel extends Migration
 
 	public function down()
 	{
-		//
+		$this->forge->dropTable($this->table);
 	}
 }

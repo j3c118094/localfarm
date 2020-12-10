@@ -1,3 +1,9 @@
+<div>
+ <?php $user = $_SERVER['REMOTE_ADDR']; echo $user?>
+</div>
+
+
+
 <!-- background header -->
 <div class="hero-image" style="max-height: 90vh;">
     <div class="hero-text">

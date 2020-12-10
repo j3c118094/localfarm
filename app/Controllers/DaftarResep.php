@@ -12,6 +12,7 @@ class DaftarResep extends BaseController
 	public function index()
 	{
 		$data['dataResep'] = $this->resepModel->findAll();
+		$data['cari'] = "";
         echo view('_parts/header.php');
 		echo view('v_resep.php', $data);
 	    echo view('_parts/footer.php');

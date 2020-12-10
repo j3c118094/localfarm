@@ -117,7 +117,7 @@
         <section style="height: auto;">
             <div class="row " style="height: auto;" >
                 <div class="col-3 d-none d-lg-block">
-                    
+                     
                 </div>
                 <div class="col text-center mx-auto">
                     <div class="row h-100">
@@ -269,7 +269,7 @@
     <!-- CDN Datadables -->
     <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.22/datatables.min.js"></script>
     <!-- Kok bisa??  -->
-    <script src="<?php echo site_url('assets/js/v_post.js') ?>"></script> 
+    <script src="<?php echo site_url('/assets/js/v_post.js') ?>"></script> 
 
 <!--     <script>
         $(document).ready(function() {

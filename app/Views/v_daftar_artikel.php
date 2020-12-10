@@ -62,7 +62,7 @@
     ?>
 
     <div class="col text-center mt-5">
-        <h3>Artikel tentang <?php echo $cari ?> tidak ditemukan</h3>
+        <h3>Artikel <?php echo $cari ?> tidak ditemukan</h3>
     </div>
 
     <?php } ?>

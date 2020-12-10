@@ -8,6 +8,10 @@ $('#artikel').DataTable( {
     scrollY: 400
 } );
 
+$('#response').DataTable( {
+    
+} );
+
 $('.dataTables_filter input[type="search"]').
   attr('placeholder','Cari...').
   css({
