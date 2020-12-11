@@ -77,6 +77,8 @@ class Kuesioner extends BaseController
         
         $dataresponse = $q1.','.$q2.','.$q3.','.$q4.','.$q5;
 
+        var_dump($iplong);die;
+
         $data = [
             'responseid' => "",
             'responses' => $dataresponse,
@@ -84,9 +86,10 @@ class Kuesioner extends BaseController
             'visitor_ip' => $iplong,
         ];
 
-
+        // gak ke insert ke db. kemungknan kode ini yang gak kebaca
         if (!empty($iplong)) { //Insert
             $response = $this->responseModel->insert($data);
+
             if ($response) {
                 $this->session->setFlashdata('response', ['status' => $response, 'message' => 'Data berhasil disimpan.']);
             } else {
