@@ -13,11 +13,15 @@
     <!-- Font Awesome -->
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <script type="text/javascript" src="/assets/js/fusioncharts.js"></script>
+
+    <script type="text/javascript" src="/assets/js/themes/fusioncharts.theme.fusion.js"></script>
     <title>Document</title>
 </head>
 <body class="bg-abu">
     <div class="container-fluid">
-
         <section class="sticky-top" style="height: 7vh;">
             <div class="row bg-green h-100">
                 <div class="col">
@@ -47,8 +51,35 @@
                 <div class="col text-center mx-auto">
                     <div class="row h-100">
                         <div class="col card mx-1 my-3">
-                            <div class="my-auto" style="font-size: 40px;">
-                                CHART KUESIONER
+                            <div class="my-auto">
+                                <?php
+                                    include "fusioncharts-wrapper/fusioncharts.php";
+                                    $chartData = "";
+                                    foreach ($dataJoin as $obj){
+                                        $count = 0;
+                                        foreach ($dataResponse as $ref){
+                                            $count += 1;
+                                        }
+                                        $chartData .= '{"label": "'.$obj->kota.'","value": "'.$count.'"},';
+                                    }
+
+                                    $columnChart = new FusionCharts("column2d", "ex1", "100%", 400, "chart-1", "json", '{
+                                    "chart": {
+                                        "caption": "Domisili Pengisi Kuesioner Localfarm",
+                                        "subcaption": "",
+                                        "xaxisname": "Kota",
+                                        "yaxisname": "Jumlah (Orang)",
+                                        "numbersuffix": "",
+                                        "theme": "fusion"
+                                    },
+                                    "data": [
+                                        '.$chartData.'
+                                    ]
+                                    }');
+
+                                    $columnChart->render();
+                                ?>
+                                <div id="chart-1"></div>
                             </div>
                         </div>
                     </div>
@@ -99,7 +130,6 @@
                                                 <td>
                                                     <form id="view<?php echo $row->responseid ?>" class="d-inline" action="<?php echo site_url('Panel/details'); ?>" method="POST">
                                                         <input type="hidden" id="id-edit-artikel-<?php echo $row->responseid ?>" name="id" value="<?php echo $row->responseid ?>">
-                                                        <input type="hidden" id="tipe-edit-artikel-<?php echo $row->responseid ?>" name="tipe" value="artikel">
                                                         <a href="#" onclick="document.getElementById('edit-<?php echo $row->responseid ?>').submit();">Detail Response</a>
                                                     </form>
                                                 </td>
@@ -136,7 +166,6 @@
 
     </div>
 
-    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

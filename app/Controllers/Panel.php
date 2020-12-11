@@ -51,6 +51,12 @@ class Panel extends BaseController
 	}
  
 	public function form(){
+		$db = \Config\Database::connect();
+
+		$query = $db->query("SELECT visitor.kota FROM response INNER JOIN visitor ON response.visitor_ip=visitor.visitor_ip");
+		$data['dataJoin'] = $query->getResult();
+
+
 		$data['dataResponse'] = $this->responseModel->findAll();
 		$ip = $data['dataResponse'][0]->visitor_ip;
 		$data['dataVisitor'] = $this->visitorModel->find($ip);
