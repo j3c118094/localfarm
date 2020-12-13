@@ -1,0 +1,51 @@
+body {
+    font-size: 12px;
+}
+
+.form-group > label {
+    top: 18px;
+    left: 6px;
+    position: relative;
+    background-color: white;
+    padding: 0px 5px 0px 5px;
+    font-size: 0.9em;
+  }
+
+.logo {
+    max-width: 75%;
+}
+
+.bg-abu {
+    background-color: #F4F4F4;
+}
+
+.btn-green {
+    background-color: #59B102;
+    color: white;
+    border: thin solid #59B102;
+}
+
+.btn-green:hover {
+
+    background-color: white;
+    color: #59B102;
+}
+
+.bg-green {
+    background-color: #59B102;
+}
+
+.panelbtnp {
+    background-color: #59B102;
+    color: white;
+}
+
+.panelbtnp:hover {
+    background-color: white;
+    color: #59B102;
+}
+
+.panelbtna {
+    background-color: white;
+    color: #59B102;
+}

@@ -1,10 +1,18 @@
+<?php
 
-<section class="container-fluid px-0">
+$obj_judul = $dataArtikel['0']->judul;
+$obj_thumb = $dataArtikel['0']->thumbnail;
+$obj_content = $dataArtikel['0']->konten;
+$obj_tanggal = $dataArtikel['0']->created_at;
+
+?>
+
+<section class="container-fluid px-0" style="min-height: 90vh">
     <div class="position-relative">
-        <img class="img-fluid" src="assets/images/img_rotikopi.jpg" alt="">
+        <img class="img-fluid" src="/assets/uploads/<?php echo $obj_thumb?>" alt="" style="max-height: 50vh; width: 100vw; object-fit: cover;">
         <!-- Link kembali ke daftar artikel -->
         <div class="position-absolute  icon-arrow">
-            <a href="" class="white-color">
+            <a href="<?php echo site_url('DaftarArtikel')?>" class="white-color">
                 <i class="fa fa-long-arrow-left"></i>
             </a>
         </div>
@@ -12,17 +20,12 @@
         <div class="min-5-mt container">
             <div class="card w-100 border-0" >
                 <div class="card-body card-shadow">
-                    <h2 class="card-title text-center text-secondary font-weight-bold">Manfaat Ubi</h2>
-                    <h6 class="card-subtitle text-muted text-center">11/12/2020</h6>
+                    <h2 class="card-title text-center text-secondary font-weight-bold"><?php echo ucwords(str_replace("-", " ", $obj_judul)) ?></h2>
+                    <h6 class="card-subtitle text-muted text-center"><?php echo date("d/m/Y", strtotime($obj_tanggal)) ?></h6>
                     <p class="card-text mt-4 px-sm-3 text-justify">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum possimus quis aperiam animi
-                        magnam laudantium sequi repudiandae inventore ipsam, molestias suscipit consequatur officia
-                        rerum quo eveniet necessitatibus veritatis autem molestiae.
-                        Some quick example text to build on the card title and make up the bulk of the card's content.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum possimus quis aperiam animi
-                        magnam laudantium sequi repudiandae inventore ipsam, molestias suscipit consequatur officia
-                        rerum quo eveniet necessitatibus veritatis autem molestiae.
-                        Some quick example text to build on the card title and make up the bulk of the card's content.
+
+                        <?php echo $obj_content ?>
+
                     </p>
                 </div>
             </div>
