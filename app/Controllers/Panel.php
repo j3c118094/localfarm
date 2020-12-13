@@ -5,6 +5,7 @@ use App\Models\Resep_Model;
 use App\Models\Artikel_Model;
 use App\Models\Response_Model;
 use App\Models\Visitor_Model;
+use App\Models\Admin_Model;
 
 class Panel extends BaseController
 {
@@ -16,9 +17,11 @@ class Panel extends BaseController
 		$this->responseModel = new Response_Model();
 		$this->visitorModel = new Visitor_Model();
 		$this->artikelModel = new Artikel_Model();
+		$this->adminModel = new Admin_Model();
     }
 
-	public function checkSession($status){
+	public function checkSession(){
+		$status = $this->session->get('is_admin');
 		if ($status){
 			return 1;
 		} else {
@@ -28,43 +31,134 @@ class Panel extends BaseController
 
 	public function index()
 	{
-		// DEBUG VARIABLE
-		$session = $this->checkSession(1);
+/* 		// DEBUG VARIABLE
+		$session = $this->checkSession();
 
 		if (!$session){
 			return $this->signIn();
 		} else {
 			return $this->dash();
-		}
-	}
+		} */
 
-	public function signUp(){
-		return view('_panel/v_signup.php');
-	}
+		return $this->dash();
 
-	public function signIn(){
-		return view('_panel/v_signin.php');
 	}
 
 	public function dash(){
-		return view('_panel/v_dash.php');
+		$data['is_admin'] = $this->checkSession();
+		
+		return view('_panel/v_dash.php', $data);
 	}
+
+	public function signUp(){
+		$data['is_admin'] = $this->checkSession();
+		$data['status']= "a";
+		return view('_panel/v_signup.php', $data);
+	}
+
+
+	public function register(){
+
+		$data['is_admin'] = $this->checkSession();
+		$data['status']= "a";
+
+        $data = [
+            'username' => $this->request->getPost('user'),
+            'password' => md5($this->request->getPost('pass')),
+            'nama' => $this->request->getPost('nama'),
+		];
+		
+		$exists = $this->adminModel->find($data['username']);
+
+		if (empty($exists)) { //Insert
+			
+			$response = $this->adminModel->insert($data);
+			$data['status'] = "berhasil";
+
+        } else { // Update
+			$data['status'] = "gagal";
+		}
+		
+		return view('_panel/v_signup.php', $data);
+	}
+
+
+
+	public function signIn(){
+
+		$data['is_admin'] = $this->checkSession();
+		$data['status'] = 0;
+		return view('_panel/v_signin.php', $data);
+	}
+
+	public function rootaccess(){
+
+		$key = "localfarmadmin";
+		return $key;
+	}
+
+	public function account(){
+
+		$data['is_admin'] = $this->checkSession();
+		$data['status'] = 0;
+		$username = $this->request->getPost('user');
+		$password = $this->request->getPost('pass');
+		$data['akun'] = $this->adminModel->find($username);
+		if ($data['akun']){
+			if (md5($password) == $data['akun']->password){
+				$newdata = [
+					'username'  => $data['akun']->username,
+					'nama'     => $data['akun']->nama,
+					'is_logged' => TRUE,
+					'is_admin' => TRUE
+				];
+			
+				$this->session->set($newdata);
+				/* $data['session'] = $session; */
+				$data['status'] = "Terverifikasi";
+				return view('_panel/redirect.php', $data);
+			} else {
+				$data['status'] = 2;
+				return view('_panel/v_signin.php', $data);
+			}
+		} else {
+			$data['status'] = 1;
+			return view('_panel/v_signin.php', $data);
+		}
+
+	}
+
+	public function signOut(){
+		$current = ['username', 'nama', 'is_logged', 'is_admin'];
+		$this->session->remove($current);
+		sleep(.5);
+		return $this->index();
+	}
+
  
 	public function form(){
 		$db = \Config\Database::connect();
 
+		$data['is_admin'] = $this->checkSession();
 		$query = $db->query("SELECT visitor.kota FROM response INNER JOIN visitor ON response.visitor_ip=visitor.visitor_ip");
 		$data['dataJoin'] = $query->getResult();
 
 
 		$data['dataResponse'] = $this->responseModel->findAll();
-		$ip = $data['dataResponse'][0]->visitor_ip;
-		$data['dataVisitor'] = $this->visitorModel->find($ip);
-		$data['kota'] = $data['dataVisitor']->kota;
+		IF ($data['dataResponse']){
+			$ip = $data['dataResponse'][0]->visitor_ip;
+			$data['dataVisitor'] = $this->visitorModel->find($ip);
+			$data['kota'] = $data['dataVisitor']->kota;
+		} else {
+
+		}
 		return view('_panel/v_form.php', $data);
 	}
 
 	public function post(){
+
+
+		$data['is_admin'] = $this->checkSession();
 		$data['dataResep'] = $this->resepModel->findAll();
 		$data['dataArtikel'] = $this->artikelModel->findAll();
 
@@ -93,6 +187,8 @@ class Panel extends BaseController
 		
 
 		
+		$data['is_admin'] = $this->checkSession();
+		$data['author'] = $this->checkSession();
 		return view('_panel/v_editor.php', $data);
 	}
 	//--------------------------------------------------------------------
@@ -125,7 +221,8 @@ class Panel extends BaseController
         $data = [
             'id' => $this->request->getPost('id'),
             'judul' => str_replace(" ", "-", strtolower($this->request->getPost('judul'))),
-            'thumbnail' => $newName,
+			'thumbnail' => $newName,
+			'author' => $this->session->get('nama'),
 			'konten' => $this->request->getPost('konten'),
 			'created_at' => date('Y-m-d'),
         ];
@@ -146,12 +243,7 @@ class Panel extends BaseController
 				$response = $this->artikelModel->update($where, $data);
 			}
 			
-            
-            if ($response) {
-                $this->session->setFlashdata('response', ['status' => $response, 'message' => 'Data berhasil disimpan.']);
-            } else {
-                $this->session->setFlashdata('response', ['status' => $response, 'message' => 'Data gagal disimpan.']);
-            }
+        
         }
 
         return redirect()->to(site_url('Panel/post'));
@@ -167,11 +259,7 @@ class Panel extends BaseController
 			$response = $this->artikelModel->delete($id);
 		}
         
-        if ($response) {
-            $this->session->setFlashdata('response', ['status' => $response, 'message' => 'Data berhasil dihapus.']);
-        } else {
-            $this->session->setFlashdata('response', ['status' => $response, 'message' => 'Data gagal dihapus.']);
-        }
+
 
         return redirect()->to(site_url('Panel/post'));
     }
