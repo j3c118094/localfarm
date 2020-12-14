@@ -22,6 +22,9 @@ class DaftarResep extends BaseController
             set_cookie('saved_ip', $ip, time()+86400);
         }
          
+        if ($ip == "::1"){
+            $ip = "127.0.0.1";
+        }
         
         $iplong = ip2long($ip);
 

@@ -23,9 +23,14 @@ class Beranda extends BaseController
             $ip = $_SERVER['REMOTE_ADDR'];
             set_cookie('saved_ip', $ip, time()+86400);
         }
-         
+
+        if ($ip == "::1"){
+            $ip = "127.0.0.1";
+        }
+
         
         $iplong = ip2long($ip);
+
 
 
         // tadi gw coba tambahin if ($iplong == "2130706433" || $ip == "::1")
