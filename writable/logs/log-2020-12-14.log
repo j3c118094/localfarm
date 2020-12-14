@@ -619,3 +619,46 @@ CRITICAL - 2020-12-14 05:22:28 --> Undefined variable: is_admin
 #7 /var/www/html/localfarm-master/public/index.php(45): CodeIgniter\CodeIgniter->run()
 #8 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(34): require_once('/var/www/html/l...')
 #9 {main}
+CRITICAL - 2020-12-14 10:43:37 --> Call to undefined method App\Controllers\Beranda::helper()
+#0 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(890): App\Controllers\Beranda->__construct()
+#1 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(399): CodeIgniter\CodeIgniter->createController()
+#2 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#3 /var/www/html/localfarm-master/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(34): require_once('/var/www/html/l...')
+#5 {main}
+CRITICAL - 2020-12-14 10:43:47 --> Call to undefined method App\Controllers\Beranda::helper()
+#0 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(890): App\Controllers\Beranda->__construct()
+#1 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(399): CodeIgniter\CodeIgniter->createController()
+#2 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#3 /var/www/html/localfarm-master/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(34): require_once('/var/www/html/l...')
+#5 {main}
+CRITICAL - 2020-12-14 10:44:09 --> Undefined variable: cookietest
+#0 /var/www/html/localfarm-master/app/Views/v_beranda.php(1): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/View/View.php(246): include('/var/www/html/l...')
+#2 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/localfarm-master/app/Controllers/Beranda.php(52): view()
+#4 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\Beranda->index()
+#5 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#6 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#7 /var/www/html/localfarm-master/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(34): require_once('/var/www/html/l...')
+#9 {main}
+CRITICAL - 2020-12-14 10:53:14 --> Undefined variable: cookietest
+#0 /var/www/html/localfarm-master/app/Views/v_beranda.php(1): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/View/View.php(246): include('/var/www/html/l...')
+#2 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/localfarm-master/app/Controllers/Beranda.php(56): view()
+#4 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\Beranda->index()
+#5 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#6 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#7 /var/www/html/localfarm-master/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(34): require_once('/var/www/html/l...')
+#9 {main}
+CRITICAL - 2020-12-14 10:54:32 --> Call to undefined function App\Controllers\get_cookie()
+#0 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\DaftarArtikel->index()
+#1 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#2 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#3 /var/www/html/localfarm-master/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(34): require_once('/var/www/html/l...')
+#5 {main}

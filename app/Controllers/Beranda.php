@@ -9,14 +9,24 @@ class Beranda extends BaseController
         $this->session = \Config\Services::session();
 
         $this->visitorModel = new Visitor_Model();
+
+        helper('cookie');
     }
 
 
 	public function index()
 	{
-		$ip = $_SERVER['REMOTE_ADDR'];
-        $iplong = ip2long($_SERVER['REMOTE_ADDR']);
+        $data['saved_ip'] = get_cookie('saved_ip');
+        if ($data['saved_ip']){
+            $ip = $data['saved_ip'];
+        } else {
+            $ip = $_SERVER['REMOTE_ADDR'];
+            set_cookie('saved_ip', $ip, time()+86400);
+        }
+         
         
+        $iplong = ip2long($ip);
+
         if ($iplong == "2130706433"){
             $visitorData = [
                 'visitor_ip' => $iplong,
@@ -33,6 +43,7 @@ class Beranda extends BaseController
                 'visited_at' => date('d-m-Y_h:i:s'),
             ];
         }
+        
         $dataExist = $this->visitorModel->find($iplong);
         if ($dataExist){
             $this->visitorModel->update($iplong, $visitorData);
@@ -42,7 +53,7 @@ class Beranda extends BaseController
 
 		
         echo view('_parts/header.php');
-		echo view('v_beranda.php');
+		echo view('v_beranda.php', $data);
 	    echo view('_parts/footer.php');
 	}
 

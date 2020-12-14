@@ -54,6 +54,13 @@
             </div>
         </section>
 
+        <section>
+            <div class="row bg-green" style="height: 2em;">
+                <div class="col">
+                    <p class="text-center text-white" style="font-size: 1.2em;">Selamat datang, <?php echo $nama ?></p>
+                </div>
+            </div>
+        </section>
 
         <section style="height: auto;">
             <div class="row " style="height: 43vh;" >

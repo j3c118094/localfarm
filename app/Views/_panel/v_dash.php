@@ -30,8 +30,8 @@
 
         <section class="sticky-top" style="height: 7vh;">
             <div class="row bg-green h-100">
-                <div class="col d-none d-lg-block">
-                    
+                <div class="col d-none d-lg-block h-100">
+
                 </div>
                 <div class="col text-center ">
                     <div class="btn btn-group p-0" style="border: thin solid white;">
@@ -50,8 +50,16 @@
                     <button type="submit" form="signout" class="btn btn-danger h-100 my-auto" href="<?php echo site_url('Panel/post') ?>" style="width: 25%;">  Keluar <i class="fa fa-sign-out fa-lg" aria-hidden="true"></i></button>
                 </div>
             </div>
+
         </section>
 
+        <section>
+            <div class="row bg-green" style="height: 2em;">
+                <div class="col">
+                    <p class="text-center text-white" style="font-size: 1.2em;">Selamat datang, <?php echo $nama ?></p>
+                </div>
+            </div>
+        </section>
 
         <section style="height: auto;">
             <div class="row " style="height: 43vh;" >

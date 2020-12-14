@@ -6,13 +6,23 @@ class Tentang extends BaseController
 {
 	public function __construct() {
 		$this->visitorModel = new Visitor_Model();
+        helper('cookie');
 	}
 	
 	public function index()
 	{
 
-		$ip = $_SERVER['REMOTE_ADDR'];
-        $iplong = ip2long($_SERVER['REMOTE_ADDR']);
+        $data['saved_ip'] = get_cookie('saved_ip');
+        if ($data['saved_ip']){
+            $ip = $data['saved_ip'];
+        } else {
+            $ip = $_SERVER['REMOTE_ADDR'];
+            set_cookie('saved_ip', $ip, time()+86400);
+        }
+         
+        
+        $iplong = ip2long($ip);
+
         
         if ($iplong == "2130706433"){
             $visitorData = [

@@ -46,6 +46,7 @@ class Panel extends BaseController
 
 	public function dash(){
 		$data['is_admin'] = $this->checkSession();
+		$data['nama'] = $this->session->get('nama');
 		
 		return view('_panel/v_dash.php', $data);
 	}
@@ -140,6 +141,7 @@ class Panel extends BaseController
 		$db = \Config\Database::connect();
 
 		$data['is_admin'] = $this->checkSession();
+		$data['nama'] = $this->session->get('nama');
 		$query = $db->query("SELECT visitor.kota FROM response INNER JOIN visitor ON response.visitor_ip=visitor.visitor_ip");
 		$data['dataJoin'] = $query->getResult();
 
@@ -159,6 +161,7 @@ class Panel extends BaseController
 
 
 		$data['is_admin'] = $this->checkSession();
+		$data['nama'] = $this->session->get('nama');
 		$data['dataResep'] = $this->resepModel->findAll();
 		$data['dataArtikel'] = $this->artikelModel->findAll();
 
@@ -188,6 +191,7 @@ class Panel extends BaseController
 
 		
 		$data['is_admin'] = $this->checkSession();
+		$data['nama'] = $this->session->get('nama');
 		$data['author'] = $this->checkSession();
 		return view('_panel/v_editor.php', $data);
 	}

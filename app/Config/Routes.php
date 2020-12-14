@@ -37,6 +37,9 @@ $routes->get('/', 'Beranda::index');
 // buat ke laman admin
 $routes->get('/Admin', 'Panel::index');
 
+// buat ke laman admin
+$routes->get('/admin', 'Panel::index');
+
 /**
  * --------------------------------------------------------------------
  * Additional Routing
