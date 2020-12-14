@@ -26,7 +26,6 @@
 
     ?>
     <div class="container-fluid">
-    <form action="<?php echo site_url('Panel/save'); ?>" method="POST" enctype="multipart/form-data">
 
         <section class="sticky-top" style="height: 7vh;">
             <div class="row bg-green h-100">
@@ -58,7 +57,8 @@
                 </div>
             </div>
         </section>
-        
+
+        <form action="<?php echo site_url('Panel/save'); ?>" method="POST" enctype="multipart/form-data">
         <section style="height: auto;">
             <div class="row " style="height: 33vh;" >
                 <div class="col-3 d-none d-lg-block">
