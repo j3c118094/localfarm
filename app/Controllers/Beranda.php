@@ -27,6 +27,8 @@ class Beranda extends BaseController
         
         $iplong = ip2long($ip);
 
+
+        // tadi gw coba tambahin if ($iplong == "2130706433" || $ip == "::1")
         if ($iplong == "2130706433"){
             $visitorData = [
                 'visitor_ip' => $iplong,

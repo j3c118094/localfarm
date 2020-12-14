@@ -662,3 +662,19 @@ CRITICAL - 2020-12-14 10:54:32 --> Call to undefined function App\Controllers\ge
 #3 /var/www/html/localfarm-master/public/index.php(45): CodeIgniter\CodeIgniter->run()
 #4 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(34): require_once('/var/www/html/l...')
 #5 {main}
+CRITICAL - 2020-12-14 12:39:09 --> Unable to connect to the database.
+#0 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1548): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#2 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\Database\BaseConnection.php(1591): CodeIgniter\Database\BaseConnection->listTables()
+#3 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(945): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#4 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\Database\MigrationRunner.php(193): CodeIgniter\Database\MigrationRunner->ensureTable()
+#5 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\Commands\Database\Migrate.php(128): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#6 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\CLI\Commands.php(100): CodeIgniter\Commands\Database\Migrate->run(Array)
+#7 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\CLI\CommandRunner.php(107): CodeIgniter\CLI\Commands->run('migrate', Array)
+#8 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\CLI\CommandRunner.php(85): CodeIgniter\CLI\CommandRunner->index(Array)
+#9 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\CodeIgniter.php(914): CodeIgniter\CLI\CommandRunner->_remap('index', 'migrate')
+#10 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\CLI\CommandRunner))
+#11 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\CLI\Console.php(86): CodeIgniter\CodeIgniter->run()
+#13 C:\Users\ASUS\Documents\GitHub\localfarm\spark(57): CodeIgniter\CLI\Console->run()
+#14 {main}
