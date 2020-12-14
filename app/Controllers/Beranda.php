@@ -29,6 +29,7 @@ class Beranda extends BaseController
 
 
         // tadi gw coba tambahin if ($iplong == "2130706433" || $ip == "::1")
+        // berhasil nyimpen di database, tapi ipnya kosong
         if ($iplong == "2130706433"){
             $visitorData = [
                 'visitor_ip' => $iplong,
