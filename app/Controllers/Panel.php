@@ -1,6 +1,10 @@
 <?php namespace App\Controllers;
 
 
+require 'vendor/autoload.php';
+
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 use App\Models\Resep_Model;
 use App\Models\Artikel_Model;
 use App\Models\Response_Model;
@@ -266,6 +270,27 @@ class Panel extends BaseController
 
 
         return redirect()->to(site_url('Panel/post'));
-    }
+	}
+	
+	public function exportxls(){
+		$tabel = $this->request->getPost('tabel');
+
+		if ($tabel == "resep"){
+			$data = $this->resepModel->findAll();
+		} elseif ($tabel == "artikel"){
+			$data = $this->artikelModel->findAll();
+		} elseif ($tabel == "response"){
+			$data = $this->responseModel->findAll();
+		} else {
+			return $this->index();
+		}
+
+		$spreadsheet = new Spreadsheet();
+		$sheet = $spreadsheet->getActiveSheet();
+		$sheet->setCellValue('A1', 'Hello World !');
+
+		$writer = new Xlsx($spreadsheet);
+		$writer->save('hello world.xlsx');
+	}
 
 }
