@@ -64,12 +64,12 @@
 
 
                                    <label for="pass">Password</label>
-                                   <input type="text" class="form-control" id="pass" name="pass" required>
+                                   <input type="password" class="form-control" id="pass" name="pass" required>
                                    <label for="confirm">Konfirmasi Password</label>
-                                   <input type="text" class="form-control" id="confirm" name="confirm" required>
+                                   <input type="password" class="form-control" id="confirm" name="confirm" required>
                                    <div class="text-center mt-2" id="message"></div>
                                    <label for="root">Root Access</label>
-                                   <input type="text" class="form-control" id="root" name="root" required>
+                                   <input type="password" class="form-control" id="root" name="root" required>
                                    <div class="text-center mt-2" id="rootmsg"></div>
                                   
                                   
