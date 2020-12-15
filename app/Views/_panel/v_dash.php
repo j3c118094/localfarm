@@ -41,13 +41,13 @@
 
                         <a class="btn panelbtnp " href="<?php echo site_url('Panel/post') ?>" style="width: 45%;">POSTS</a>
 
-                        <button type="submit" form="signout" class="btn btn-danger d-lg-none h-100 my-auto" href="<?php echo site_url('Panel/post') ?>" style="width: 20%;"> <i class="fa fa-sign-out fa-lg" aria-hidden="true"></i></button>
+                        <button type="submit" form="signout" class="btn btn-danger d-lg-none h-100 my-auto" style="width: 20%;"> <i class="fa fa-sign-out fa-lg" aria-hidden="true"></i></button>
                     </div>
                     <form id="signout" method="POST" action="<?php echo site_url('Panel/signOut') ?>">
                     </form>
                 </div>
                 <div class="col d-none d-lg-block text-right mr-0 pr-0 h-100">
-                    <button type="submit" form="signout" class="btn btn-danger h-100 my-auto" href="<?php echo site_url('Panel/post') ?>" style="width: 25%;">  Keluar <i class="fa fa-sign-out fa-lg" aria-hidden="true"></i></button>
+                    <button type="submit" form="signout" class="btn btn-danger h-100 my-auto" style="width: 25%;">  Keluar <i class="fa fa-sign-out fa-lg" aria-hidden="true"></i></button>
                 </div>
             </div>
 
@@ -80,6 +80,23 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="col-3 d-none d-lg-block text-right">
+                    
+                </div>
+            </div>
+        </section>
+
+        <section style="height: auto;">
+            <div class="row " style="height: 10vh;" >
+                <div class="col-3 d-none d-lg-block">
+                    
+                </div>
+                <div class="col text-center mx-auto ">
+                    <form id="export" method="POST" action="<?php echo site_url('Panel/exportxls') ?>">
+                    <input type="hidden" id="valid-request" name="valid" value="valid">
+                        <button type="submit" class="btn btn-success h-100 my-auto" style="width: 25%;">  PRINT REPORT <i class="fa fa-file-excel-o fa-lg" aria-hidden="true"></i></button>
+                    </form>
                 </div>
                 <div class="col-3 d-none d-lg-block text-right">
                     

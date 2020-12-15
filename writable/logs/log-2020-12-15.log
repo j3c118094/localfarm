@@ -9,3 +9,186 @@ CRITICAL - 2020-12-15 00:03:49 --> Unable to connect to the database.
 #7 /var/www/html/localfarm-master/public/index.php(45): CodeIgniter\CodeIgniter->run()
 #8 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(34): require_once('/var/www/html/l...')
 #9 {main}
+CRITICAL - 2020-12-15 13:59:16 --> require(vendor/autoload.php): failed to open stream: No such file or directory
+#0 /var/www/html/localfarm-master/app/Controllers/Panel.php(4): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/localfarm-master/app/Controllers/Panel.php(4): require()
+#2 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Autoloader/Autoloader.php(365): require_once('/var/www/html/l...')
+#3 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Autoloader/Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile()
+#4 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Autoloader/Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+#5 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+#6 [internal function]: spl_autoload_call()
+#7 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(869): class_exists()
+#8 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(394): CodeIgniter\CodeIgniter->startController()
+#9 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#10 /var/www/html/localfarm-master/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#11 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(34): require_once('/var/www/html/l...')
+#12 {main}
+CRITICAL - 2020-12-15 13:59:33 --> require(vendor/autoload.php): failed to open stream: No such file or directory
+#0 /var/www/html/localfarm-master/app/Controllers/Panel.php(4): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/localfarm-master/app/Controllers/Panel.php(4): require()
+#2 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Autoloader/Autoloader.php(365): require_once('/var/www/html/l...')
+#3 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Autoloader/Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile()
+#4 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Autoloader/Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+#5 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+#6 [internal function]: spl_autoload_call()
+#7 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(869): class_exists()
+#8 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(394): CodeIgniter\CodeIgniter->startController()
+#9 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#10 /var/www/html/localfarm-master/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#11 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(34): require_once('/var/www/html/l...')
+#12 {main}
+CRITICAL - 2020-12-15 13:59:33 --> require(vendor/autoload.php): failed to open stream: No such file or directory
+#0 /var/www/html/localfarm-master/app/Controllers/Panel.php(4): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/localfarm-master/app/Controllers/Panel.php(4): require()
+#2 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Autoloader/Autoloader.php(365): require_once('/var/www/html/l...')
+#3 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Autoloader/Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile()
+#4 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Autoloader/Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+#5 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+#6 [internal function]: spl_autoload_call()
+#7 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(869): class_exists()
+#8 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(394): CodeIgniter\CodeIgniter->startController()
+#9 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#10 /var/www/html/localfarm-master/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#11 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(34): require_once('/var/www/html/l...')
+#12 {main}
+CRITICAL - 2020-12-15 13:59:33 --> require(vendor/autoload.php): failed to open stream: No such file or directory
+#0 /var/www/html/localfarm-master/app/Controllers/Panel.php(4): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/localfarm-master/app/Controllers/Panel.php(4): require()
+#2 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Autoloader/Autoloader.php(365): require_once('/var/www/html/l...')
+#3 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Autoloader/Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->requireFile()
+#4 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Autoloader/Autoloader.php(258): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+#5 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+#6 [internal function]: spl_autoload_call()
+#7 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(869): class_exists()
+#8 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(394): CodeIgniter\CodeIgniter->startController()
+#9 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#10 /var/www/html/localfarm-master/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#11 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(34): require_once('/var/www/html/l...')
+#12 {main}
+CRITICAL - 2020-12-15 14:04:41 --> Undefined property: CodeIgniter\HTTP\Response::$visitor_ip
+#0 /var/www/html/localfarm-master/app/Controllers/Panel.php(337): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\Panel->exportxls()
+#2 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/localfarm-master/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(34): require_once('/var/www/html/l...')
+#6 {main}
+CRITICAL - 2020-12-15 14:05:57 --> syntax error, unexpected ')'
+#0 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Router/Router.php(195): CodeIgniter\Router\Router->autoRoute()
+#1 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(793): CodeIgniter\Router\Router->handle()
+#2 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(364): CodeIgniter\CodeIgniter->tryToRouteIt()
+#3 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/localfarm-master/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(34): require_once('/var/www/html/l...')
+#6 {main}
+CRITICAL - 2020-12-15 14:06:00 --> syntax error, unexpected ')'
+#0 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Router/Router.php(195): CodeIgniter\Router\Router->autoRoute()
+#1 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(793): CodeIgniter\Router\Router->handle()
+#2 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(364): CodeIgniter\CodeIgniter->tryToRouteIt()
+#3 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/localfarm-master/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(34): require_once('/var/www/html/l...')
+#6 {main}
+CRITICAL - 2020-12-15 14:06:10 --> Undefined property: CodeIgniter\HTTP\Response::$visitor_ip
+#0 /var/www/html/localfarm-master/app/Controllers/Panel.php(336): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\Panel->exportxls()
+#2 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/localfarm-master/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(34): require_once('/var/www/html/l...')
+#6 {main}
+CRITICAL - 2020-12-15 14:06:57 --> Maximum 31 characters allowed in sheet title.
+#0 /var/www/html/localfarm-master/vendor/phpoffice/phpspreadsheet/src/PhpSpreadsheet/Worksheet/Worksheet.php(850): PhpOffice\PhpSpreadsheet\Worksheet\Worksheet::checkSheetTitle()
+#1 /var/www/html/localfarm-master/app/Controllers/Panel.php(352): PhpOffice\PhpSpreadsheet\Worksheet\Worksheet->setTitle()
+#2 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\Panel->exportxls()
+#3 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#4 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#5 /var/www/html/localfarm-master/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#6 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(34): require_once('/var/www/html/l...')
+#7 {main}
+CRITICAL - 2020-12-15 14:07:30 --> You tried to set a sheet active by the out of bounds index: 1. The actual number of sheets is 1.
+#0 /var/www/html/localfarm-master/app/Controllers/Panel.php(358): PhpOffice\PhpSpreadsheet\Spreadsheet->setActiveSheetIndex()
+#1 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\Panel->exportxls()
+#2 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/localfarm-master/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(34): require_once('/var/www/html/l...')
+#6 {main}
+CRITICAL - 2020-12-15 14:08:46 --> Class 'App\Controllers\IOFactory' not found
+#0 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\Panel->exportxls()
+#1 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#2 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#3 /var/www/html/localfarm-master/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(34): require_once('/var/www/html/l...')
+#5 {main}
+CRITICAL - 2020-12-15 14:08:48 --> Class 'App\Controllers\IOFactory' not found
+#0 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\Panel->exportxls()
+#1 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#2 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#3 /var/www/html/localfarm-master/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(34): require_once('/var/www/html/l...')
+#5 {main}
+CRITICAL - 2020-12-15 14:08:54 --> Trying to get property 'password' of non-object
+#0 /var/www/html/localfarm-master/app/Controllers/Panel.php(113): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\Panel->account()
+#2 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/localfarm-master/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(34): require_once('/var/www/html/l...')
+#6 {main}
+CRITICAL - 2020-12-15 14:08:59 --> Class 'App\Controllers\IOFactory' not found
+#0 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\Panel->exportxls()
+#1 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#2 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#3 /var/www/html/localfarm-master/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(34): require_once('/var/www/html/l...')
+#5 {main}
+CRITICAL - 2020-12-15 14:10:02 --> Class 'App\Controllers\IOFactory' not found
+#0 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\Panel->exportxls()
+#1 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#2 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#3 /var/www/html/localfarm-master/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(34): require_once('/var/www/html/l...')
+#5 {main}
+CRITICAL - 2020-12-15 14:12:05 --> Class 'App\Controllers\IOFactory' not found
+#0 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\Panel->exportxls()
+#1 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#2 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#3 /var/www/html/localfarm-master/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(34): require_once('/var/www/html/l...')
+#5 {main}
+CRITICAL - 2020-12-15 14:12:17 --> Class 'App\Controllers\IOFactory' not found
+#0 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\Panel->exportxls()
+#1 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#2 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#3 /var/www/html/localfarm-master/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(34): require_once('/var/www/html/l...')
+#5 {main}
+CRITICAL - 2020-12-15 14:12:19 --> Class 'App\Controllers\IOFactory' not found
+#0 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\Panel->exportxls()
+#1 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#2 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#3 /var/www/html/localfarm-master/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(34): require_once('/var/www/html/l...')
+#5 {main}
+CRITICAL - 2020-12-15 14:12:25 --> Class 'App\Controllers\IOFactory' not found
+#0 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\Panel->exportxls()
+#1 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#2 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#3 /var/www/html/localfarm-master/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(34): require_once('/var/www/html/l...')
+#5 {main}
+CRITICAL - 2020-12-15 14:12:28 --> Class 'App\Controllers\IOFactory' not found
+#0 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\Panel->exportxls()
+#1 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#2 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#3 /var/www/html/localfarm-master/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(34): require_once('/var/www/html/l...')
+#5 {main}
+CRITICAL - 2020-12-15 14:17:30 --> Call to undefined method PhpOffice\PhpSpreadsheet\Spreadsheet::setCellValue()
+#0 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\Panel->exportxls()
+#1 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#2 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#3 /var/www/html/localfarm-master/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#4 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(34): require_once('/var/www/html/l...')
+#5 {main}

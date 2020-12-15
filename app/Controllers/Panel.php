@@ -1,10 +1,10 @@
 <?php namespace App\Controllers;
 
 
-require 'vendor/autoload.php';
-
+require '../vendor/autoload.php';
+use PhpOffice\PhpSpreadsheet\Helper\Sample;
+use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 use App\Models\Resep_Model;
 use App\Models\Artikel_Model;
 use App\Models\Response_Model;
@@ -266,6 +266,8 @@ class Panel extends BaseController
 		} else {
 			$response = $this->artikelModel->delete($id);
 		}
+
+		$query = $db->query("SELECT visitor.kota FROM response INNER JOIN visitor ON response.visitor_ip=visitor.visitor_ip");
         
 
 
@@ -273,24 +275,218 @@ class Panel extends BaseController
 	}
 	
 	public function exportxls(){
-		$tabel = $this->request->getPost('tabel');
+		$valid = $this->request->getPost('valid');
 
-		if ($tabel == "resep"){
-			$data = $this->resepModel->findAll();
-		} elseif ($tabel == "artikel"){
-			$data = $this->artikelModel->findAll();
-		} elseif ($tabel == "response"){
-			$data = $this->responseModel->findAll();
-		} else {
+		if (!($valid)){
 			return $this->index();
 		}
 
+		$data['nama'] = $this->session->get('nama');
+		
 		$spreadsheet = new Spreadsheet();
-		$sheet = $spreadsheet->getActiveSheet();
-		$sheet->setCellValue('A1', 'Hello World !');
 
-		$writer = new Xlsx($spreadsheet);
-		$writer->save('hello world.xlsx');
+		// Set Properties
+		$spreadsheet->getProperties()
+		->setCreator($data['nama'].' - LOCALFARM')
+		->setLastModifiedBy($data['nama'])
+		->setTitle('LOCALFARM - REPORT')
+		->setSubject('REPORT')
+		->setDescription('REPORT LOCALFARM TABEL '.date('d-m-Y'))
+		->setKeywords('LOCALFARM REPORT')
+		->setCategory('LOCALFARM - REPORT');
+
+		// Data Sheet 1
+		$spreadsheet->setActiveSheetIndex(0)
+		->setCellValue('A1', 'REPORT RESPONSE KUESIONER')
+		->mergeCells('A1:F1')
+		->setCellValue('A2', 'NO')
+		->setCellValue('B2', 'Response ID')
+		->setCellValue('C2', 'Identifier Pengisi')
+		->setCellValue('D2', 'Domisili Pengisi')
+		->setCellValue('E2', 'Isi Response')
+		->setCellValue('F2', 'Tanggal Response')
+		;
+
+		$styleArray = [
+			'font' => [
+				'bold' => true,
+			],
+			'alignment' => [
+				'horizontal' => \PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER,
+			],
+			'fill' => [
+				'fillType' => \PhpOffice\PhpSpreadsheet\Style\Fill::FILL_GRADIENT_LINEAR,
+				'rotation' => 90,
+				'startColor' => [
+					'argb' => 'FF88FF88',
+				],
+				'endColor' => [
+					'argb' => 'FF88FF88',
+				],
+			],
+		];
+
+		$spreadsheet->getActiveSheet()->getStyle('A1')->applyFromArray($styleArray);
+
+
+		$responses = $this->responseModel->findAll();
+		$cellIndex = 3;
+		$no = 1;
+		foreach ($responses as $response) {
+			$ip = $response->visitor_ip;
+			$visitor = $this->visitorModel->find($ip);
+			$kota = $visitor->kota;
+
+			$spreadsheet->setActiveSheetIndex(0)
+			->setCellValue('A'.$cellIndex, $no)
+			->setCellValue('B'.$cellIndex, $response->responseid)
+			->setCellValue('C'.$cellIndex, $response->visitor_ip)
+			->setCellValue('D'.$cellIndex, $kota)
+			->setCellValue('E'.$cellIndex, $response->responses)
+			->setCellValue('F'.$cellIndex, $response->submitted_at);
+
+			$cellIndex++;
+			$no++;
+		};
+
+		$spreadsheet->getActiveSheet()->setTitle('Report Response - '.date('d-m-Y H'));
+
+
+		// ====================================================================================
+
+		// Data Sheet 2
+		$spreadsheet->createSheet();
+		$spreadsheet->setActiveSheetIndex(1)
+		->setCellValue('A1', 'REPORT ARTIKEL')
+		->mergeCells('A1:F1')
+		->setCellValue('A2', 'NO')
+		->setCellValue('B2', 'Artikel ID')
+		->setCellValue('C2', 'Judul')
+		->setCellValue('D2', 'Konten (HTML)')
+		->setCellValue('E2', 'Author')
+		->setCellValue('F2', 'Tanggal Dibuat')
+		;
+
+		$styleArray = [
+			'font' => [
+				'bold' => true,
+			],
+			'alignment' => [
+				'horizontal' => \PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER,
+			],
+			'fill' => [
+				'fillType' => \PhpOffice\PhpSpreadsheet\Style\Fill::FILL_GRADIENT_LINEAR,
+				'rotation' => 90,
+				'startColor' => [
+					'argb' => 'FF88FF88',
+				],
+				'endColor' => [
+					'argb' => 'FF88FF88',
+				],
+			],
+		];
+
+		$spreadsheet->getActiveSheet()->getStyle('A1')->applyFromArray($styleArray);
+
+
+		$artikels = $this->artikelModel->findAll();
+		$cellIndex = 3;
+		$no = 1;
+		foreach ($artikels as $artikel) {
+
+			$spreadsheet->setActiveSheetIndex(1)
+			->setCellValue('A'.$cellIndex, $no)
+			->setCellValue('B'.$cellIndex, $artikel->id)
+			->setCellValue('C'.$cellIndex, $artikel->judul)
+			->setCellValue('D'.$cellIndex, $artikel->konten)
+			->setCellValue('E'.$cellIndex, $artikel->author)
+			->setCellValue('F'.$cellIndex, $artikel->created_at);
+
+			$cellIndex++;
+			$no++;
+		};
+
+		$spreadsheet->getActiveSheet()->setTitle('Report Artikel - '.date('d-m-Y H'));
+
+
+
+		// ====================================================================================
+
+		// Data Sheet 3
+		$spreadsheet->createSheet();
+		$spreadsheet->setActiveSheetIndex(2)
+		->setCellValue('A1', 'REPORT RESEP')
+		->mergeCells('A1:F1')
+		->setCellValue('A2', 'NO')
+		->setCellValue('B2', 'Resep ID')
+		->setCellValue('C2', 'Judul')
+		->setCellValue('D2', 'Konten (HTML)')
+		->setCellValue('E2', 'Author')
+		->setCellValue('F2', 'Tanggal Dibuat')
+		;
+
+		$styleArray = [
+			'font' => [
+				'bold' => true,
+			],
+			'alignment' => [
+				'horizontal' => \PhpOffice\PhpSpreadsheet\Style\Alignment::HORIZONTAL_CENTER,
+			],
+			'fill' => [
+				'fillType' => \PhpOffice\PhpSpreadsheet\Style\Fill::FILL_GRADIENT_LINEAR,
+				'rotation' => 90,
+				'startColor' => [
+					'argb' => 'FF88FF88',
+				],
+				'endColor' => [
+					'argb' => 'FF88FF88',
+				],
+			],
+		];
+
+		$spreadsheet->getActiveSheet()->getStyle('A1')->applyFromArray($styleArray);
+
+
+		$reseps = $this->resepModel->findAll();
+		$cellIndex = 3;
+		$no = 1;
+		foreach ($reseps as $resep) {
+
+			$spreadsheet->setActiveSheetIndex(2)
+			->setCellValue('A'.$cellIndex, $no)
+			->setCellValue('B'.$cellIndex, $resep->id)
+			->setCellValue('C'.$cellIndex, $resep->judul)
+			->setCellValue('D'.$cellIndex, $resep->konten)
+			->setCellValue('E'.$cellIndex, $resep->author)
+			->setCellValue('F'.$cellIndex, $resep->created_at);
+
+			$cellIndex++;
+			$no++;
+		};
+
+		$spreadsheet->getActiveSheet()->setTitle('Report Resep - '.date('d-m-Y H'));
+
+
+		// Set active sheet index to the first sheet, so Excel opens this as the first sheet
+		$spreadsheet->setActiveSheetIndex(0);
+		
+		// Redirect output to a client’s web browser (Xlsx)
+		header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+		header('Content-Disposition: attachment;filename="Report Localfarm.xlsx"');
+		header('Cache-Control: max-age=0');
+		// If you're serving to IE 9, then the following may be needed
+		header('Cache-Control: max-age=1');
+	
+		// If you're serving to IE over SSL, then the following may be needed
+		header('Expires: Mon, 26 Jul 1997 05:00:00 GMT'); // Date in the past
+		header('Last-Modified: ' . gmdate('D, d M Y H:i:s') . ' GMT'); // always modified
+		header('Cache-Control: cache, must-revalidate'); // HTTP/1.1
+		header('Pragma: public'); // HTTP/1.0
+	
+		$writer = IOFactory::createWriter($spreadsheet, 'Xlsx');
+		$writer->save('php://output');
+		exit;
+
 	}
-
+	
 }

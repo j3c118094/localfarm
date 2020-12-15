@@ -43,13 +43,13 @@
                         <a class="btn panelbtna " href="<?php echo site_url('Panel/form') ?>" style="width: 45%;">FORMS</a>
 
                         <a class="btn panelbtnp " href="<?php echo site_url('Panel/post') ?>" style="width: 45%;">POSTS</a>
-                        <button type="submit" form="signout" class="btn btn-danger d-lg-none h-100 my-auto" href="<?php echo site_url('Panel/post') ?>" style="width: 20%;"> <i class="fa fa-sign-out fa-lg" aria-hidden="true"></i></button>
+                        <button type="submit" form="signout" class="btn btn-danger d-lg-none h-100 my-auto"  style="width: 20%;"> <i class="fa fa-sign-out fa-lg" aria-hidden="true"></i></button>
                     </div>
                     <form id="signout" method="POST" action="<?php echo site_url('Panel/signOut') ?>">
                     </form>
                 </div>
                 <div class="col d-none d-lg-block text-right mr-0 pr-0 h-100">
-                    <button type="submit" form="signout" class="btn btn-danger h-100 my-auto" href="<?php echo site_url('Panel/post') ?>" style="width: 25%;">  Keluar <i class="fa fa-sign-out fa-lg" aria-hidden="true"></i></button>
+                    <button type="submit" form="signout" class="btn btn-danger h-100 my-auto" style="width: 25%;">  Keluar <i class="fa fa-sign-out fa-lg" aria-hidden="true"></i></button>
                 </div>
             </div>
         </section>
