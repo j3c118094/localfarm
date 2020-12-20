@@ -1,6 +1,8 @@
 <?php namespace App\Controllers;
 
 use App\Models\Visitor_Model;
+use App\Models\Resep_Model;
+use App\Models\Artikel_Model;
 
 class Beranda extends BaseController
 {
@@ -9,6 +11,8 @@ class Beranda extends BaseController
         $this->session = \Config\Services::session();
 
         $this->visitorModel = new Visitor_Model();
+        $this->resepModel = new Resep_Model();
+        $this->artikelModel = new Artikel_Model();
 
         helper('cookie');
     }
@@ -59,7 +63,8 @@ class Beranda extends BaseController
             $this->visitorModel->insert($visitorData);
         }
 
-		
+		$data['dataArtikel'] = $this->artikelModel->findAll();
+		$data['dataResep'] = $this->artikelModel->findAll();
         echo view('_parts/header.php');
 		echo view('v_beranda.php', $data);
 	    echo view('_parts/footer.php');

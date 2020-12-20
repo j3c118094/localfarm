@@ -54,18 +54,17 @@
 </section>
 
 <!-- Artikel Terbaru -->
+<?php $row = array_reverse($dataArtikel) ?>
 <section class="mt-5-custom px-0 container-fluid ">
     <h2 class="container px-sm-3 font-weight-bold font-8">Artikel Terbaru</h2>
         <div class="position-relative">
-            <img class="img-fluid mh-img-50" src="assets/images/img_rotikopi.jpg" alt="">
+            <img class="img-fluid mh-img-50"  src="/assets/uploads/<?php echo $row[0]->thumbnail ?>" alt="">
             <div class="container px-sm-3">
-                <div class="position-absolute text-block-transparant index-1">
-                    <h4 class="text-white font-weight-bold">Manfaat Ubi</h4>
+                <div class="position-absolute text-block-transparant index-1 text-white">
+                    <h4 class="text-white font-weight-bold"><?php echo substr(ucwords(str_replace("-", " ", $row[0]->judul)),0,45)."..."; ?></h4>
                     <!-- Kutipan artikel terbaru -->
-                    <p class="text-white text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,
-                        officia officiis animi perspiciatis accusantium nemo accusamus quo fugit!
-                        Quia amet molestiae eius, quae recusandae optio placeat. Perspiciatis,
-                        dicta. Voluptates, omnis.
+                    <p class=" text-justify">
+                        <?php echo substr($row[0]->konten,0,50)."..." ?>
                     </p>
                     <a href="#" class="text-blue-sea font-weight-bold">Selengkapnya
                         <hr class="biru ml-0 mt-0">
@@ -74,15 +73,13 @@
             </div>
         </div>
         <div class="position-relative">
-            <img class="img-fluid mh-img-50" src="assets/images/img_jagungbakar.jpg" alt="">
+            <img class="img-fluid mh-img-50" src="/assets/uploads/<?php echo $row[1]->thumbnail ?>" alt="">
             <div class="container px-sm-3">
-                <div class="position-absolute text-block-transparant-right index-1">
-                    <h4 class="text-white font-weight-bold">Manfaat Ubi</h4>
+                <div class="position-absolute text-block-transparant-right text-white index-1">
+                    <h4 class="text-white font-weight-bold"><?php echo substr(ucwords(str_replace("-", " ", $row[1]->judul)),0,45)."..."; ?></h4>
                     <!-- Kutipan artikel terbaru -->
-                    <p class="text-white text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,
-                        officia officiis animi perspiciatis accusantium nemo accusamus quo fugit!
-                        Quia amet molestiae eius, quae recusandae optio placeat. Perspiciatis,
-                        dicta. Voluptates, omnis.
+                    <p class="text-justify">
+                        <?php echo substr($row[1]->konten,0,50)."..." ?>
                     </p>
                     <a href="#" class="text-blue-sea font-weight-bold">Selengkapnya
                         <hr class="biru ml-0 mt-0">
@@ -91,15 +88,13 @@
             </div>
         </div>
         <div class="position-relative">
-            <img class="img-fluid mh-img-50" src="assets/images/img_sembako.jpg" alt="">
+            <img class="img-fluid mh-img-50" src="/assets/uploads/<?php echo $row[2]->thumbnail ?>" alt="">
             <div class="container px-sm-3">
-                <div class="position-absolute text-block-transparant">
-                    <h4 class="text-white font-weight-bold">Manfaat Ubi</h4>
+                <div class="position-absolute text-block-transparant text-white">
+                    <h4 class="text-white font-weight-bold"><?php echo substr(ucwords(str_replace("-", " ", $row[2]->judul)),0,45)."..."; ?></h4>
                     <!-- Kutipan artikel terbaru -->
-                    <p class="text-white text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam,
-                        officia officiis animi perspiciatis accusantium nemo accusamus quo fugit!
-                        Quia amet molestiae eius, quae recusandae optio placeat. Perspiciatis,
-                        dicta. Voluptates, omnis.
+                    <p class=" text-justify">
+                        <?php echo substr($row[2]->konten,0,50)."..." ?>
                     </p>
                     <a href="#" class="text-blue-sea font-weight-bold">Selengkapnya
                         <hr class="biru ml-0 mt-0">
@@ -117,34 +112,35 @@
 
 <!-- Resep Terpopuler -->
 <section class="mt-2 container-fluid bg-secondary">
+<?php $row = array_reverse($dataResep) ?>
     <div class="pt-4 pb-5 container">
         <h2 class="text-center pt-1 pb-3 font-weight-bold text-white font-8" style="letter-spacing:0.2rem;">Resep Terpopuler</h2>
         <div class="row">
             <!-- Gambar resep dan judul resep -->
             <div class="col-sm m-col-b">
                 <div class="mx-auto card rounded-border size-card">
-                    <img class="card-img-top top-border-rounded" src="assets/images/img_roti.jpg" alt="Card image cap">
+                    <img class="card-img-top top-border-rounded" style="height: 55%" src="/assets/uploads/<?php echo $row[0]->thumbnail ?>" alt="Card image cap">
                     <div class="card-body">
-                        <p class="card-text text-secondary">Penulis Resep</p>
-                        <h5 class="card-title text-dark font-weight-bold">Judul Resep</h5>
+                        <p class="card-text text-secondary"><?php echo $row[0]->author ?></p>
+                        <h5 class="card-title text-dark font-weight-bold"><?php echo substr(ucwords(str_replace("-", " ", $row[0]->judul)),0,45)."..."; ?></h5>
                     </div>
                 </div>
             </div>
             <div class="col-sm m-col-b">
                 <div class="mx-auto card rounded-border size-card">
-                    <img class="card-img-top top-border-rounded" src="assets/images/img_roti.jpg" alt="Card image cap">
+                    <img class="card-img-top top-border-rounded" style="height: 55%" src="/assets/uploads/<?php echo $row[1]->thumbnail ?>" alt="Card image cap">
                     <div class="card-body">
-                        <p class="card-text text-secondary">Penulis Resep</p>
-                        <h5 class="card-title text-dark font-weight-bold">Judul Resep</h5>
+                        <p class="card-text text-secondary"><?php echo $row[1]->author ?></p>
+                        <h5 class="card-title text-dark font-weight-bold"><?php echo substr(ucwords(str_replace("-", " ", $row[1]->judul)),0,45)."..."; ?></h5>
                     </div>
                 </div>
             </div>
             <div class="col-sm">
                 <div class="mx-auto card rounded-border size-card" >
-                    <img class="card-img-top top-border-rounded" src="assets/images/img_roti.jpg" alt="Card image cap">
+                    <img class="card-img-top top-border-rounded" style="height: 55%" src="/assets/uploads/<?php echo $row[2]->thumbnail ?>" alt="Card image cap">
                     <div class="card-body">
-                        <p class="card-text text-secondary">Penulis Resep</p>
-                        <h5 class="card-title text-dark font-weight-bold">Judul Resep</h5>
+                        <p class="card-text text-secondary"><?php echo $row[2]->author ?></p>
+                        <h5 class="card-title text-dark font-weight-bold"><?php echo substr(ucwords(str_replace("-", " ", $row[2]->judul)),0,45)."..."; ?></h5>
                     </div>
                 </div>
             </div>

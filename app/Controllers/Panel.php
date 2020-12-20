@@ -215,7 +215,7 @@ class Panel extends BaseController
 					$filename= $_FILES["thumb"]["name"];
 					$ext = pathinfo($filename,PATHINFO_EXTENSION);
 					
-					$newName = $type."-".date('Y-m-d').".".$ext; //This is if you want to change the file name to encrypted name
+					$newName = $type."-".date('Y-m-d')."_".md5(str_replace(" ", "-", strtolower($this->request->getPost('judul')))).".".$ext; //This is if you want to change the file name to encrypted name
 					$img->move(ROOTPATH.'public/assets/uploads/', $newName);
 
 					// You can continue here to write a code to save the name to database
