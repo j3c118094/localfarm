@@ -172,7 +172,7 @@
                                                     <form id="edit-resep-<?php echo $row->id ?>" class="d-inline" action="<?php echo site_url('Panel/editor'); ?>" method="POST">
                                                         <input type="hidden" id="id-edit-resep-<?php echo $row->id ?>" name="id" value="<?php echo $row->id ?>">
                                                         <input type="hidden" id="tipe-edit-resep-<?php echo $row->id ?>" name="tipe" value="resep">
-                                                        <a href="#" onclick="document.getElementById('edit-<?php echo $row->id ?>').submit();"><?php echo substr(ucwords(str_replace("-", " ", $row->judul)),0,15)."..."; ?></a>
+                                                        <a href="#" onclick="document.getElementById('edit-resep-<?php echo $row->id ?>').submit();"><?php echo substr(ucwords(str_replace("-", " ", $row->judul)),0,15)."..."; ?></a>
                                                     </form>
                                                 </td>
                                                 <td><?php echo $row->created_at; ?>  
@@ -228,7 +228,7 @@
                                                     <form id="edit-artikel-<?php echo $row->id ?>" class="d-inline" action="<?php echo site_url('Panel/editor'); ?>" method="POST">
                                                         <input type="hidden" id="id-edit-artikel-<?php echo $row->id ?>" name="id" value="<?php echo $row->id ?>">
                                                         <input type="hidden" id="tipe-edit-artikel-<?php echo $row->id ?>" name="tipe" value="artikel">
-                                                        <a href="#" onclick="document.getElementById('edit-<?php echo $row->id ?>').submit();"><?php echo substr(ucwords(str_replace("-", " ", $row->judul)),0,15)."..."; ?></a>
+                                                        <a href="#" onclick="document.getElementById('edit-artikel-<?php echo $row->id ?>').submit();"><?php echo substr(ucwords(str_replace("-", " ", $row->judul)),0,15)."..."; ?></a>
                                                     </form>
                                                 </td>
                                                 <td><?php echo $row->created_at; ?></td>

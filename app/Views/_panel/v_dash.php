@@ -13,6 +13,10 @@
     <!-- Font Awesome -->
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script type="text/javascript" src="/assets/js/fusioncharts.js"></script>
+
+    <script type="text/javascript" src="/assets/js/themes/fusioncharts.theme.fusion.js"></script>
     <title>Document</title>
 </head>
 <body class="bg-abu">
@@ -62,33 +66,7 @@
         </section>
 
         <section style="height: auto;">
-            <div class="row " style="height: 43vh;" >
-                <div class="col-3 d-none d-lg-block">
-                    
-                </div>
-                <div class="col text-center mx-auto ">
-                    <div class="row h-100">
-                        <div class="col-6 card mx-1 my-3">
-                            <div class="my-auto" style="font-size: 40px;">
-                                CHART
-                            </div>
-                        </div>
-
-                        <div class="col card mx-1 my-3">
-                            <div class="my-auto" style="font-size: 40px;">
-                                LIST
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-3 d-none d-lg-block text-right">
-                    
-                </div>
-            </div>
-        </section>
-
-        <section style="height: auto;">
-            <div class="row " style="height: 10vh;" >
+            <div class="row mt-3" style="height: auto;" >
                 <div class="col-3 d-none d-lg-block">
                     
                 </div>
@@ -105,15 +83,229 @@
         </section>
 
         <section style="height: auto;">
-            <div class="row " style="height: 100vh;" >
+            <div class="row " style="height: 43vh;" >
                 <div class="col-3 d-none d-lg-block">
                     
+                </div>
+                <div class="col text-center mx-auto ">
+                    <div class="row h-100">
+                        <div class="col card mx-1 my-3">
+                            
+                            <div class="my-auto">
+                                <?php
+                                    include "fusioncharts-wrapper/fusioncharts.php";
+                                    $chartData = "";
+                                    foreach ($dataJoin as $obj){
+                                        $count = 0;
+                                        foreach ($dataResponse as $ref){
+                                            $count += 1;
+                                        }
+                                        $chartData .= '{"label": "'.$obj->kota.'","value": "'.$count.'"},';
+                                    }
+
+                                    $columnChart = new FusionCharts("column2d", "ex1", "100%", 400, "chart-1", "json", '{
+                                    "chart": {
+                                        "caption": "Domisili Pengisi Kuesioner Localfarm",
+                                        "subcaption": "",
+                                        "xaxisname": "Kota",
+                                        "yaxisname": "Jumlah (Orang)",
+                                        "numbersuffix": "",
+                                        "theme": "fusion"
+                                    },
+                                    "data": [
+                                        '.$chartData.'
+                                    ]
+                                    }');
+
+                                    $columnChart->render();
+                                ?>
+                                <div id="chart-1"></div>
+                            </div>
+                        </div>
+
+                        <div class="col card mx-1 mb-3">
+                            <div class="row py-3">
+                                <div class="col">
+                                    <div class="text-center">
+                                        LIST RESPONSE KUESIONER
+                                    </div>
+                                    <table id="response" class="table table-striped table-bordered table-hover table.display">
+                                        <thead class="thead-light">
+                                            <tr>
+                                                <th>IP</th>
+                                                <th>DAERAH</th>
+                                                <th>WAKTU & TANGGAL</th>
+                                                <th>RESPONSE</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="text-center">
+
+                                            <?php foreach ($dataResponse as $row) : ?>
+
+                                            <tr>
+    
+                                                <td>
+                                                    <?php echo long2ip($row->visitor_ip); ?>
+                                                </td>
+                                                <td>
+                                                    <?php echo $kota; ?>  
+                                                </td>
+                                                <td>
+                                                    <?php echo $row->submitted_at; ?>  
+                                                </td>
+                                                <td>
+                                                    <form id="view<?php echo $row->responseid ?>" class="d-inline" action="<?php echo site_url('Panel/details'); ?>" method="POST">
+                                                        <input type="hidden" id="id-edit-artikel-<?php echo $row->responseid ?>" name="id" value="<?php echo $row->responseid ?>">
+                                                        <a href="#" onclick="document.getElementById('edit-<?php echo $row->responseid ?>').submit();">Detail Response</a>
+                                                    </form>
+                                                </td>
+                                            </tr>
+
+                                            <?php
+                                                endforeach;
+
+                                                if (empty($dataResponse)) {
+                                            ?>
+
+                                            <tr>
+                                                <td colspan="4" class="text-center">Tidak ada data</td>
+                                                
+                                            </tr>
+
+                                            <?php } ?>
+                                            
+                                        </tbody>
+                                    </table>
+                                    
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 d-none d-lg-block text-right">
+                    
+                </div>
+            </div>
+        </section>
+
+
+        <section style="height: auto;">
+            <div class="row " style="height: auto;" >
+                <div class="col-3 d-none d-lg-block">
+                     
                 </div>
                 <div class="col text-center mx-auto">
                     <div class="row h-100">
                         <div class="col card mx-1 mb-3">
-                            <div class="my-auto" style="font-size: 40px;">
-                                LIST
+                            <div class="row py-3">
+                                <div class="col">
+                                    <div class="text-center">
+                                        LIST RESEP
+                                    </div>
+                                    <table id="resep" class="table table-striped table-bordered table-hover table.display">
+                                        <thead class="thead-light">
+                                            <tr>
+                                                <th>Judul</th>
+                                                <th>Tanggal</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="text-left">
+
+                                            <?php foreach ($dataResep as $row) : ?>
+
+                                            <tr>
+    
+                                                <td>
+                                                    <form class="d-inline" action="<?php echo site_url('Panel/delete'); ?>" method="POST">
+                                                        <input type="hidden" id="id-del-resep-<?php echo $row->id ?>" name="id" value="<?php echo $row->id ?>">
+                                                        <input type="hidden" id="tipe-del-resep-<?php echo $row->id ?>" name="tipe" value="resep">
+                                                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah yakin data akan dihapus?');">
+                                                            <i class="fa fa-trash"></i>
+                                                        </button>
+                                                    </form>
+                                                        &nbsp;
+                                                        &nbsp;
+                                                    <form id="edit-resep-<?php echo $row->id ?>" class="d-inline" action="<?php echo site_url('Panel/editor'); ?>" method="POST">
+                                                        <input type="hidden" id="id-edit-resep-<?php echo $row->id ?>" name="id" value="<?php echo $row->id ?>">
+                                                        <input type="hidden" id="tipe-edit-resep-<?php echo $row->id ?>" name="tipe" value="resep">
+                                                        <a href="#" onclick="document.getElementById('edit-resep-<?php echo $row->id ?>').submit();"><?php echo substr(ucwords(str_replace("-", " ", $row->judul)),0,15)."..."; ?></a>
+                                                    </form>
+                                                </td>
+                                                <td><?php echo $row->created_at; ?>  
+
+                                                </td>
+                                            </tr>
+
+                                            <?php
+                                                endforeach;
+
+                                                if (empty($dataResep)) {
+                                            ?>
+
+                                            <tr>
+                                                <td colspan="3" class="text-center">Tidak ada data</td>
+                                            </tr>
+
+                                            <?php } ?>
+                                            
+                                        </tbody>
+                                    </table>
+                                    
+                                </div>
+
+                                <div class="col">
+                                    <div class="text-center">
+                                        LIST ARTIKEL
+                                    </div>
+                                    <table id="artikel" class="table table-striped table-bordered table-hover">
+                                        <thead class="thead-light">
+                                            <tr>
+                                                <!-- <th width="170">Aksi</th> -->
+                                                <th>Judul</th>
+                                                <th>Tanggal</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="text-left">
+
+                                            <?php foreach ($dataArtikel as $row) : ?>
+
+                                            <tr>
+                                                <td>
+                                                    <form class="d-inline" action="<?php echo site_url('Panel/delete'); ?>" method="POST">
+                                                        <input type="hidden" id="id-del-artikel-<?php echo $row->id ?>" name="id" value="<?php echo $row->id ?>">
+                                                        <input type="hidden" id="tipe-del-artikel-<?php echo $row->id ?>" name="tipe" value="artikel">
+                                                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah yakin data akan dihapus?');">
+                                                            <i class="fa fa-trash"></i>
+                                                        </button>
+                                                    </form>
+                                                        &nbsp;
+                                                        &nbsp;
+
+                                                    <form id="edit-artikel-<?php echo $row->id ?>" class="d-inline" action="<?php echo site_url('Panel/editor'); ?>" method="POST">
+                                                        <input type="hidden" id="id-edit-artikel-<?php echo $row->id ?>" name="id" value="<?php echo $row->id ?>">
+                                                        <input type="hidden" id="tipe-edit-artikel-<?php echo $row->id ?>" name="tipe" value="artikel">
+                                                        <a href="#" onclick="document.getElementById('edit-artikel-<?php echo $row->id ?>').submit();"><?php echo substr(ucwords(str_replace("-", " ", $row->judul)),0,15)."..."; ?></a>
+                                                    </form>
+                                                </td>
+                                                <td><?php echo $row->created_at; ?></td>
+                                            </tr>
+
+                                            <?php
+                                                endforeach;
+
+                                                if (empty($dataArtikel)) {
+                                            ?>
+
+                                            <tr>
+                                                <td colspan="3" class="text-center">Tidak ada data</td>
+                                            </tr>
+
+                                            <?php } ?>
+                                            
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     </div>

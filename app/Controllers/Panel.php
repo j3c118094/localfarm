@@ -49,8 +49,28 @@ class Panel extends BaseController
 	}
 
 	public function dash(){
+		$db = \Config\Database::connect();
 		$data['is_admin'] = $this->checkSession();
 		$data['nama'] = $this->session->get('nama');
+
+
+		$query = $db->query("SELECT visitor.kota FROM response INNER JOIN visitor ON response.visitor_ip=visitor.visitor_ip");
+		$data['dataJoin'] = $query->getResult();
+
+
+		$data['dataResponse'] = $this->responseModel->findAll();
+		IF ($data['dataResponse']){
+			$ip = $data['dataResponse'][0]->visitor_ip;
+			$data['dataVisitor'] = $this->visitorModel->find($ip);
+			$data['kota'] = $data['dataVisitor']->kota;
+		} else {
+
+		}
+
+
+		$data['dataResep'] = $this->resepModel->findAll();
+		$data['dataArtikel'] = $this->artikelModel->findAll();
+		$data['dataResponse'] = $this->responseModel->findAll();
 		
 		return view('_panel/v_dash.php', $data);
 	}
