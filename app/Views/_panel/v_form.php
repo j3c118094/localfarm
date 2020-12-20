@@ -63,7 +63,7 @@
         </section>
 
         <section style="height: auto;">
-            <div class="row " style="height: 43vh;" >
+            <div class="row mb-4" style="height: 43vh;" >
                 <div class="col-3 d-none d-lg-block">
                     
                 </div>

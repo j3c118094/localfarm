@@ -50,7 +50,7 @@
                                         if ($status == "berhasil"){
                                             echo '<div class="text-center bg-success py-2 text-white ">Registrasi berhasil, silahkan <a class="text-white font-weight-bold" href="'.$href.'">masuk disini.</a></div>';
                                         } elseif ($status == "gagal") {
-                                            echo '<div class="text-center bg-danger py-2 text-white font-weight-bold">Registrasi gagal. username telah digunakan</div>';
+                                            echo '<div class="text-center bg-danger py-2 text-white font-weight-bold">Registrasi gagal.</div>';
                                         } else {
                                             echo '<div class="text-center text-white font-weight-bold"></div>';
                                         }

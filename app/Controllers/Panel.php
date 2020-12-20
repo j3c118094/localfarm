@@ -90,10 +90,15 @@ class Panel extends BaseController
         $data = [
             'username' => $this->request->getPost('user'),
             'password' => md5($this->request->getPost('pass')),
-            'nama' => $this->request->getPost('nama'),
+			'nama' => $this->request->getPost('nama'),
+            'root' => $this->request->getPost('root'),
 		];
 		
-		$exists = $this->adminModel->find($data['username']);
+		if ($data['root'] == "localfarmadmin") {
+			$exists = $this->adminModel->find($data['username']);
+		} else {
+			$exists = "invalid";
+		}
 
 		if (empty($exists)) { //Insert
 			
@@ -104,6 +109,7 @@ class Panel extends BaseController
 			$data['status'] = "gagal";
 		}
 		
+		$data['is_admin'] = $this->checkSession();
 		return view('_panel/v_signup.php', $data);
 	}
 
