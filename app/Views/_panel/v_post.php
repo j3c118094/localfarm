@@ -23,6 +23,15 @@
     </style>
 </head>
 <body class="bg-abu">
+
+    <?php 
+
+        if (!($is_admin)) {
+            header('Location: '.site_url('Panel/signIn'));
+            die();
+        }
+
+    ?>
     <div class="container-fluid">
 
         <section class="sticky-top" style="height: 7vh;">
@@ -32,19 +41,29 @@
                 </div>
                 <div class="col text-center">
                     <div class="btn btn-group p-0" style="border: thin solid white;">
-                        <a class="btn panelbtnp " href="<?php echo site_url('Panel/dash') ?>" style="width: 45%;">DASH</a>
+                        <a class="btn panelbtnp " href="<?php echo site_url('Panel') ?>" style="width: 45%;">DASH</a>
 
                         <a class="btn panelbtnp " href="<?php echo site_url('Panel/form') ?>" style="width: 45%;">FORMS</a>
 
                         <a class="btn panelbtna " href="<?php echo site_url('Panel/post') ?>" style="width: 45%;">POSTS</a>
+                        <button type="submit" form="signout" class="btn btn-danger d-lg-none h-100 my-auto" style="width: 20%;"> <i class="fa fa-sign-out fa-lg" aria-hidden="true"></i></button>
                     </div>
+                    <form id="signout" method="POST" action="<?php echo site_url('Panel/signOut') ?>">
+                    </form>
                 </div>
-                <div class="col">
-                    
+                <div class="col d-none d-lg-block text-right mr-0 pr-0 h-100">z
+                    <button type="submit" form="signout" class="btn btn-danger h-100 my-auto" style="width: 25%;">  Keluar <i class="fa fa-sign-out fa-lg" aria-hidden="true"></i></button>
                 </div>
             </div>
         </section>
 
+        <section>
+            <div class="row bg-green" style="height: 2em;">
+                <div class="col">
+                    <p class="text-center text-white" style="font-size: 1.2em;">Selamat datang, <?php echo $nama ?></p>
+                </div>
+            </div>
+        </section>
 
         <section style="height: auto;">
             <div class="row " style="height: 20vh;" >
@@ -153,7 +172,7 @@
                                                     <form id="edit-resep-<?php echo $row->id ?>" class="d-inline" action="<?php echo site_url('Panel/editor'); ?>" method="POST">
                                                         <input type="hidden" id="id-edit-resep-<?php echo $row->id ?>" name="id" value="<?php echo $row->id ?>">
                                                         <input type="hidden" id="tipe-edit-resep-<?php echo $row->id ?>" name="tipe" value="resep">
-                                                        <a href="#" onclick="document.getElementById('edit-<?php echo $row->id ?>').submit();"><?php echo substr(ucwords(str_replace("-", " ", $row->judul)),0,15)."..."; ?></a>
+                                                        <a href="#" onclick="document.getElementById('edit-resep-<?php echo $row->id ?>').submit();"><?php echo substr(ucwords(str_replace("-", " ", $row->judul)),0,15)."..."; ?></a>
                                                     </form>
                                                 </td>
                                                 <td><?php echo $row->created_at; ?>  
@@ -209,7 +228,7 @@
                                                     <form id="edit-artikel-<?php echo $row->id ?>" class="d-inline" action="<?php echo site_url('Panel/editor'); ?>" method="POST">
                                                         <input type="hidden" id="id-edit-artikel-<?php echo $row->id ?>" name="id" value="<?php echo $row->id ?>">
                                                         <input type="hidden" id="tipe-edit-artikel-<?php echo $row->id ?>" name="tipe" value="artikel">
-                                                        <a href="#" onclick="document.getElementById('edit-<?php echo $row->id ?>').submit();"><?php echo substr(ucwords(str_replace("-", " ", $row->judul)),0,15)."..."; ?></a>
+                                                        <a href="#" onclick="document.getElementById('edit-artikel-<?php echo $row->id ?>').submit();"><?php echo substr(ucwords(str_replace("-", " ", $row->judul)),0,15)."..."; ?></a>
                                                     </form>
                                                 </td>
                                                 <td><?php echo $row->created_at; ?></td>

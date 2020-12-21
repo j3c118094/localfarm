@@ -19,13 +19,13 @@ body {
     background-color: #F4F4F4;
 }
 
-.btn-green {
+.btn-green:enabled {
     background-color: #59B102;
     color: white;
     border: thin solid #59B102;
 }
 
-.btn-green:hover {
+.btn-green:hover:enabled {
 
     background-color: white;
     color: #59B102;

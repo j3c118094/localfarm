@@ -15,8 +15,12 @@ class Artikel extends BaseController
 	public function index()
 	{
 
-		$ip = $_SERVER['REMOTE_ADDR'];
-        $iplong = ip2long($_SERVER['REMOTE_ADDR']);
+        $ip = $_SERVER['REMOTE_ADDR'];
+        
+        if ($ip == "::1"){
+            $ip = "127.0.0.1";
+        }
+        $iplong = ip2long($ip);
         
         if ($iplong == "2130706433"){
             $visitorData = [

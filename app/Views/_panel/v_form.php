@@ -21,6 +21,15 @@
     <title>Document</title>
 </head>
 <body class="bg-abu">
+
+    <?php 
+
+        if (!($is_admin)) {
+            header('Location: '.site_url('Panel/signIn'));
+            die();
+        }
+
+    ?>
     <div class="container-fluid">
         <section class="sticky-top" style="height: 7vh;">
             <div class="row bg-green h-100">
@@ -29,22 +38,32 @@
                 </div>
                 <div class="col text-center">
                     <div class="btn btn-group p-0" style="border: thin solid white;">
-                        <a class="btn panelbtnp " href="<?php echo site_url('Panel/dash') ?>" style="width: 45%;">DASH</a>
+                        <a class="btn panelbtnp " href="<?php echo site_url('Panel') ?>" style="width: 45%;">DASH</a>
 
                         <a class="btn panelbtna " href="<?php echo site_url('Panel/form') ?>" style="width: 45%;">FORMS</a>
 
                         <a class="btn panelbtnp " href="<?php echo site_url('Panel/post') ?>" style="width: 45%;">POSTS</a>
+                        <button type="submit" form="signout" class="btn btn-danger d-lg-none h-100 my-auto"  style="width: 20%;"> <i class="fa fa-sign-out fa-lg" aria-hidden="true"></i></button>
                     </div>
+                    <form id="signout" method="POST" action="<?php echo site_url('Panel/signOut') ?>">
+                    </form>
                 </div>
-                <div class="col">
-                    
+                <div class="col d-none d-lg-block text-right mr-0 pr-0 h-100">
+                    <button type="submit" form="signout" class="btn btn-danger h-100 my-auto" style="width: 25%;">  Keluar <i class="fa fa-sign-out fa-lg" aria-hidden="true"></i></button>
                 </div>
             </div>
         </section>
 
+        <section>
+            <div class="row bg-green" style="height: 2em;">
+                <div class="col">
+                    <p class="text-center text-white" style="font-size: 1.2em;">Selamat datang, <?php echo $nama ?></p>
+                </div>
+            </div>
+        </section>
 
         <section style="height: auto;">
-            <div class="row " style="height: 43vh;" >
+            <div class="row mb-4" style="height: 43vh;" >
                 <div class="col-3 d-none d-lg-block">
                     
                 </div>
@@ -142,7 +161,8 @@
                                             ?>
 
                                             <tr>
-                                                <td colspan="3" class="text-center">Tidak ada data</td>
+                                                <td colspan="4" class="text-center">Tidak ada data</td>
+                                                
                                             </tr>
 
                                             <?php } ?>
