@@ -464,3 +464,11 @@ CRITICAL - 2020-12-21 11:38:28 --> Undefined property: stdClass::$city
 #4 C:\Users\ASUS\Documents\GitHub\localfarm\public\index.php(45): CodeIgniter\CodeIgniter->run()
 #5 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\ASUS\\D...')
 #6 {main}
+CRITICAL - 2020-12-21 20:20:39 --> Undefined property: stdClass::$city
+#0 C:\Users\ASUS\Documents\GitHub\localfarm\app\Controllers\DaftarArtikel.php(77): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\Users\\ASUS\\D...', 77, Array)
+#1 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\DaftarArtikel->cari()
+#2 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DaftarArtikel))
+#3 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ASUS\Documents\GitHub\localfarm\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\ASUS\\D...')
+#6 {main}
