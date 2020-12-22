@@ -54,7 +54,7 @@
 </section>
 
 <!-- Artikel Terbaru -->
-<?php $row = array_reverse($dataArtikel) ?>
+<?php $row = array_reverse($dataArtikel); ?>
 <section class="mt-5-custom px-0 container-fluid ">
     <h2 class="container px-sm-3 font-weight-bold font-8">Artikel Terbaru</h2>
         <div class="position-relative">
@@ -66,7 +66,7 @@
                     <p class=" text-justify">
                         <?php echo substr($row[0]->konten,0,50)."..." ?>
                     </p>
-                    <a href="#" class="text-blue-sea font-weight-bold">Selengkapnya
+                    <a href="<?php echo site_url('Artikel/read/'.$row[0]->judul) ?>" class="text-blue-sea font-weight-bold">Selengkapnya
                         <hr class="biru ml-0 mt-0">
                     </a>
                 </div>
@@ -81,7 +81,7 @@
                     <p class="text-justify">
                         <?php echo substr($row[1]->konten,0,50)."..." ?>
                     </p>
-                    <a href="#" class="text-blue-sea font-weight-bold">Selengkapnya
+                    <a href="<?php echo site_url('Artikel/read/'.$row[1]->judul) ?>" class="text-blue-sea font-weight-bold">Selengkapnya
                         <hr class="biru ml-0 mt-0">
                     </a>
                 </div>
@@ -96,7 +96,7 @@
                     <p class=" text-justify">
                         <?php echo substr($row[2]->konten,0,50)."..." ?>
                     </p>
-                    <a href="#" class="text-blue-sea font-weight-bold">Selengkapnya
+                    <a href="<?php echo site_url('Artikel/read/'.$row[2]->judul) ?>" class="text-blue-sea font-weight-bold">Selengkapnya
                         <hr class="biru ml-0 mt-0">
                     </a>
                 </div>
@@ -112,12 +112,13 @@
 
 <!-- Resep Terpopuler -->
 <section class="mt-2 container-fluid bg-secondary">
-<?php $row = array_reverse($dataResep) ?>
+<?php $row = array_reverse($dataResep); ?>
     <div class="pt-4 pb-5 container">
         <h2 class="text-center pt-1 pb-3 font-weight-bold text-white font-8" style="letter-spacing:0.2rem;">Resep Terpopuler</h2>
         <div class="row">
             <!-- Gambar resep dan judul resep -->
             <div class="col-sm m-col-b">
+                <a href="<?php echo site_url('Resep/read/'.$row[0]->judul) ?>">
                 <div class="mx-auto card rounded-border size-card">
                     <img class="card-img-top top-border-rounded" style="height: 55%" src="/assets/uploads/<?php echo $row[0]->thumbnail ?>" alt="Card image cap">
                     <div class="card-body">
@@ -125,8 +126,10 @@
                         <h5 class="card-title text-dark font-weight-bold"><?php echo substr(ucwords(str_replace("-", " ", $row[0]->judul)),0,45)."..."; ?></h5>
                     </div>
                 </div>
+                </a>
             </div>
             <div class="col-sm m-col-b">
+                <a href="<?php echo site_url('Resep/read/'.$row[1]->judul) ?>">
                 <div class="mx-auto card rounded-border size-card">
                     <img class="card-img-top top-border-rounded" style="height: 55%" src="/assets/uploads/<?php echo $row[1]->thumbnail ?>" alt="Card image cap">
                     <div class="card-body">
@@ -134,8 +137,10 @@
                         <h5 class="card-title text-dark font-weight-bold"><?php echo substr(ucwords(str_replace("-", " ", $row[1]->judul)),0,45)."..."; ?></h5>
                     </div>
                 </div>
+                </a>
             </div>
             <div class="col-sm">
+                <a href="<?php echo site_url('Resep/read/'.$row[2]->judul) ?>">
                 <div class="mx-auto card rounded-border size-card" >
                     <img class="card-img-top top-border-rounded" style="height: 55%" src="/assets/uploads/<?php echo $row[2]->thumbnail ?>" alt="Card image cap">
                     <div class="card-body">
@@ -143,6 +148,7 @@
                         <h5 class="card-title text-dark font-weight-bold"><?php echo substr(ucwords(str_replace("-", " ", $row[2]->judul)),0,45)."..."; ?></h5>
                     </div>
                 </div>
+                </a>
             </div>
         </div>
     </div>
