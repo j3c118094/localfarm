@@ -24,9 +24,10 @@
     <link rel="stylesheet" href="/assets/css/style_tentang.css">
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <title>Localfarm</title>
+    <title><?= $judulPage ?></title>
   </head>
   <body>
+  
 
     <nav class="navbar p-0 navbar-expand-sm navbar-light bg-green">
       <div class="container position-relative mx-header">

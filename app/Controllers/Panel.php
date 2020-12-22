@@ -33,6 +33,7 @@ class Panel extends BaseController
 		}
 	}
 
+
 	public function index()
 	{
 /* 		// DEBUG VARIABLE
@@ -71,13 +72,15 @@ class Panel extends BaseController
 		$data['dataResep'] = $this->resepModel->findAll();
 		$data['dataArtikel'] = $this->artikelModel->findAll();
 		$data['dataResponse'] = $this->responseModel->findAll();
-		
+		$data["judulPage"] = $this->request->uri->getSegment(2);
 		return view('_panel/v_dash.php', $data);
 	}
 
 	public function signUp(){
 		$data['is_admin'] = $this->checkSession();
 		$data['status']= "a";
+
+		$data["judulPage"] = $this->request->uri->getSegment(2);
 		return view('_panel/v_signup.php', $data);
 	}
 
@@ -110,6 +113,8 @@ class Panel extends BaseController
 		}
 		
 		$data['is_admin'] = $this->checkSession();
+
+		$data["judulPage"] = $this->request->uri->getSegment(2);
 		return view('_panel/v_signup.php', $data);
 	}
 
@@ -119,6 +124,8 @@ class Panel extends BaseController
 
 		$data['is_admin'] = $this->checkSession();
 		$data['status'] = 0;
+
+		$data["judulPage"] = $this->request->uri->getSegment(2);
 		return view('_panel/v_signin.php', $data);
 	}
 
@@ -135,6 +142,8 @@ class Panel extends BaseController
 		$username = $this->request->getPost('user');
 		$password = $this->request->getPost('pass');
 		$data['akun'] = $this->adminModel->find($username);
+
+		$data["judulPage"] = $this->request->uri->getSegment(2);
 		if ($data['akun']){
 			if (md5($password) == $data['akun']->password){
 				$newdata = [
@@ -153,6 +162,7 @@ class Panel extends BaseController
 				return view('_panel/v_signin.php', $data);
 			}
 		} else {
+			
 			$data['status'] = 1;
 			return view('_panel/v_signin.php', $data);
 		}
@@ -184,6 +194,8 @@ class Panel extends BaseController
 		} else {
 
 		}
+
+		$data["judulPage"] = $this->request->uri->getSegment(2);
 		return view('_panel/v_form.php', $data);
 	}
 
@@ -196,6 +208,7 @@ class Panel extends BaseController
 		$data['dataArtikel'] = $this->artikelModel->findAll();
 
 
+		$data["judulPage"] = $this->request->uri->getSegment(2);
 		return view('_panel/v_post.php', $data);
 	}
 
@@ -223,6 +236,8 @@ class Panel extends BaseController
 		$data['is_admin'] = $this->checkSession();
 		$data['nama'] = $this->session->get('nama');
 		$data['author'] = $this->checkSession();
+
+		$data["judulPage"] = $this->request->uri->getSegment(2);
 		return view('_panel/v_editor.php', $data);
 	}
 	//--------------------------------------------------------------------

@@ -73,7 +73,8 @@ class Kuesioner extends BaseController
             ];
         }
 
-        echo view('_parts/header.php');
+        $data['judulPage'] = "Kuesioner";
+        echo view('_parts/header.php', $data);
 		echo view('v_kuesioner.php', $data);
 	    echo view('_parts/footer.php');
 	}

@@ -50,8 +50,8 @@ class Tentang extends BaseController
             $this->visitorModel->insert($visitorData);
         }
 
-		
-        echo view('_parts/header.php');
+        $data['judulPage'] = "Tentang Localfarm";
+        echo view('_parts/header.php', $data);
 		echo view('v_tentang.php');
 	    echo view('_parts/footer.php');
 	}

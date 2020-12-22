@@ -17,7 +17,7 @@
     <script type="text/javascript" src="/assets/js/fusioncharts.js"></script>
 
     <script type="text/javascript" src="/assets/js/themes/fusioncharts.theme.fusion.js"></script>
-    <title>Document</title>
+    <title>Panel - <?= $judulPage ?></title>
 </head>
 <body class="bg-abu">
 
@@ -39,7 +39,7 @@
                 </div>
                 <div class="col text-center ">
                     <div class="btn btn-group p-0" style="border: thin solid white;">
-                        <a class="btn panelbtna " href="<?php echo site_url('Panel') ?>" style="width: 45%;">DASH</a>
+                        <a class="btn panelbtna " href="<?php echo site_url('Panel/dash') ?>" style="width: 45%;">DASH</a>
 
                         <a class="btn panelbtnp " href="<?php echo site_url('Panel/form') ?>" style="width: 45%;">FORMS</a>
 

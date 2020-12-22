@@ -64,8 +64,9 @@ class Beranda extends BaseController
         }
 
 		$data['dataArtikel'] = $this->artikelModel->findAll();
-		$data['dataResep'] = $this->resepModel->findAll();
-        echo view('_parts/header.php');
+        $data['dataResep'] = $this->resepModel->findAll();
+        $data['judulPage'] = "Localfarm";
+        echo view('_parts/header.php', $data);
 		echo view('v_beranda.php', $data);
 	    echo view('_parts/footer.php');
 	}

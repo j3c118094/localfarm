@@ -35,10 +35,10 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Beranda::index');
 
 // buat ke laman admin
-$routes->get('/Admin', 'Panel::index');
+$routes->get('/Admin', 'Panel::dash');
 
 // buat ke laman admin
-$routes->get('/admin', 'Panel::index');
+$routes->get('/admin', 'Panel::dash');
 
 /**
  * --------------------------------------------------------------------

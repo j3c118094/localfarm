@@ -54,8 +54,9 @@ class DaftarArtikel extends BaseController
         }
 
 		$data['dataArtikel'] = $this->artikelModel->findAll();
-		$data['cari'] = "";
-        echo view('_parts/header.php');
+        $data['cari'] = "";
+        $data['judulPage'] = "Daftar Artikel";
+        echo view('_parts/header.php', $data);
 		echo view('v_daftar_artikel.php', $data);
 	    echo view('_parts/footer.php');
 	}
@@ -97,7 +98,8 @@ class DaftarArtikel extends BaseController
 		$data['dataArtikel'] = $query->getResult();
 		$data['cari'] = $q;
 
-        echo view('_parts/header.php');
+        $data['judulPage'] = "Cari Artikel : ".$q;
+        echo view('_parts/header.php', $data);
 		echo view('v_daftar_artikel.php', $data);
 	    echo view('_parts/footer.php');
 	}

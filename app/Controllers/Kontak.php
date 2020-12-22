@@ -50,7 +50,8 @@ class Kontak extends BaseController
             $this->visitorModel->insert($visitorData);
         }
 
-        echo view('_parts/header.php');
+        $data['judulPage'] = "Kontak";
+        echo view('_parts/header.php', $data);
 		echo view('v_kontak.php');
 	    echo view('_parts/footer.php');
 	}

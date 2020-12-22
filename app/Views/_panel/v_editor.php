@@ -13,7 +13,7 @@
     <!-- Font Awesome -->
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Document</title>
+    <title>Panel - <?= $judulPage ?></title>
 </head>
 <body class="bg-abu">
 
@@ -34,7 +34,7 @@
                 </div>
                 <div class="col text-center">
                     <div class="btn btn-group p-0" style="border: thin solid white;">
-                        <a class="btn panelbtnp " href="<?php echo site_url('Panel') ?>" style="width: 45%;">DASH</a>
+                        <a class="btn panelbtnp " href="<?php echo site_url('Panel/dash') ?>" style="width: 45%;">DASH</a>
 
                         <a class="btn panelbtnp " href="<?php echo site_url('Panel/form') ?>" style="width: 45%;">FORMS</a>
 

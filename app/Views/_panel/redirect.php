@@ -8,7 +8,7 @@
 <body>
     <?php 
 
-        header('Location: '.site_url('Panel'));
+        header('Location: '.site_url('Panel/dash'));
         die();
 
     ?>

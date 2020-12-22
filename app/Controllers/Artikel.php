@@ -82,8 +82,9 @@ class Artikel extends BaseController
 		$data['dataArtikel'] = $this->artikelModel->where('judul', $judul)
                    ->findAll();
 
-		$data['url'] = $judul;
-        echo view('_parts/header.php');
+        $data['url'] = $this->request->uri->getSegment(3);;
+        $data['judulPage'] = "Artikel - ".ucwords(str_replace("-", " ", $data['url']));
+        echo view('_parts/header.php', $data);
 		echo view('v_artikel.php', $data);
 	    echo view('_parts/footer.php');
 	}

@@ -5,6 +5,8 @@ $obj_thumb = $dataArtikel['0']->thumbnail;
 $obj_content = $dataArtikel['0']->konten;
 $obj_tanggal = $dataArtikel['0']->created_at;
 
+
+
 ?>
 
 <section class="container-fluid px-0" style="min-height: 90vh">

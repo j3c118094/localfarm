@@ -54,8 +54,9 @@ class DaftarResep extends BaseController
 
 
 		$data['dataResep'] = $this->resepModel->findAll();
-		$data['cari'] = "";
-        echo view('_parts/header.php');
+        $data['cari'] = "";
+        $data['judulPage'] = "Daftar Resep";
+        echo view('_parts/header.php', $data);
 		echo view('v_resep.php', $data);
 	    echo view('_parts/footer.php');
 	}
@@ -95,7 +96,8 @@ class DaftarResep extends BaseController
 		$data['dataResep'] = $query->getResult();
 		$data['cari'] = $q;
 
-        echo view('_parts/header.php');
+        $data['judulPage'] = "Cari Resep : ".$q;
+        echo view('_parts/header.php', $data);
 		echo view('v_resep.php', $data);
 	    echo view('_parts/footer.php');
 	}
