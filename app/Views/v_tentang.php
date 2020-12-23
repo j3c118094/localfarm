@@ -22,7 +22,7 @@
               <h1>
                   Local Farm
               </h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed justo dolor, interdum vitae urna ut, ultrices blandit nisi. Vestibulum rutrum sagittis lorem, a ultricies orci blandit eu. Duis tempor mollis metus ut tempor.Vestibulum rutrum sagittis lorem, a ultricies orci blandit eu. Duis tempor mollis metus ut temporVestibulum rutrum sagittis lorem, a ultricies orci blandit eu. Duis tempor mollis metus ut tempor </p>
+              <p>Kami merupakan mahasiswa sekolah vokasi ipb program studi manajemen informatika yang ditugaskan untuk membantu pemerintah dalam mengkapanyekan kegiatan diversivikasi pangan melalui media sistem dan teknologi informasi. Tujuan dari diversifikasi pangan ini adalah Meningkatkan kesadaran, peran, dan partisipasi masyarakat dalam mewujudkan pola konsumsi pangan yang Beragam, Bergizi Seimbang dan Aman (B2SA) serta mengurangi ketergantungan terhadap bahan pangan pokok beras</p>
               
           </div>
           <div class="col-lg-6">
@@ -119,7 +119,7 @@
             <h1>
                   Tujuan
             </h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed justo dolor, interdum vitae urna ut, ultrices blandit nisi. Vestibulum rutrum sagittis lorem, a ultricies orci blandit eu. Duis tempor mollis metus ut tempor.Vestibulum rutrum sagittis lorem, a ultricies orci blandit eu. Duis tempor mollis metus ut temporVestibulum rutrum sagittis lorem, a ultricies orci blandit eu. Duis tempor mollis metus ut tempor </p>
+            <p>Web ini bertujuan untuk mengenalkan dan mengedukasi masyarakat tentang diversifikasi pangan. Diversifikasi pangan adalah membudayakan pola konsumsi pangan beragam, bergizi, seimbang, dan aman untuk hidup sehat, aktif, dan produktif</p>
           </div>
         </div>
       </div>

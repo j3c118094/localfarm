@@ -34,13 +34,13 @@
         <div class="col-sm m-col-b m-col-t">
             <div class="mx-auto card size-card-artikel">
                 <a href="<?php echo site_url('Artikel/read/'.$row->judul) ?>">
-                    <img class="card-img-top" src="/assets/uploads/<?php echo $row->thumbnail ?>" alt="Card image cap">
+                    <img class="card-img-top" src="/assets/uploads/<?php echo $row->thumbnail ?>" alt="Card image cap" style="height: 25vh">
                 </a>
                 <div class="card-body-custom">
-                    <div class="bg-secondary p-card">
+                    <div class="bg-secondary p-card" style="height: 10vh;">
                         <h5 class="card-title text-white"><?php echo substr(ucwords(str_replace("-", " ", $row->judul)),0,45)."..."; ?></h5>
                     </div>
-                    <div class="bg-green-light text-white p-card" style="min-height: 25vh;">
+                    <div class="bg-green-light text-white p-card" style="height: 25vh;">
                         <span>
                             <i class='far fa-calendar-alt mr-1'></i>
                             <?php echo date("d/m/Y", strtotime($row->created_at)) ?>

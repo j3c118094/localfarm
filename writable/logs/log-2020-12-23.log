@@ -1,0 +1,8 @@
+CRITICAL - 2020-12-23 21:27:39 --> Undefined property: stdClass::$city
+#0 F:\DATA\Kuliah\Semester 5\Rekayasa Perangkat Lunak\project UAS\Localfarm Baru\localfarm\app\Controllers\Resep.php(75): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'F:\\DATA\\Kuliah\\...', 75, Array)
+#1 F:\DATA\Kuliah\Semester 5\Rekayasa Perangkat Lunak\project UAS\Localfarm Baru\localfarm\vendor\codeigniter4\framework\system\CodeIgniter.php(924): App\Controllers\Resep->read('roti-goreng-emp...')
+#2 F:\DATA\Kuliah\Semester 5\Rekayasa Perangkat Lunak\project UAS\Localfarm Baru\localfarm\vendor\codeigniter4\framework\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Resep))
+#3 F:\DATA\Kuliah\Semester 5\Rekayasa Perangkat Lunak\project UAS\Localfarm Baru\localfarm\vendor\codeigniter4\framework\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 F:\DATA\Kuliah\Semester 5\Rekayasa Perangkat Lunak\project UAS\Localfarm Baru\localfarm\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 F:\DATA\Kuliah\Semester 5\Rekayasa Perangkat Lunak\project UAS\Localfarm Baru\localfarm\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('F:\\DATA\\Kuliah\\...')
+#6 {main}

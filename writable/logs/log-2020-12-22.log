@@ -1,0 +1,27 @@
+CRITICAL - 2020-12-22 20:26:54 --> Undefined variable: db
+#0 F:\DATA\Kuliah\Semester 5\Rekayasa Perangkat Lunak\project UAS\Localfarm Baru\localfarm\app\Controllers\Panel.php(296): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'F:\\DATA\\Kuliah\\...', 296, Array)
+#1 F:\DATA\Kuliah\Semester 5\Rekayasa Perangkat Lunak\project UAS\Localfarm Baru\localfarm\vendor\codeigniter4\framework\system\CodeIgniter.php(924): App\Controllers\Panel->delete()
+#2 F:\DATA\Kuliah\Semester 5\Rekayasa Perangkat Lunak\project UAS\Localfarm Baru\localfarm\vendor\codeigniter4\framework\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel))
+#3 F:\DATA\Kuliah\Semester 5\Rekayasa Perangkat Lunak\project UAS\Localfarm Baru\localfarm\vendor\codeigniter4\framework\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 F:\DATA\Kuliah\Semester 5\Rekayasa Perangkat Lunak\project UAS\Localfarm Baru\localfarm\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 F:\DATA\Kuliah\Semester 5\Rekayasa Perangkat Lunak\project UAS\Localfarm Baru\localfarm\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('F:\\DATA\\Kuliah\\...')
+#6 {main}
+CRITICAL - 2020-12-22 20:57:31 --> Undefined variable: db
+#0 F:\DATA\Kuliah\Semester 5\Rekayasa Perangkat Lunak\project UAS\Localfarm Baru\localfarm\app\Controllers\Panel.php(313): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'F:\\DATA\\Kuliah\\...', 313, Array)
+#1 F:\DATA\Kuliah\Semester 5\Rekayasa Perangkat Lunak\project UAS\Localfarm Baru\localfarm\vendor\codeigniter4\framework\system\CodeIgniter.php(924): App\Controllers\Panel->delete()
+#2 F:\DATA\Kuliah\Semester 5\Rekayasa Perangkat Lunak\project UAS\Localfarm Baru\localfarm\vendor\codeigniter4\framework\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Panel))
+#3 F:\DATA\Kuliah\Semester 5\Rekayasa Perangkat Lunak\project UAS\Localfarm Baru\localfarm\vendor\codeigniter4\framework\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 F:\DATA\Kuliah\Semester 5\Rekayasa Perangkat Lunak\project UAS\Localfarm Baru\localfarm\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 F:\DATA\Kuliah\Semester 5\Rekayasa Perangkat Lunak\project UAS\Localfarm Baru\localfarm\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('F:\\DATA\\Kuliah\\...')
+#6 {main}
+CRITICAL - 2020-12-22 21:12:11 --> Maximum execution time of 60 seconds exceeded
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2020-12-22 21:12:12 --> Undefined property: stdClass::$city
+#0 F:\DATA\Kuliah\Semester 5\Rekayasa Perangkat Lunak\project UAS\Localfarm Baru\localfarm\app\Controllers\Resep.php(75): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'F:\\DATA\\Kuliah\\...', 75, Array)
+#1 F:\DATA\Kuliah\Semester 5\Rekayasa Perangkat Lunak\project UAS\Localfarm Baru\localfarm\vendor\codeigniter4\framework\system\CodeIgniter.php(924): App\Controllers\Resep->read('tips-untuk-kamu')
+#2 F:\DATA\Kuliah\Semester 5\Rekayasa Perangkat Lunak\project UAS\Localfarm Baru\localfarm\vendor\codeigniter4\framework\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Resep))
+#3 F:\DATA\Kuliah\Semester 5\Rekayasa Perangkat Lunak\project UAS\Localfarm Baru\localfarm\vendor\codeigniter4\framework\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 F:\DATA\Kuliah\Semester 5\Rekayasa Perangkat Lunak\project UAS\Localfarm Baru\localfarm\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 F:\DATA\Kuliah\Semester 5\Rekayasa Perangkat Lunak\project UAS\Localfarm Baru\localfarm\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('F:\\DATA\\Kuliah\\...')
+#6 {main}

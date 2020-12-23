@@ -71,6 +71,8 @@ class Panel extends BaseController
 		$data['dataResep'] = $this->resepModel->findAll();
 		$data['dataArtikel'] = $this->artikelModel->findAll();
 		$data['dataResponse'] = $this->responseModel->findAll();
+
+		
 		
 		return view('_panel/v_dash.php', $data);
 	}

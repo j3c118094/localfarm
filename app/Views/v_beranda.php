@@ -11,9 +11,7 @@
         <div class="col-sm">
             <h2 class="font-weight-bold font-8">Tentang Kami</h2>
             <!-- kutipan kalimat tentang kami -->
-            <p class="pt-2 text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia fuga animi ad,
-                quisquam corrupti repellat sunt vero libero? Ullam aliquam eum sequi labore eaque
-                voluptas. Illum dolore sequi placeat eaque!. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia fuga animi ad,
+            <p class="pt-2 text-justify">Kami merupakan mahasiswa sekolah vokasi ipb program studi manajemen informatika yang ditugaskan untuk membantu pemerintah dalam mengkapanyekan kegiatan diversivikasi pangan melalui media sistem dan teknologi informasi. Tujuan dari diversifikasi pangan ini adalah Meningkatkan kesadaran, peran, dan partisipasi masyarakat dalam mewujudkan pola konsumsi pangan yang Beragam, Bergizi Seimbang dan Aman (B2SA) serta mengurangi ketergantungan terhadap bahan pangan pokok beras
             </p>
             <button class="btn btn-dark btn-hidden">
                 Selengkapnya
@@ -40,9 +38,7 @@
             <div class="px-sm-4 pt-3">
                 <h2 class="font-weight-bold text-white font-8">Tujuan</h2>
                 <!-- kutipan kalimat Tujuan -->
-                <p class="pt-2 text-justify text-white">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia fuga animi ad,
-                    quisquam corrupti repellat sunt vero libero? Ullam aliquam eum sequi labore eaque
-                    voluptas. Illum dolore sequi placeat eaque!. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia fuga animi ad,
+                <p class="pt-2 text-justify text-white">Website ini bertujuan untuk mengenalkan dan mengedukasi masyarakat tentang diversifikasi pangan. Diversifikasi pangan adalah membudayakan pola konsumsi pangan beragam, bergizi, seimbang, dan aman untuk hidup sehat, aktif, dan produktif
                 </p>
                 <button class="btn btn-dark mb-3">
                     Selengkapnya
