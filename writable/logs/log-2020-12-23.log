@@ -538,3 +538,20 @@ CRITICAL - 2020-12-23 03:56:59 --> Undefined variable: judulPage
 #7 /var/www/html/localfarm-master/public/index.php(45): CodeIgniter\CodeIgniter->run()
 #8 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(34): require_once('/var/www/html/l...')
 #9 {main}
+CRITICAL - 2020-12-23 09:41:49 --> Undefined variable: db
+#0 /var/www/html/localfarm-master/app/Controllers/Panel.php(311): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\Panel->delete()
+#2 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/localfarm-master/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(34): require_once('/var/www/html/l...')
+#6 {main}
+CRITICAL - 2020-12-23 09:49:20 --> syntax error, unexpected '"..."' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+#0 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Common.php(1119): CodeIgniter\View\View->render()
+#1 /var/www/html/localfarm-master/app/Controllers/Beranda.php(70): view()
+#2 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\Beranda->index()
+#3 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#4 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#5 /var/www/html/localfarm-master/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#6 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(34): require_once('/var/www/html/l...')
+#7 {main}

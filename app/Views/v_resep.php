@@ -27,10 +27,10 @@
 
 
       <?php foreach ( array_reverse($dataResep) as $row) : ?>
-        <div class="row justify-content-center">
+        <div class="row justify-content-center my-3" >
           <div class="col justify-content-center d-flex">
-            <div class="card mb-3" style="width: 75%;">
-              <div class="row no-gutters">
+            <div class="card mb-3" style="width: 75%; height: 25vh" >
+              <div class="row no-gutters" >
                 <div class="col-md-4">
                   <a href="<?php echo site_url('Resep/read/'.$row->judul) ?>">
                     <img src="/assets/uploads/<?php echo $row->thumbnail ?>" class="card-img" alt="... " style="

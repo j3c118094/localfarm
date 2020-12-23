@@ -308,7 +308,6 @@ class Panel extends BaseController
 			$response = $this->artikelModel->delete($id);
 		}
 
-		$query = $db->query("SELECT visitor.kota FROM response INNER JOIN visitor ON response.visitor_ip=visitor.visitor_ip");
         
 
 

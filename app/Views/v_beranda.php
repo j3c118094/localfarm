@@ -61,10 +61,10 @@
             <img class="img-fluid mh-img-50"  src="/assets/uploads/<?php echo $row[0]->thumbnail ?>" alt="">
             <div class="container px-sm-3">
                 <div class="position-absolute text-block-transparant index-1 text-white">
-                    <h4 class="text-white font-weight-bold"><?php echo substr(ucwords(str_replace("-", " ", $row[0]->judul)),0,45)."..."; ?></h4>
+                    <h4 class="text-white font-weight-bold"><?php echo substr(ucwords(str_replace("-", " ", $row[0]->judul)),0,35)."..."; ?></h4>
                     <!-- Kutipan artikel terbaru -->
                     <p class=" text-justify">
-                        <?php echo substr($row[0]->konten,0,50)."..." ?>
+                        <?php echo substr($row[0]->konten,0,150)."..." ?>
                     </p>
                     <a href="<?php echo site_url('Artikel/read/'.$row[0]->judul) ?>" class="text-blue-sea font-weight-bold">Selengkapnya
                         <hr class="biru ml-0 mt-0">
@@ -76,10 +76,10 @@
             <img class="img-fluid mh-img-50" src="/assets/uploads/<?php echo $row[1]->thumbnail ?>" alt="">
             <div class="container px-sm-3">
                 <div class="position-absolute text-block-transparant-right text-white index-1">
-                    <h4 class="text-white font-weight-bold"><?php echo substr(ucwords(str_replace("-", " ", $row[1]->judul)),0,45)."..."; ?></h4>
+                    <h4 class="text-white font-weight-bold"><?php echo substr(ucwords(str_replace("-", " ", $row[1]->judul)),0,35)."..."; ?></h4>
                     <!-- Kutipan artikel terbaru -->
                     <p class="text-justify">
-                        <?php echo substr($row[1]->konten,0,50)."..." ?>
+                        <?php echo substr($row[1]->konten,0,150)."..." ?>
                     </p>
                     <a href="<?php echo site_url('Artikel/read/'.$row[1]->judul) ?>" class="text-blue-sea font-weight-bold">Selengkapnya
                         <hr class="biru ml-0 mt-0">
@@ -91,10 +91,10 @@
             <img class="img-fluid mh-img-50" src="/assets/uploads/<?php echo $row[2]->thumbnail ?>" alt="">
             <div class="container px-sm-3">
                 <div class="position-absolute text-block-transparant text-white">
-                    <h4 class="text-white font-weight-bold"><?php echo substr(ucwords(str_replace("-", " ", $row[2]->judul)),0,45)."..."; ?></h4>
+                    <h4 class="text-white font-weight-bold"><?php echo substr(ucwords(str_replace("-", " ", $row[2]->judul)),0,35)."..."; ?></h4>
                     <!-- Kutipan artikel terbaru -->
                     <p class=" text-justify">
-                        <?php echo substr($row[2]->konten,0,50)."..." ?>
+                        <?php echo substr($row[2]->konten,0,150)."..." ?>
                     </p>
                     <a href="<?php echo site_url('Artikel/read/'.$row[2]->judul) ?>" class="text-blue-sea font-weight-bold">Selengkapnya
                         <hr class="biru ml-0 mt-0">
@@ -123,7 +123,7 @@
                     <img class="card-img-top top-border-rounded" style="height: 55%" src="/assets/uploads/<?php echo $row[0]->thumbnail ?>" alt="Card image cap">
                     <div class="card-body">
                         <p class="card-text text-secondary"><?php echo $row[0]->author ?></p>
-                        <h5 class="card-title text-dark font-weight-bold"><?php echo substr(ucwords(str_replace("-", " ", $row[0]->judul)),0,45)."..."; ?></h5>
+                        <h5 class="card-title text-dark font-weight-bold"><?php echo substr(ucwords(str_replace("-", " ", $row[0]->judul)),0,35)."..."; ?></h5>
                     </div>
                 </div>
                 </a>
@@ -134,7 +134,7 @@
                     <img class="card-img-top top-border-rounded" style="height: 55%" src="/assets/uploads/<?php echo $row[1]->thumbnail ?>" alt="Card image cap">
                     <div class="card-body">
                         <p class="card-text text-secondary"><?php echo $row[1]->author ?></p>
-                        <h5 class="card-title text-dark font-weight-bold"><?php echo substr(ucwords(str_replace("-", " ", $row[1]->judul)),0,45)."..."; ?></h5>
+                        <h5 class="card-title text-dark font-weight-bold"><?php echo substr(ucwords(str_replace("-", " ", $row[1]->judul)),0,35)."..."; ?></h5>
                     </div>
                 </div>
                 </a>
@@ -145,7 +145,7 @@
                     <img class="card-img-top top-border-rounded" style="height: 55%" src="/assets/uploads/<?php echo $row[2]->thumbnail ?>" alt="Card image cap">
                     <div class="card-body">
                         <p class="card-text text-secondary"><?php echo $row[2]->author ?></p>
-                        <h5 class="card-title text-dark font-weight-bold"><?php echo substr(ucwords(str_replace("-", " ", $row[2]->judul)),0,45)."..."; ?></h5>
+                        <h5 class="card-title text-dark font-weight-bold"><?php echo substr(ucwords(str_replace("-", " ", $row[2]->judul)),0,35)."..."; ?></h5>
                     </div>
                 </div>
                 </a>
