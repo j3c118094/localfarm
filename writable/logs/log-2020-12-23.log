@@ -555,3 +555,51 @@ CRITICAL - 2020-12-23 09:49:20 --> syntax error, unexpected '"..."' (T_CONSTANT_
 #5 /var/www/html/localfarm-master/public/index.php(45): CodeIgniter\CodeIgniter->run()
 #6 /var/www/html/localfarm-master/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(34): require_once('/var/www/html/l...')
 #7 {main}
+CRITICAL - 2020-12-23 10:27:45 --> Undefined property: stdClass::$city
+#0 C:\Users\ASUS\Documents\GitHub\localfarm\app\Controllers\Artikel.php(67): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\Users\\ASUS\\D...', 67, Array)
+#1 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Artikel->read('talas-yang-luar...')
+#2 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Artikel))
+#3 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ASUS\Documents\GitHub\localfarm\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\ASUS\\D...')
+#6 {main}
+CRITICAL - 2020-12-23 10:50:32 --> Undefined property: stdClass::$city
+#0 C:\Users\ASUS\Documents\GitHub\localfarm\app\Controllers\Artikel.php(67): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\Users\\ASUS\\D...', 67, Array)
+#1 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Artikel->read('talas-yang-luar...')
+#2 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Artikel))
+#3 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ASUS\Documents\GitHub\localfarm\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\ASUS\\D...')
+#6 {main}
+CRITICAL - 2020-12-23 10:50:55 --> Undefined property: stdClass::$city
+#0 C:\Users\ASUS\Documents\GitHub\localfarm\app\Controllers\Artikel.php(67): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\Users\\ASUS\\D...', 67, Array)
+#1 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Artikel->read('talas-yang-luar...')
+#2 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Artikel))
+#3 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ASUS\Documents\GitHub\localfarm\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\ASUS\\D...')
+#6 {main}
+CRITICAL - 2020-12-23 10:53:02 --> Undefined property: stdClass::$city
+#0 C:\Users\ASUS\Documents\GitHub\localfarm\app\Controllers\Artikel.php(68): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\Users\\ASUS\\D...', 68, Array)
+#1 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Artikel->read('talas-yang-luar...')
+#2 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Artikel))
+#3 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ASUS\Documents\GitHub\localfarm\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\ASUS\\D...')
+#6 {main}
+CRITICAL - 2020-12-23 10:54:10 --> Undefined variable: visitorData
+#0 C:\Users\ASUS\Documents\GitHub\localfarm\app\Controllers\Artikel.php(78): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\Users\\ASUS\\D...', 78, Array)
+#1 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Artikel->read('talas-yang-luar...')
+#2 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Artikel))
+#3 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ASUS\Documents\GitHub\localfarm\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\ASUS\\D...')
+#6 {main}
+CRITICAL - 2020-12-23 10:57:36 --> Undefined property: stdClass::$city
+#0 C:\Users\ASUS\Documents\GitHub\localfarm\app\Controllers\Artikel.php(67): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined prope...', 'C:\\Users\\ASUS\\D...', 67, Array)
+#1 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\CodeIgniter.php(918): App\Controllers\Artikel->read('talas-yang-luar...')
+#2 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Artikel))
+#3 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\Users\ASUS\Documents\GitHub\localfarm\public\index.php(45): CodeIgniter\CodeIgniter->run()
+#5 C:\Users\ASUS\Documents\GitHub\localfarm\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(34): require_once('C:\\Users\\ASUS\\D...')
+#6 {main}
