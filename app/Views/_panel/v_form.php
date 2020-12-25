@@ -61,14 +61,14 @@
             </div>
         </section>
 
-        <section style="height: auto;">
-            <div class="row" style="height: 45vh;" >
+        <section    >
+            <div class="row mt-3">
                 <div class="col-3 d-none d-lg-block">
                     
                 </div>
                 <div class="col-6 text-center mx-auto">
                     <div class="row h-100">
-                        <div class="col card mx-1 my-3">
+                        <div class="col card mx-1 mb-3">
                             <div class="my-auto">
                                 <?php
                                     include "fusioncharts-wrapper/fusioncharts.php";
@@ -108,14 +108,14 @@
             </div>
         </section>
 
-        <section style="height: auto;">
-            <div class="row" style="height: 45vh;" >
+        <section >
+            <div class="row"   >
                 <div class="col-3 d-none d-lg-block">
                     
                 </div>
                 <div class="col-6 text-center mx-auto">
                     <div class="row h-100">
-                        <div class="col card mx-1 my-3">
+                        <div class="col card mx-1 mb-3">
                             <div class="my-auto">
                                 <?php
                                     $chartData = "";
@@ -154,8 +154,8 @@
             </div>
         </section>
 
-        <section class="my-3" >
-            <div class="row " style="height: 47vh;" >
+        <section  >
+            <div class="row "   >
                 <div class="col-3 d-none d-lg-block">
                     
                 </div>
@@ -165,7 +165,7 @@
                             <div class="mx-auto mt-2" style="font-size: 17px; font-weight: 600">
                                 Respons dari :  Apa saja yang termasuk pangan lokal menurut Anda?
                             </div> 
-                            <div class="my-auto"style="height: 45vh; overflow-y : scroll;" >
+                            <div class="my-auto"style=" overflow-y : scroll;" >
                             <?php 
 
                                 $respq2 = explode("|", $dataArr1);
@@ -193,13 +193,13 @@
         </section>
 
         <section style="height: auto;">
-            <div class="row" style="height: 45vh;" >
+            <div class="row"   >
                 <div class="col-3 d-none d-lg-block">
                     
                 </div>
                 <div class="col-6 text-center mx-auto">
                     <div class="row h-100">
-                        <div class="col card mx-1 my-3">
+                        <div class="col card mx-1 mb-3">
                             <div class="my-auto">
                                 <?php
                                     $chartData = "";
@@ -240,13 +240,13 @@
         </section>
 
         <section style="height: auto;">
-            <div class="row" style="height: 45vh;" >
+            <div class="row"   >
                 <div class="col-3 d-none d-lg-block">
                     
                 </div>
                 <div class="col-6 text-center mx-auto">
                     <div class="row h-100">
-                        <div class="col card mx-1 my-3">
+                        <div class="col card mx-1 mb-3">
                             <div class="my-auto">
                                 <?php
                                     $chartData = "";
@@ -285,8 +285,8 @@
             </div>
         </section>
 
-        <section class="my-3" >
-            <div class="row " style="height: 47vh;" >
+        <section  >
+            <div class="row "   >
                 <div class="col-3 d-none d-lg-block">
                     
                 </div>

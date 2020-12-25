@@ -82,14 +82,14 @@
             </div>
         </section>
 
-        <section style="height: auto;">
-            <div class="row " style="height: 43vh;" >
+        <section>
+            <div class="row my-3" style="height: 65vh;" >
                 <div class="col-3 d-none d-lg-block">
                     
                 </div>
                 <div class="col text-center mx-auto ">
                     <div class="row h-100">
-                        <div class="col card mx-1 my-3">
+                        <div class="col card mx-1">
                             
                             <div class="my-auto">
                                 <?php
@@ -123,13 +123,13 @@
                             </div>
                         </div>
 
-                        <div class="col card mx-1 mb-3">
+                        <div class="col card mx-1 " >
                             <div class="row py-3">
-                                <div class="col">
-                                    <div class="text-center">
+                                <div class="col" style="overflow-y: scroll; height: 60vh" >
+                                    <div class="text-center" >
                                         LIST RESPONSE KUESIONER
                                     </div>
-                                    <table id="response" class="table table-striped table-bordered table-hover table.display">
+                                    <table id="response" class="table table-striped table-bordered table-hover table.display" >
                                         <thead class="thead-light">
                                             <tr>
                                                 <th>IP</th>

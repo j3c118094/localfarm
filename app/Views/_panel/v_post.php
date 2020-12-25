@@ -51,7 +51,7 @@
                     <form id="signout" method="POST" action="<?php echo site_url('Panel/signOut') ?>">
                     </form>
                 </div>
-                <div class="col d-none d-lg-block text-right mr-0 pr-0 h-100">z
+                <div class="col d-none d-lg-block text-right mr-0 pr-0 h-100">
                     <button type="submit" form="signout" class="btn btn-danger h-100 my-auto" style="width: 25%;">  Keluar <i class="fa fa-sign-out fa-lg" aria-hidden="true"></i></button>
                 </div>
             </div>
