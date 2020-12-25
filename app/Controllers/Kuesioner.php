@@ -16,8 +16,7 @@ class Kuesioner extends BaseController
     }
 
 	public function index()
-	{
-        
+	{   
         $data['saved_ip'] = get_cookie('saved_ip');
         if ($data['saved_ip']){
             $ip = $data['saved_ip'];
@@ -56,13 +55,9 @@ class Kuesioner extends BaseController
             $this->visitorModel->insert($visitorData);
         }
 
-
-
-
         $db = \Config\Database::connect();
         $query = $db->query("SELECT * FROM response WHERE visitor_ip = '".$iplong."'");
 		$hasFilled = $query->getResult();
-        
         if ($hasFilled){
             $data = [
                 'hasFilled' => true,
@@ -72,6 +67,7 @@ class Kuesioner extends BaseController
                 'hasFilled' => false,
             ];
         }
+
 
         $data['judulPage'] = "Kuesioner";
         echo view('_parts/header.php', $data);
@@ -86,10 +82,22 @@ class Kuesioner extends BaseController
         $q4 = $this->request->getPost('no_4');
         $q5 = $this->request->getPost('no_5');
                 
-        $ip = $_SERVER['REMOTE_ADDR'];
-        $iplong = ip2long($_SERVER['REMOTE_ADDR']);
+        $data['saved_ip'] = get_cookie('saved_ip');
+        if ($data['saved_ip']){
+            $ip = $data['saved_ip'];
+        } else {
+            $ip = $_SERVER['REMOTE_ADDR'];
+            set_cookie('saved_ip', $ip, time()+86400);
+        }
+
+        if ($ip == "::1"){
+            $ip = "127.0.0.1";
+        }
+
         
-        $dataresponse = $q1.','.$q2.','.$q3.','.$q4.','.$q5;
+        $iplong = ip2long($ip);
+        
+        $dataresponse = $q1.'|'.$q2.'|'.$q3.'|'.$q4.'|'.$q5;
 
         // var_dump($iplong);die;
 
@@ -100,17 +108,8 @@ class Kuesioner extends BaseController
             'visitor_ip' => $iplong,
         ];
 
-        // gak ke insert ke db. kemungknan kode ini yang gak kebaca
-        if (!empty($iplong)) { //Insert
-            $response = $this->responseModel->insert($data);
-
-            if ($response) {
-                $this->session->setFlashdata('response', ['status' => $response, 'message' => 'Data berhasil disimpan.']);
-            } else {
-                $this->session->setFlashdata('response', ['status' => $response, 'message' => 'Data gagal disimpan.']);
-            }
-        }
-
+        $response = $this->responseModel->insert($data);
+        
         return redirect()->to(site_url('Kuesioner'));
     }
 	//--------------------------------------------------------------------

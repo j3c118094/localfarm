@@ -15,7 +15,18 @@ hr.white{
     width: 13%;
 }
 
-
+.font-judul{
+    margin-top: -5px;
+    font-size: 13px;
+}
+.font-isi{
+    font-size: 13px;
+}
+font-lengkap{
+    position: relative;
+    right: 0;
+    bottom: 0;
+}
 
 
 .card-body-custom {
@@ -63,5 +74,14 @@ hr.white{
 @media (min-width: 992px){
     .daftar-resep img{
         width: 313px;
+    }
+    .p-card{
+        height: 8vh
+    }
+    .font-judul{
+    font-size: 20px;
+    }
+    .font-isi{
+    font-size: 15px;
     }
 }

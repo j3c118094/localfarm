@@ -135,7 +135,6 @@
                                                 <th>IP</th>
                                                 <th>DAERAH</th>
                                                 <th>WAKTU & TANGGAL</th>
-                                                <th>RESPONSE</th>
                                             </tr>
                                         </thead>
                                         <tbody class="text-center">
@@ -152,12 +151,6 @@
                                                 </td>
                                                 <td>
                                                     <?php echo $row->submitted_at; ?>  
-                                                </td>
-                                                <td>
-                                                    <form id="view<?php echo $row->responseid ?>" class="d-inline" action="<?php echo site_url('Panel/details'); ?>" method="POST">
-                                                        <input type="hidden" id="id-edit-artikel-<?php echo $row->responseid ?>" name="id" value="<?php echo $row->responseid ?>">
-                                                        <a href="#" onclick="document.getElementById('edit-<?php echo $row->responseid ?>').submit();">Detail Response</a>
-                                                    </form>
                                                 </td>
                                             </tr>
 

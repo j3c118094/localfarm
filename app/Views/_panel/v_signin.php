@@ -38,7 +38,7 @@
                             <form class="text-left mb-4" action="<?php echo site_url('Panel/account') ?>" method="post">
                             <div class=" text-center">
                                 <img src="/assets/images/localfarm-logo.png" class="logo"></img>
-                                <div class="m-0 p-0 ">Administrator Registration</div>
+                                <div class="m-0 p-0 ">Administrator Sign In</div>
                                 <?php 
 
                                     $href= site_url('Panel/signIn');

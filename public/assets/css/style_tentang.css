@@ -68,4 +68,9 @@
     .perusahaan img{
         float: right;
     }
+    .foto img{
+    width: 250px;
+    height: 333px;
+    border-radius: 25px;
+    }
 }

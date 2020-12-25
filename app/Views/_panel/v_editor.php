@@ -79,8 +79,8 @@
                                 <div class="row h-100">
                                     <div class="col">
                                         <div class="form-group text-left" style="font-size: 14px">
-                                            <label for="usr" >Thumbnail <?php if (!empty($id)) echo '<a href="'.site_url('/assets/images/').$data->thumbnail.'">sebelumnya</a>'; ?></label>
-                                            <input required id="thumb" name="thumb" type="file" accept="image/png, .jpeg, .jpg" class="form-control" >
+                                            <label for="usr" >Thumbnail <?php if (!empty($id)) echo '<a href="'.site_url('/assets/uploads/').$data->thumbnail.'">sebelumnya</a>'; ?></label>
+                                            <input <?php if (empty($id)) echo 'required'; ?> id="thumb" value="<?php if (!empty($id)) echo $data->thumbnail; ?>"" name="thumb" type="file" accept="image/png, .jpeg, .jpg" class="form-control" >
                                         </div>
                                     </div>
                                     <div class="col">

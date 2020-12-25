@@ -1,7 +1,7 @@
 <?php namespace App\Controllers;
 
 
-require '../vendor/autoload.php';
+require ROOTPATH.'vendor/autoload.php';
 use PhpOffice\PhpSpreadsheet\Helper\Sample;
 use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
@@ -172,7 +172,6 @@ class Panel extends BaseController
 	public function signOut(){
 		$current = ['username', 'nama', 'is_logged', 'is_admin'];
 		$this->session->remove($current);
-		sleep(.5);
 		return $this->index();
 	}
 
@@ -187,10 +186,68 @@ class Panel extends BaseController
 
 
 		$data['dataResponse'] = $this->responseModel->findAll();
-		IF ($data['dataResponse']){
+		if ($data['dataResponse']){
 			$ip = $data['dataResponse'][0]->visitor_ip;
 			$data['dataVisitor'] = $this->visitorModel->find($ip);
 			$data['kota'] = $data['dataVisitor']->kota;
+            
+            //Pie Pertanyaan 1
+            $data['dataPieQ11'] = 0;
+            $data['dataPieQ12'] = 0;
+            $data['dataPieQ13'] = 0;
+
+            //Array Pertanyaan 2
+            $data['dataArr1'] = "";
+            
+            //Pie Pertanyaan 3
+            $data['dataPieQ21'] = 0;
+            $data['dataPieQ22'] = 0;
+            $data['dataPieQ23'] = 0;
+            $data['dataPieQ24'] = 0;
+
+            //Pie Pertanyaan 4
+            $data['dataPieQ31'] = 0;
+            $data['dataPieQ32'] = 0;
+            $data['dataPieQ33'] = 0;
+
+
+            //Array Pertanyaan 5
+            $data['dataArr2'] = "";
+
+            foreach ($data['dataResponse'] as $responden){
+                $answer = explode("|", $responden->responses);
+
+                $data['dataArr1'] .= $answer[1]."|";
+                $data['dataArr2'] .= $answer[4]."|";
+
+                if ($answer[0] == "Sangat Tahu"){
+                    $data['dataPieQ11'] += 1;
+                } elseif ($answer[0] == "Cukup Tahu") {
+                    $data['dataPieQ12'] += 1;
+                } elseif ($answer[0] == "Tidak Tahu") {
+                    $data['dataPieQ13'] += 1;
+                }
+
+                if ($answer[2] == "Sangat Sering"){
+                    $data['dataPieQ21'] += 1;
+                } elseif ($answer[2] == "Sedang") {
+                    $data['dataPieQ22'] += 1;
+                } elseif ($answer[2] == "Pernah") {
+                    $data['dataPieQ23'] += 1;
+                } elseif ($answer[2] == "Tidak Pernah") {
+                    $data['dataPieQ24'] += 1;
+                }
+
+                if ($answer[3] == "Sangat Membantu"){
+                    $data['dataPieQ31'] += 1;
+                } elseif ($answer[3] == "Cukup Membantu") {
+                    $data['dataPieQ32'] += 1;
+                } elseif ($answer[3] == "Tidak Membantu") {
+                    $data['dataPieQ33'] += 1;
+                }
+
+                
+            }
 		} else {
 
 		}
@@ -246,7 +303,23 @@ class Panel extends BaseController
 
         $id = $this->request->getPost('id');
 		$type = $this->request->getPost('tipe');
-		$newName = "default.jpg";
+        
+		
+
+        if (empty($id)) { //Insert
+            $newName = "default.jpg";
+        } else { // Update
+			$where = ['id' => $id];
+			
+			if ($type == 'resep'){
+                $existing = $this->resepModel->find($id);
+				$newName = $existing->thumbnail;
+			} else {
+                $existing = $this->artikelModel->find($id);
+				$newName = $existing->thumbnail;
+			}
+        }
+
 		if($imagefile = $this->request->getFiles())
 		{
 			if($img = $imagefile['thumb'])
@@ -257,7 +330,7 @@ class Panel extends BaseController
 					$ext = pathinfo($filename,PATHINFO_EXTENSION);
 					
 					$newName = $type."-".date('Y-m-d')."_".md5(str_replace(" ", "-", strtolower($this->request->getPost('judul')))).".".$ext; //This is if you want to change the file name to encrypted name
-					$img->move(ROOTPATH.'public/assets/uploads/', $newName);
+					$img->move(ROOTPATH.'../assets/uploads/', $newName);
 
 					// You can continue here to write a code to save the name to database
 					// db_connect() or model format
@@ -277,7 +350,6 @@ class Panel extends BaseController
         ];
 
 		if (empty($id)) { //Insert
-			
 			if ($type == 'resep'){
 				$response = $this->resepModel->insert($data);
 			} else {
@@ -307,8 +379,7 @@ class Panel extends BaseController
 		} else {
 			$response = $this->artikelModel->delete($id);
 		}
-
-        
+    
 
 
         return redirect()->to(site_url('Panel/post'));

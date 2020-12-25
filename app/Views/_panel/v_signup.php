@@ -40,7 +40,7 @@
                             <form class="text-left mb-4" action="<?php echo site_url('Panel/register'); ?>" method="post" autocomplete="off">
                             <div class=" text-center">
                                 <img src="/assets/images/localfarm-logo.png" class="logo"></img>
-                                <div class="m-0 p-0 ">Administrator Panel Login</div>
+                                <div class="m-0 p-0 ">Administrator Panel Sign Up</div>
                             </div>
                                 <!-- Material input -->
                                 <div class="form-group">

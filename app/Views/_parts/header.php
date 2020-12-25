@@ -29,9 +29,9 @@
   <body>
   
 
-    <nav class="navbar p-0 navbar-expand-sm navbar-light bg-green">
+    <nav class="navbar py-0 px-5  navbar-expand-sm navbar-light bg-green" style="z-index: 100;">
       <div class="container position-relative mx-header">
-        <a class="" href="#">
+        <a class="" href="<?php echo site_url('Beranda') ?>">
           <img class="img-fluid nav-img" id="logo" src="/assets/images/logo localfarm v4.png" alt="">
         </a>
         

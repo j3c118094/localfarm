@@ -22,8 +22,7 @@
 </head>
 <body class="bg-abu">
 
-    <?php 
-
+    <?php
         if (!($is_admin)) {
             header('Location: '.site_url('Panel/signIn'));
             die();
@@ -63,11 +62,11 @@
         </section>
 
         <section style="height: auto;">
-            <div class="row mb-4" style="height: 43vh;" >
+            <div class="row" style="height: 45vh;" >
                 <div class="col-3 d-none d-lg-block">
                     
                 </div>
-                <div class="col text-center mx-auto">
+                <div class="col-6 text-center mx-auto">
                     <div class="row h-100">
                         <div class="col card mx-1 my-3">
                             <div class="my-auto">
@@ -110,7 +109,222 @@
         </section>
 
         <section style="height: auto;">
-            <div class="row " style="height: auto;" >
+            <div class="row" style="height: 45vh;" >
+                <div class="col-3 d-none d-lg-block">
+                    
+                </div>
+                <div class="col-6 text-center mx-auto">
+                    <div class="row h-100">
+                        <div class="col card mx-1 my-3">
+                            <div class="my-auto">
+                                <?php
+                                    $chartData = "";
+                                    $chartData = '
+                                                    {"label": "Sangat Tahu","value": "'.$dataPieQ11.'"},
+                                                    {"label": "Cukup Tahu","value": "'.$dataPieQ12.'"},
+                                                    {"label": "Tidak Tahu","value": "'.$dataPieQ13.'"},
+                                                ';
+
+                                    $columnChart2 = new FusionCharts("pie2d", "ex2", "100%", 400, "chart-2", "json", '{
+                                    "chart": {
+                                        "caption": "Response dari : Seberapa tahu anda tentang diversifikasi pangan?",
+                                        "plottooltext": "<b>$percentValue</b> responden mengatakan $label",
+                                        "showlegend": "1",
+                                        "showpercentvalues": "1",
+                                        "legendposition": "bottom",
+                                        "usedataplotcolorforlabels": "1",
+                                        "theme": "fusion"
+
+                                    },
+                                    "data": [
+                                        '.$chartData.'
+                                    ]
+                                    }');
+
+                                    $columnChart2->render();
+                                ?>
+                                <div id="chart-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 d-none d-lg-block">
+                    
+                </div>
+            </div>
+        </section>
+
+        <section class="my-3" >
+            <div class="row " style="height: 47vh;" >
+                <div class="col-3 d-none d-lg-block">
+                    
+                </div>
+                <div class="col-6 text-center mx-auto" >
+                    <div class="row h-100" >
+                        <div class="col card mx-1">
+                            <div class="mx-auto mt-2" style="font-size: 17px; font-weight: 600">
+                                Respons dari :  Apa saja yang termasuk pangan lokal menurut Anda?
+                            </div> 
+                            <div class="my-auto"style="height: 45vh; overflow-y : scroll;" >
+                            <?php 
+
+                                $respq2 = explode("|", $dataArr1);
+                                $no = 0;
+                                array_pop($respq2);
+                                foreach ($respq2 as $each){
+                            ?>
+                                <div class="bg-secondary text-white text-left px-2 py-2 my-1" style="border-radius: 5px;">
+                                    <?php
+                                        $no += 1;
+                                        echo $no.". ".$each;
+                                    ?>
+                                </div>
+                            <?php
+                                }
+                            ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 d-none d-lg-block">
+                    
+                </div>
+            </div>
+        </section>
+
+        <section style="height: auto;">
+            <div class="row" style="height: 45vh;" >
+                <div class="col-3 d-none d-lg-block">
+                    
+                </div>
+                <div class="col-6 text-center mx-auto">
+                    <div class="row h-100">
+                        <div class="col card mx-1 my-3">
+                            <div class="my-auto">
+                                <?php
+                                    $chartData = "";
+                                    $chartData = '
+                                                    {"label": "Sangat Sering","value": "'.$dataPieQ21.'"},
+                                                    {"label": "Sedang","value": "'.$dataPieQ22.'"},
+                                                    {"label": "Pernah","value": "'.$dataPieQ23.'"},
+                                                    {"label": "Tidak Pernah","value": "'.$dataPieQ24.'"},
+                                                ';
+
+                                    $columnChart3 = new FusionCharts("pie2d", "ex3", "100%", 400, "chart-3", "json", '{
+                                    "chart": {
+                                        "caption": "Respons dari : Seberapa tahu anda tentang diversifikasi pangan?",
+                                        "plottooltext": "<b>$percentValue</b> responden mengatakan $label",
+                                        "showlegend": "1",
+                                        "showpercentvalues": "1",
+                                        "legendposition": "bottom",
+                                        "usedataplotcolorforlabels": "1",
+                                        "theme": "fusion"
+
+                                    },
+                                    "data": [
+                                        '.$chartData.'
+                                    ]
+                                    }');
+
+                                    $columnChart3->render();
+                                ?>
+                                <div id="chart-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 d-none d-lg-block">
+                    
+                </div>
+            </div>
+        </section>
+
+        <section style="height: auto;">
+            <div class="row" style="height: 45vh;" >
+                <div class="col-3 d-none d-lg-block">
+                    
+                </div>
+                <div class="col-6 text-center mx-auto">
+                    <div class="row h-100">
+                        <div class="col card mx-1 my-3">
+                            <div class="my-auto">
+                                <?php
+                                    $chartData = "";
+                                    $chartData = '
+                                                    {"label": "Sangat Membantu","value": "'.$dataPieQ31.'"},
+                                                    {"label": "Cukup Membantu","value": "'.$dataPieQ32.'"},
+                                                    {"label": "Tidak Membantu","value": "'.$dataPieQ33.'"},
+                                                ';
+
+                                    $columnChart4 = new FusionCharts("pie2d", "ex4", "100%", 400, "chart-4", "json", '{
+                                    "chart": {
+                                        "caption": "Response dari : Menurut Anda apakah website kami sudah cukup membantu untuk informasi diversifikasi pangan?",
+                                        "plottooltext": "<b>$percentValue</b> responden mengatakan $label",
+                                        "showlegend": "1",
+                                        "showpercentvalues": "1",
+                                        "legendposition": "bottom",
+                                        "usedataplotcolorforlabels": "1",
+                                        "theme": "fusion"
+
+                                    },
+                                    "data": [
+                                        '.$chartData.'
+                                    ]
+                                    }');
+
+                                    $columnChart4->render();
+                                ?>
+                                <div id="chart-4"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 d-none d-lg-block">
+                    
+                </div>
+            </div>
+        </section>
+
+        <section class="my-3" >
+            <div class="row " style="height: 47vh;" >
+                <div class="col-3 d-none d-lg-block">
+                    
+                </div>
+                <div class="col-6 text-center mx-auto" >
+                    <div class="row h-100" >
+                        <div class="col card mx-1">
+                            <div class="mx-auto mt-2" style="font-size: 17px; font-weight: 600">
+                                Respons dari :  Kritik dan saran mengenai diversifikasi pangan?
+                            </div> 
+                            <div class="my-auto"style="height: 45vh; overflow-y : scroll;" >
+                            <?php 
+
+                                $respq5 = explode("|", $dataArr2);
+                                $no = 0;
+                                array_pop($respq5);
+                                foreach ($respq5 as $each){
+                            ?>
+                                <div class="bg-secondary text-white text-left px-2 py-2 my-1" style="border-radius: 5px;">
+                                    <?php
+                                        $no += 1;
+                                        echo $no.". ".$each;
+                                    ?>
+                                </div>
+                            <?php
+                                }
+                            ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 d-none d-lg-block">
+                    
+                </div>
+            </div>
+        </section>
+
+        <section style="height: auto;">
+            <div class="row mt-4" style="height: auto;" >
                 <div class="col-3 d-none d-lg-block">
                     
                 </div>
@@ -128,7 +342,6 @@
                                                 <th>IP</th>
                                                 <th>DAERAH</th>
                                                 <th>WAKTU & TANGGAL</th>
-                                                <th>RESPONSE</th>
                                             </tr>
                                         </thead>
                                         <tbody class="text-center">
@@ -145,12 +358,6 @@
                                                 </td>
                                                 <td>
                                                     <?php echo $row->submitted_at; ?>  
-                                                </td>
-                                                <td>
-                                                    <form id="view<?php echo $row->responseid ?>" class="d-inline" action="<?php echo site_url('Panel/details'); ?>" method="POST">
-                                                        <input type="hidden" id="id-edit-artikel-<?php echo $row->responseid ?>" name="id" value="<?php echo $row->responseid ?>">
-                                                        <a href="#" onclick="document.getElementById('edit-<?php echo $row->responseid ?>').submit();">Detail Response</a>
-                                                    </form>
                                                 </td>
                                             </tr>
 
@@ -181,6 +388,8 @@
                 </div>
             </div>
         </section>
+
+
 
 
 

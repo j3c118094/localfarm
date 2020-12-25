@@ -1,0 +1,74 @@
+CRITICAL - 2020-12-26 01:31:03 --> Undefined variable: dataPieQ11
+#0 /var/www/html/localfarm-backup/app/Views/_panel/v_form.php(123): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/localfarm-backup/vendor/codeigniter4/framework/system/View/View.php(246): include('/var/www/html/l...')
+#2 /var/www/html/localfarm-backup/vendor/codeigniter4/framework/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/localfarm-backup/app/Controllers/Panel.php(199): view()
+#4 /var/www/html/localfarm-backup/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\Panel->form()
+#5 /var/www/html/localfarm-backup/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#6 /var/www/html/localfarm-backup/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#7 /var/www/html/localfarm-backup/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 /var/www/html/localfarm-backup/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(34): require_once('/var/www/html/l...')
+#9 {main}
+CRITICAL - 2020-12-26 01:31:38 --> Undefined variable: dataPieQ11
+#0 /var/www/html/localfarm-backup/app/Views/_panel/v_form.php(123): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/localfarm-backup/vendor/codeigniter4/framework/system/View/View.php(246): include('/var/www/html/l...')
+#2 /var/www/html/localfarm-backup/vendor/codeigniter4/framework/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/localfarm-backup/app/Controllers/Panel.php(199): view()
+#4 /var/www/html/localfarm-backup/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\Panel->form()
+#5 /var/www/html/localfarm-backup/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#6 /var/www/html/localfarm-backup/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#7 /var/www/html/localfarm-backup/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 /var/www/html/localfarm-backup/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(34): require_once('/var/www/html/l...')
+#9 {main}
+CRITICAL - 2020-12-26 01:31:38 --> Undefined variable: dataPieQ11
+#0 /var/www/html/localfarm-backup/app/Views/_panel/v_form.php(123): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/localfarm-backup/vendor/codeigniter4/framework/system/View/View.php(246): include('/var/www/html/l...')
+#2 /var/www/html/localfarm-backup/vendor/codeigniter4/framework/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/localfarm-backup/app/Controllers/Panel.php(199): view()
+#4 /var/www/html/localfarm-backup/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\Panel->form()
+#5 /var/www/html/localfarm-backup/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#6 /var/www/html/localfarm-backup/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#7 /var/www/html/localfarm-backup/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 /var/www/html/localfarm-backup/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(34): require_once('/var/www/html/l...')
+#9 {main}
+CRITICAL - 2020-12-26 01:31:41 --> Undefined variable: dataPieQ11
+#0 /var/www/html/localfarm-backup/app/Views/_panel/v_form.php(123): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/localfarm-backup/vendor/codeigniter4/framework/system/View/View.php(246): include('/var/www/html/l...')
+#2 /var/www/html/localfarm-backup/vendor/codeigniter4/framework/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/localfarm-backup/app/Controllers/Panel.php(199): view()
+#4 /var/www/html/localfarm-backup/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\Panel->form()
+#5 /var/www/html/localfarm-backup/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#6 /var/www/html/localfarm-backup/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#7 /var/www/html/localfarm-backup/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 /var/www/html/localfarm-backup/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(34): require_once('/var/www/html/l...')
+#9 {main}
+CRITICAL - 2020-12-26 01:31:46 --> Undefined variable: dataPieQ11
+#0 /var/www/html/localfarm-backup/app/Views/_panel/v_form.php(123): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/localfarm-backup/vendor/codeigniter4/framework/system/View/View.php(246): include('/var/www/html/l...')
+#2 /var/www/html/localfarm-backup/vendor/codeigniter4/framework/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/localfarm-backup/app/Controllers/Panel.php(199): view()
+#4 /var/www/html/localfarm-backup/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\Panel->form()
+#5 /var/www/html/localfarm-backup/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#6 /var/www/html/localfarm-backup/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#7 /var/www/html/localfarm-backup/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 /var/www/html/localfarm-backup/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(34): require_once('/var/www/html/l...')
+#9 {main}
+CRITICAL - 2020-12-26 01:31:47 --> Undefined variable: dataPieQ11
+#0 /var/www/html/localfarm-backup/app/Views/_panel/v_form.php(123): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/localfarm-backup/vendor/codeigniter4/framework/system/View/View.php(246): include('/var/www/html/l...')
+#2 /var/www/html/localfarm-backup/vendor/codeigniter4/framework/system/Common.php(1119): CodeIgniter\View\View->render()
+#3 /var/www/html/localfarm-backup/app/Controllers/Panel.php(199): view()
+#4 /var/www/html/localfarm-backup/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\Panel->form()
+#5 /var/www/html/localfarm-backup/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#6 /var/www/html/localfarm-backup/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#7 /var/www/html/localfarm-backup/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#8 /var/www/html/localfarm-backup/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(34): require_once('/var/www/html/l...')
+#9 {main}
+CRITICAL - 2020-12-26 01:43:54 --> Undefined offset: 1
+#0 /var/www/html/localfarm-backup/app/Controllers/Panel.php(220): CodeIgniter\Debug\Exceptions->errorHandler()
+#1 /var/www/html/localfarm-backup/vendor/codeigniter4/framework/system/CodeIgniter.php(918): App\Controllers\Panel->form()
+#2 /var/www/html/localfarm-backup/vendor/codeigniter4/framework/system/CodeIgniter.php(404): CodeIgniter\CodeIgniter->runController()
+#3 /var/www/html/localfarm-backup/vendor/codeigniter4/framework/system/CodeIgniter.php(312): CodeIgniter\CodeIgniter->handleRequest()
+#4 /var/www/html/localfarm-backup/public/index.php(45): CodeIgniter\CodeIgniter->run()
+#5 /var/www/html/localfarm-backup/vendor/codeigniter4/framework/system/Commands/Server/rewrite.php(34): require_once('/var/www/html/l...')
+#6 {main}

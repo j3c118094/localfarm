@@ -1,4 +1,4 @@
-    <div class="container-fluid w-100 py-4 bg-green">
+    <div class="container-fluid w-100 py-4 mt-5 bg-green">
         <div class="text-center sticky-bottom text-white">Copyright &copy; Localfarm 2020. All Rights Reserved</div>
     </div>    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

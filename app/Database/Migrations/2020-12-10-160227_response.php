@@ -9,6 +9,9 @@ class Response extends Migration
 		$this->forge->addField([
 			'responseid'          => [
 					'type'           => 'INT',
+                    'constraint'     => '11',
+					'unsigned'		 => TRUE,
+					'auto_increment' => TRUE,
 			],
 			'responses'       => [
 					'type'           => 'TEXT',

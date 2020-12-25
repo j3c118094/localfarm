@@ -63,6 +63,10 @@ class Beranda extends BaseController
             $this->visitorModel->insert($visitorData);
         }
 
+        
+        $iplong = ip2long($ip);
+        $data['FULL'] = $iplong;
+
 		$data['dataArtikel'] = $this->artikelModel->findAll();
         $data['dataResep'] = $this->resepModel->findAll();
         $data['judulPage'] = "Localfarm";

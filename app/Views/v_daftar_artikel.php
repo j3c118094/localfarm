@@ -34,11 +34,11 @@
         <div class="col-sm m-col-b m-col-t">
             <div class="mx-auto card size-card-artikel">
                 <a href="<?php echo site_url('Artikel/read/'.$row->judul) ?>">
-                    <img class="card-img-top" style="height: 25vh; object-fit: contain;" src="/assets/uploads/<?php echo $row->thumbnail ?>" alt="Card image cap">
+                    <img class="card-img-top" style="height: 25vh" src="/assets/uploads/<?php echo $row->thumbnail ?>" alt="Card image cap">
                 </a>
                 <div class="card-body-custom">
-                    <div class="bg-secondary p-card" style="height: 10vh; "> 
-                        <h5 class="card-title text-white"><?php echo substr(ucwords(str_replace("-", " ", $row->judul)),0,45)."..."; ?></h5>
+                    <div class="bg-secondary p-card" style="height: 10vh">
+                        <h5 class="card-title text-white"><?php echo substr(ucwords(str_replace("-", " ", $row->judul)),0,38)."..."; ?></h5>
                     </div>
                     <div class="bg-green-light text-white p-card" style="height: 25vh;">
                         <span>
@@ -46,7 +46,7 @@
                             <?php echo date("d/m/Y", strtotime($row->created_at)) ?>
                         </span>
                         <hr class="white ml-0 mt-0">
-                        <p class="card-text text-justify"> <?php echo substr($row->konten,0,50)."..." ?></p>
+                        <p class="card-text text-justify"> <?php echo substr($row->konten,0,100)."..." ?></p>
                     </div>
                     <div class="text-right">
                         <a style="position: relative; top: -2rem;" href="<?php echo site_url('Artikel/read/'.$row->judul) ?>" class="text-dark font-weight-bold pr-2">Selengkapnya</a>

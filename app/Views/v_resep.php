@@ -22,36 +22,36 @@
 </section>
  
     <!-- daftarresep -->
-    <section class="daftar-resep" style="min-height: 55vh;">
+    <section class="daftar-resep" style="height: auto; min-height: 55vh;">
       <div class="container">
 
 
       <?php foreach ( array_reverse($dataResep) as $row) : ?>
-        <div class="row justify-content-center my-3" >
-          <div class="col justify-content-center d-flex">
-            <div class="card mb-3" style="width: 75%; height: 25vh" >
-              <div class="row no-gutters" >
+        <div class="row mb-2 justify-content-center">
+          <div class="col justify-content-center d-flex" >
+            <div class="card" style="width: 75%;">
+              <div class="row no-gutters">
                 <div class="col-md-4">
-                  <a href="<?php echo site_url('Resep/read/'.$row->judul) ?>">
+                  <a href="<?php echo site_url('Resep/read/'.$row->judul) ?>" >
                     <img src="/assets/uploads/<?php echo $row->thumbnail ?>" class="card-img" alt="... " style="
-                    height: 100%;
+                    height: 33vh;
                     object-fit: cover;
                     min-width: 100%;
                     max-width: 100%;">
                   </a>
                 </div>
-                <div class="col-md-8">
-                  <div class="card-body-custom">
-                    <div class="bg-secondary p-card">
-                      <h5 class="card-title text-white"><?php echo substr(ucwords(str_replace("-", " ", $row->judul)),0,45)."..."; ?></h5>
+                <div class="col-md-8" >
+                  <div class="card-body-custom" >
+                    <div class="bg-secondary p-card" style="height: 8vh">
+                      <h5 class="card-title text-white pt-2 font-judul"><?php echo substr(ucwords(str_replace("-", " ", $row->judul)),0,38)."..."; ?></h5>
                     </div>
-                    <div class="bg-green-light text-white p-card pb-5">
+                    <div class="bg-green-light text-white p-card pb-5 font-isi" style="height: 25vh">
                       <span>
                           <i class='far fa-calendar-alt mr-1'></i>
                           <?php echo date("d/m/Y", strtotime($row->created_at)) ?>
                       </span>
                       <hr class="white ml-0 mt-1">
-                      <p class="card-text"> <?php echo substr($row->konten,0,75)."..." ?></p>
+                      <p class="card-text"> <?php echo substr($row->konten,0,135)."..." ?></p>
                       <div class="text-right">
                         <a href="<?php echo site_url('Resep/read/'.$row->judul) ?>" class="text-dark font-weight-bold pr-2">Selengkapnya</a>
                       </div>

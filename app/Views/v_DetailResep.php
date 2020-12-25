@@ -10,9 +10,9 @@ $obj_tanggal = $dataResep['0']->created_at;
 <section class="container-fluid px-0" style="min-height: 90vh">
     <div class="position-relative">
         <img class="img-fluid" src="/assets/uploads/<?php echo $obj_thumb?>" alt="" style="max-height: 50vh; width: 100vw; object-fit: cover;">
-        <!-- Link kembali ke daftar artikel -->
+        <!-- Link kembali ke daftar resep -->
         <div class="position-absolute  icon-arrow">
-            <a href="<?php echo site_url('DaftarArtikel')?>" class="white-color">
+            <a href="<?php echo site_url('DaftarResep')?>" class="white-color">
                 <i class="fa fa-long-arrow-left"></i>
             </a>
         </div>
